@@ -140,9 +140,12 @@ body {
    MOBILE & SMALL SCREEN RESPONSIVENESS
    ========================================== */
 @media (max-width: 600px) {
-    body {
+    /* 1. Ensure the root container allows smooth bi-directional horizontal scrolling */
+    html, body {
         padding-top: 20px;
         padding-bottom: 30px;
+        overflow-x: auto !important;
+        width: 100%;
     }
 
     h1 {
@@ -151,8 +154,12 @@ body {
         margin-bottom: 15px;
     }
 
+    /* 2. Add side padding to .branch so left-most/right-most nodes don't hit screen edges */
     .branch {
         padding-top: 15px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        min-width: max-content; /* Prevents flexbox from squeezing wide sibling groups */
     }
 
     .column {
@@ -184,7 +191,6 @@ body {
         padding: 6px;
     }
 }
-
 /* ==========================================
    SMOOTH SCROLLING 
    ========================================== */
