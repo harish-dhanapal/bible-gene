@@ -1,0 +1,204 @@
+/* Page setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Base style for individual person boxes */
+.node {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border: 2px solid #334e68;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+/* Tooltip Hover Box */
+.node .details {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #102a43;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.node:hover .details {
+    display: block;
+}
+
+/* Simple vertical connector line/arrow */
+.connector {
+    font-size: 1.2rem;
+    color: #334e68;
+    margin: 2px 0;
+    line-height: 1;
+}
+
+/* Helper to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Vertical column wrapper for lineage branches */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================
+   FAMILY TREE CONNECTOR SYSTEM
+   ========================================== */
+
+/* Horizontal Branch Container */
+.branch {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Individual Column */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.column > .node {
+    min-width: 80px;
+    text-align: center;
+}
+
+/* 1. Vertical tick going UP from node center */
+.column::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #334e68;
+    transform: translateX(-50%);
+}
+
+/* 2. Horizontal connection lines */
+.column::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #334e68;
+}
+
+/* Trim the outer lines so the top bar stops exactly at the first and last child */
+.column:first-child::after {
+    left: 50%;
+    width: 50%;
+}
+
+.column:last-child::after {
+    width: 50%;
+}
+
+/* Single child exception (if a branch has only 1 column) */
+.column:only-child::after {
+    display: none;
+}
+
+
+/* ==========================================
+   MOBILE & SMALL SCREEN RESPONSIVENESS
+   ========================================== */
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .branch {
+        padding-top: 15px;
+    }
+
+    .column {
+        padding: 0 4px;
+    }
+
+    .node {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .column > .node {
+        min-width: 55px;
+    }
+
+    /* Adjust connector heights for smaller mobile vertical gap */
+    .column::before {
+        top: -15px;
+        height: 15px;
+    }
+
+    .column::after {
+        top: -15px;
+    }
+
+    .node .details {
+        width: 140px;
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+}
+
+/* ==========================================
+   SMOOTH SCROLLING 
+   ========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Ensure the body allows smooth horizontal and vertical alignment */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    width: 100%;
+}
+

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogy: Adam to Noah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="tree-container">
+        <!-- Breadcrumb Navigation Bar -->
+    
+        <h1>Adam to Noah</h1>
+
+        <!-- Generation 1: Adam & Eve -->
+        <div id="root" class="node" onclick="revealNext('gen2-children')">
+        Adam & Eve
+        <div class="details">
+    <strong>Gen 1 (First Ancestors)</strong><br>
+    • Adam:lived 930 yrs<br>
+    • Eve:Mother of all living<br>
+    • Placed in Eden
+</div>
+    </div>
+
+        <div id="gen2-connector" class="connector hidden">│</div>
+
+       <!-- Generation 2: Branch of Siblings -->
+       <div id="gen2-children" class="branch hidden">
+            
+        <!-- Cain Column -->
+        <div class="column">
+            <div class="node cain" onclick="revealNext('cain-enoch-node')">
+                Cain
+                <div class="details">
+                    <strong>Firstborn Son</strong><br>
+                    Farmer.<br>
+                    Killed Abel.<br>
+                    Exiled to Land of Nod.
+                </div>
+            </div>
+
+            <div id="cain-enoch-connector" class="connector hidden">↓</div>
+
+            <!-- Gen 3: Enoch -->
+            <div id="cain-enoch-node" class="node hidden" onclick="revealNext('irad-node')">
+                Enoch
+                <div class="details">
+                    <strong>Line of Cain (Gen 3)</strong><br>
+                    City named after him.<br>
+                    <em>Click to reveal child</em>
+                </div>
+            </div>
+
+            <div id="irad-connector" class="connector hidden">↓</div>
+
+            <!-- Gen 4: Irad -->
+            <div id="irad-node" class="node hidden" onclick="revealNext('mehujael-node')">
+                Irad
+                <div class="details">
+                    <strong>Line of Cain (Gen 4)</strong><br>
+                    Son of Enoch.<br>
+                    <em>Click to reveal child</em>
+                </div>
+            </div>
+
+            <div id="mehujael-connector" class="connector hidden">↓</div>
+
+            <!-- Gen 5: Mehujael -->
+            <div id="mehujael-node" class="node hidden" onclick="revealNext('methushael-node')">
+                Mehujael
+                <div class="details">
+                    <strong>Line of Cain (Gen 5)</strong><br>
+                    Son of Irad.<br>
+                    <em>Click to reveal child</em>
+                </div>
+            </div>
+
+            <div id="methushael-connector" class="connector hidden">↓</div>
+
+            <!-- Gen 6: Methushael -->
+            <div id="methushael-node" class="node hidden" onclick="revealNext('lamech-node')">
+                Methushael
+                <div class="details">
+                    <strong>Line of Cain (Gen 6)</strong><br>
+                    Son of Mehujael.<br>
+                    <em>Click to reveal child</em>
+                </div>
+            </div>
+
+            <div id="lamech-connector" class="connector hidden">↓</div>
+
+            <!-- Gen 7: Lamech -->
+            <div id="lamech-node" class="node hidden" onclick="revealNext('lamech-children')">
+                Lamech
+                <div class="details">
+                    <strong>Line of Cain (Gen 7)</strong><br>
+                    Husband of Adah & Zillah.<br>
+                    <em>Click to reveal children</em>
+                </div>
+            </div>
+
+            <div id="lamech-children-connector" class="connector hidden">│</div>
+
+            <!-- Gen 8: Lamech's Children Branch -->
+            <div id="lamech-children" class="branch hidden">
+                <div class="column">
+                    <div class="node">
+                        Jabal
+                        <div class="details">
+                            <strong>Son of Adah</strong><br>
+                            Father of tent-dwellers & livestock herders.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="node">
+                        Jubal
+                        <div class="details">
+                            <strong>Son of Adah</strong><br>
+                            Father of musicians (harp & flute).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="node">
+                        Tubal-Cain
+                        <div class="details">
+                            <strong>Son of Zillah</strong><br>
+                            Craftsman of bronze & iron tools.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="node">
+                        Naamah
+                        <div class="details">
+                            <strong>Daughter of Zillah</strong><br>
+                            Sister of Tubal-Cain.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Abel Column -->
+        <div class="column">
+            <div class="node abel">
+                Abel
+                <div class="details">
+                    <strong>Second Son</strong><br>
+                    Shepherd.<br>
+                    Killed by Cain.
+                </div>
+            </div>
+        </div>
+
+        <!-- Seth Column -->
+<div class="column">
+    <div class="node seth" onclick="revealNext('enosh-node')">
+        Seth ⭐
+        <div class="details">
+            <strong>Main Patriarch Line</strong><br>
+            Lifespan: 912 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="enosh-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 3: Enosh -->
+    <div id="enosh-node" class="node hidden" onclick="revealNext('kenan-node')">
+        Enosh
+        <div class="details">
+            <strong>Gen 3 (Line of Seth)</strong><br>
+            Lifespan: 905 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="kenan-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 4: Kenan -->
+    <div id="kenan-node" class="node hidden" onclick="revealNext('mahalalel-node')">
+        Kenan
+        <div class="details">
+            <strong>Gen 4</strong><br>
+            Lifespan: 910 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="mahalalel-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 5: Mahalalel -->
+    <div id="mahalalel-node" class="node hidden" onclick="revealNext('jared-node')">
+        Mahalalel
+        <div class="details">
+            <strong>Gen 5</strong><br>
+            Lifespan: 895 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="jared-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 6: Jared -->
+    <div id="jared-node" class="node hidden" onclick="revealNext('seth-enoch-node')">
+        Jared
+        <div class="details">
+            <strong>Gen 6</strong><br>
+            Lifespan: 962 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="seth-enoch-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 7: Enoch -->
+    <div id="seth-enoch-node" class="node hidden" onclick="revealNext('methuselah-node')">
+        Enoch
+        <div class="details">
+            <strong>Gen 7</strong><br>
+            Walked with God (365 years)<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="methuselah-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 8: Methuselah -->
+    <div id="methuselah-node" class="node hidden" onclick="revealNext('seth-lamech-node')">
+        Methuselah
+        <div class="details">
+            <strong>Gen 8</strong><br>
+            Lifespan: 969 years (Longest)<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="seth-lamech-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 9: Lamech -->
+    <div id="seth-lamech-node" class="node hidden" onclick="revealNext('noah-node')">
+        Lamech
+        <div class="details">
+            <strong>Gen 9</strong><br>
+            Lifespan: 777 years<br>
+            <em>Click to reveal child</em>
+        </div>
+    </div>
+
+    <div id="noah-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 10: Noah -->
+    <div id="noah-node" class="node hidden" onclick="revealNext('noah-children')">
+        Noah 🚢
+        <div class="details">
+            <strong>Gen 10</strong><br>
+            Lifespan: 950 years<br>
+            <em>Click to reveal sons</em>
+        </div>
+    </div>
+
+    <div id="noah-children-connector" class="connector hidden">↓</div>
+
+    <!-- Generation 11: Noah's Sons -->
+    <div id="noah-children" class="branch hidden">
+        <div class="column">
+            <div class="node">Shem</div>
+        </div>
+        <div class="column">
+            <div class="node">Ham</div>
+        </div>
+        <div class="column">
+            <div class="node">Japheth</div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    </div> <!-- ADDED: Closed tree-container -->
+
+    <script src="script.js"></script>
+</body>
+</html>
