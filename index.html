@@ -13,13 +13,8 @@
 
         <!-- Generation 1: Adam & Eve -->
         <div id="root" class="node" onclick="revealNext('gen2-children')">
-            Adam & Eve
-            <div class="details">
-                <strong>Gen 1 (First Ancestors)</strong><br>
-                • Adam: lived 930 yrs<br>
-                • Eve: Mother of all living<br>
-                • Placed in Eden
-            </div>
+            <span class="node-title">Adam & Eve</span>
+            <button class="info-badge" type="button" aria-label="More about Adam and Eve" onclick="event.stopPropagation(); toggleAdamInfo()">i</button>
         </div>
 
         <!-- Gen 1 to Gen 2 Vertical Connector Line -->
@@ -273,7 +268,26 @@
                         <div class="node">Shem</div>
                     </div>
                     <div class="column">
-                        <div class="node">Ham</div>
+                        <div id="ham-node" class="node" onclick="revealNext('ham-children')">
+                            Ham
+                        </div>
+
+                        <div id="ham-connector" class="connector hidden">↓</div>
+
+                        <div id="ham-children" class="branch hidden">
+                            <div class="column">
+                                <div class="node">Cush</div>
+                            </div>
+                            <div class="column">
+                                <div class="node">Mizraim</div>
+                            </div>
+                            <div class="column">
+                                <div class="node">Put</div>
+                            </div>
+                            <div class="column">
+                                <div class="node">Canaan</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="column">
                         <div class="node">Japheth</div>
@@ -283,6 +297,21 @@
 
         </div> <!-- End gen2-children -->
     </div> <!-- End tree-container -->
+
+    <aside id="detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Adam & Eve</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleAdamInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) The Start 🌅</strong><br>
+            <strong>Creation &amp; Purpose:</strong> Formed by God in the Garden of Eden—Adam from the dust of the ground and Eve from Adam’s rib—to tend the garden and be companions as the origin of humanity.<br><br>
+            <strong>2) Life Lived 🍃</strong><br>
+            <strong>Exile &amp; Family:</strong> After eating the forbidden fruit, they were expelled from Eden into a life of hard toil and childbearing, raising Cain, Abel, Seth, and many other sons and daughters.<br><br>
+            <strong>3) Their End ⏳</strong><br>
+            <strong>930-Year Legacy:</strong> Adam lived for 930 years before passing away, leaving behind the foundational root generation for the entire biblical lineage tree.
+        </div>
+    </aside>
 
     <script src="script.js"></script>
 </body>

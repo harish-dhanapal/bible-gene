@@ -38,6 +38,73 @@ body {
     position: relative;
     user-select: none;
     box-sizing: border-box;
+    min-width: 120px;
+}
+
+.node-title {
+    display: inline-block;
+    padding-right: 18px;
+}
+
+.info-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: #334e68;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.detail-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: min(340px, 82vw);
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 14px;
+    background-color: #102a43;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.25);
+    z-index: 50;
+    text-align: left;
+}
+
+.detail-panel-header {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.detail-panel-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.detail-panel-body {
+    line-height: 1.45;
 }
 
 /* Tooltip Hover Box */
@@ -269,6 +336,6 @@ body.seth-theme {
 /* Custom background theme for Abel */
 body.abel-theme {
     /* Replace 'abel-bg.png' with your image name inside the images folder */
-    background: url('images/abel.png') no-repeat center center fixed;
+    background: url('images/abel 2.png') no-repeat center center fixed;
     background-size: cover;
 }

@@ -69,6 +69,9 @@ const lineageMap = {
     'noah-node': [
         'noah-connector', 'noah-children', 'noah-children-connector'
     ],
+    'ham-node': [
+        'ham-connector', 'ham-children'
+    ],
 
     // Root Generation 2
     'gen2-children': [
@@ -103,7 +106,8 @@ const connectorMap = {
     'methuselah-node': 'methuselah-connector',
     'seth-lamech-node': 'seth-lamech-connector',
     'noah-node': 'noah-connector',
-    'noah-children': 'noah-children-connector'
+    'noah-children': 'noah-children-connector',
+    'ham-node': 'ham-connector'
 };
 
 // Parent map for auto-scroll on collapse
@@ -125,7 +129,8 @@ const parentMap = {
     'methuselah-node': 'seth-enoch-node',
     'seth-lamech-node': 'methuselah-node',
     'noah-node': 'seth-lamech-node',
-    'noah-children': 'noah-node'
+    'noah-children': 'noah-node',
+    'ham-node': 'noah-children'
 };
 
 // Function to toggle Abel's specific background theme
@@ -226,6 +231,32 @@ function revealNext(targetId) {
         }
     }
 }
+
+function toggleAdamInfo() {
+    const panel = document.getElementById('detail-panel');
+    if (!panel) return;
+
+    panel.classList.toggle('hidden');
+}
+
+function closeAdamInfo() {
+    const panel = document.getElementById('detail-panel');
+    if (!panel) return;
+
+    panel.classList.add('hidden');
+}
+
+// Close the Adam & Eve panel when the user clicks anywhere outside it
+window.addEventListener('click', (event) => {
+    const panel = document.getElementById('detail-panel');
+    const infoBadge = document.querySelector('.info-badge');
+
+    if (!panel || panel.classList.contains('hidden')) return;
+    if (panel.contains(event.target)) return;
+    if (infoBadge && infoBadge.contains(event.target)) return;
+
+    closeAdamInfo();
+});
 
 // Smooth scroll centering helper
 function scrollToNode(nodeId) {
