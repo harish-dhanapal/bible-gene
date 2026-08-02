@@ -129,11 +129,26 @@ const parentMap = {
 };
 
 // Function to toggle Abel's specific background theme
+// Function to toggle Abel's theme AND collapse open branches
 function toggleAbelTheme() {
-    // Clear Cain and Seth themes if active
+    // 1. Collapse Cain's branch if expanded
+    if (typeof collapseDescendants === 'function') {
+        collapseDescendants('cain-enoch-node');
+        hideElement('cain-enoch-node');
+        hideElement('cain-enoch-connector');
+    }
+
+    // 2. Collapse Seth's branch if expanded
+    if (typeof collapseDescendants === 'function') {
+        collapseDescendants('enosh-node');
+        hideElement('enosh-node');
+        hideElement('enosh-connector');
+    }
+
+    // 3. Clear Cain and Seth themes if active
     document.body.classList.remove('cain-theme', 'seth-theme');
     
-    // Toggle Abel theme on/off
+    // 4. Toggle Abel theme on/off
     document.body.classList.toggle('abel-theme');
 }
 
