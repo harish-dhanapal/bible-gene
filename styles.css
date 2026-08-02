@@ -1,11 +1,22 @@
 /* Page setup */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Page setup with Garden of Eden background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    /* Soft dark overlay + your background image for high card contrast */
+    background: 
+        url('images/green garden.png') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 50px;
+    margin: 0;
 }
 
 .tree-container {
@@ -26,6 +37,7 @@ body {
     cursor: pointer;
     position: relative;
     user-select: none;
+    box-sizing: border-box;
 }
 
 /* Tooltip Hover Box */
@@ -50,24 +62,17 @@ body {
     display: block;
 }
 
-/* Simple vertical connector line/arrow */
+/* Clean 2px Vertical Connector Line (Replaces clumsy text arrows) */
 .connector {
-    font-size: 1.2rem;
-    color: #334e68;
-    margin: 2px 0;
-    line-height: 1;
+    width: 2px;
+    height: 20px;
+    background-color: #334e68;
+    margin: 0 auto;
 }
 
 /* Helper to hide elements */
 .hidden {
     display: none !important;
-}
-
-/* Vertical column wrapper for lineage branches */
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* ==========================================
@@ -130,40 +135,42 @@ body {
     width: 50%;
 }
 
-/* Single child exception (if a branch has only 1 column) */
+/* Single child exception */
 .column:only-child::after {
     display: none;
 }
-
 
 /* ==========================================
    MOBILE & SMALL SCREEN RESPONSIVENESS
    ========================================== */
 @media (max-width: 600px) {
-    /* 1. Ensure the root container allows smooth bi-directional horizontal scrolling */
     html, body {
-        padding-top: 20px;
-        padding-bottom: 30px;
-        overflow-x: auto !important;
+        margin: 0;
+        padding: 0;
         width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
 
-    h1 {
-        font-size: 1.4rem;
-        text-align: center;
-        margin-bottom: 15px;
+    body {
+        display: block;
     }
 
-    /* 2. Add side padding to .branch so left-most/right-most nodes don't hit screen edges */
+    .tree-container {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 8px 30px;
+        box-sizing: border-box;
+    }
+
     .branch {
         padding-top: 15px;
         padding-left: 20px !important;
         padding-right: 20px !important;
-        min-width: max-content; /* Prevents flexbox from squeezing wide sibling groups */
-    }
-
-    .column {
-        padding: 0 4px;
+        min-width: max-content;
     }
 
     .node {
@@ -175,7 +182,11 @@ body {
         min-width: 55px;
     }
 
-    /* Adjust connector heights for smaller mobile vertical gap */
+    /* 💡 Adjust connectors to match 15px mobile branch padding */
+    .connector {
+        height: 15px;
+    }
+
     .column::before {
         top: -15px;
         height: 15px;
@@ -191,20 +202,73 @@ body {
         padding: 6px;
     }
 }
+
 /* ==========================================
-   SMOOTH SCROLLING 
+   COLOR & READABILITY IMPROVEMENTS
    ========================================== */
 
-html {
-    scroll-behavior: smooth;
+/* 1. Make the main heading pop over the dark leaves */
+h1 {
+    color: #ffffff;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
 }
 
-
-
-/* Ensure the body allows smooth horizontal and vertical alignment */
-html, body {
-    scroll-behavior: smooth;
-    overflow-x: auto;
-    width: 100%;
+/* 2. Enhance node card borders & text for crisp contrast */
+.node {
+    background-color: #ffffff;
+    color: #0f172a; /* Deep dark text */
+    border: 2px solid #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* 3. Brighten vertical standalone connectors */
+.connector {
+    width: 2px;
+    height: 20px;
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+}
+
+/* 4. Brighten branch connector lines (vertical ticks + horizontal bars) */
+.column::before {
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+.column::after {
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* 5. Tooltip box adjustment for dark theme compatibility */
+.node .details {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom background theme for Cain's branch */
+body.cain-theme {
+    /* Replace 'cain-bg.png' with your chosen image inside the images folder */
+    background: url('images/cain.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Seth's branch */
+body.seth-theme {
+    /* Replace 'seth-bg.png' with your chosen image inside the images folder */
+    background: url('images/seth.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Abel */
+body.abel-theme {
+    /* Replace 'abel-bg.png' with your image name inside the images folder */
+    background: url('images/abel.png') no-repeat center center fixed;
+    background-size: cover;
+}

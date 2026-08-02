@@ -128,6 +128,23 @@ const parentMap = {
     'noah-children': 'noah-node'
 };
 
+// Function to toggle Abel's specific background theme
+function toggleAbelTheme() {
+    // Clear Cain and Seth themes if active
+    document.body.classList.remove('cain-theme', 'seth-theme');
+    
+    // Toggle Abel theme on/off
+    document.body.classList.toggle('abel-theme');
+}
+
+// Ensure click on Abel node toggles his theme
+document.addEventListener('DOMContentLoaded', () => {
+    const abelNode = document.getElementById('abel-node'); // Make sure Abel's node has id="abel-node" in index.html
+    if (abelNode) {
+        abelNode.addEventListener('click', toggleAbelTheme);
+    }
+});
+
 function revealNext(targetId) {
     const targetElement = document.getElementById(targetId);
     if (!targetElement) return;
@@ -137,18 +154,27 @@ function revealNext(targetId) {
     if (isHidden) {
         // --- EXPAND BRANCH ---
 
-        // Auto-collapse Cain's tree if opening Seth's branch
+        // Reset all custom themes back to main Garden when opening root/gen2
+        if (targetId === 'gen2-children') {
+            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme');
+        }
+
+        // Auto-collapse Cain's tree & switch to Seth theme if opening Seth's branch
         if (targetId === 'enosh-node') {
             collapseDescendants('cain-enoch-node');
             hideElement('cain-enoch-node');
             hideElement('cain-enoch-connector');
+            document.body.classList.remove('cain-theme', 'abel-theme');
+            document.body.classList.add('seth-theme');
         }
 
-        // Auto-collapse Seth's tree if opening Cain's branch
+        // Auto-collapse Seth's tree & switch to Cain theme if opening Cain's branch
         if (targetId === 'cain-enoch-node') {
             collapseDescendants('enosh-node');
             hideElement('enosh-node');
             hideElement('enosh-connector');
+            document.body.classList.remove('seth-theme', 'abel-theme');
+            document.body.classList.add('cain-theme');
         }
 
         // Show target element and its immediate connector
@@ -167,6 +193,17 @@ function revealNext(targetId) {
             hideElement(connectorMap[targetId]);
         }
         collapseDescendants(targetId);
+
+        // Reset background to main garden if collapsing Cain, Seth, or Gen 2
+        if (targetId === 'cain-enoch-node') {
+            document.body.classList.remove('cain-theme');
+        }
+        if (targetId === 'enosh-node') {
+            document.body.classList.remove('seth-theme');
+        }
+        if (targetId === 'gen2-children') {
+            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme');
+        }
 
         // Scroll back up to the parent node
         if (parentMap[targetId]) {
