@@ -14,7 +14,7 @@
         <!-- Generation 1: Adam & Eve -->
         <div id="root" class="node" onclick="revealNext('gen2-children')">
             <span class="node-title">Adam & Eve</span>
-            <button class="info-badge" type="button" aria-label="More about Adam and Eve" onclick="event.stopPropagation(); toggleAdamInfo()">i</button>
+            <button class="info-badge adam-info-badge" type="button" aria-label="More about Adam and Eve" onclick="event.stopPropagation(); toggleAdamInfo()">🍃</button>
         </div>
 
         <!-- Gen 1 to Gen 2 Vertical Connector Line -->
@@ -26,7 +26,8 @@
             <!-- Cain Column -->
             <div class="column">
                 <div class="node cain" onclick="revealNext('cain-enoch-node')">
-                    Cain
+                    <span class="node-title">Cain</span>
+                    <button class="info-badge cain-info-badge" type="button" aria-label="More about Cain" onclick="event.stopPropagation(); toggleCainInfo()">🌾</button>
                     <div class="details">
                         <strong>Firstborn Son</strong><br>
                         Farmer.<br>
@@ -142,21 +143,23 @@
             </div>
 
             <!-- Abel Column -->
-<div class="column">
-    <div class="node abel" onclick="toggleAbelTheme()">
-        Abel
-        <div class="details">
-            <strong>Second Son</strong><br>
-            Shepherd.<br>
-            Killed by Cain.
-        </div>
-    </div>
-</div>
+            <div class="column">
+                <div id="abel-node" class="node abel" onclick="toggleAbelTheme()">
+                    <span class="node-title">Abel</span>
+                    <button class="info-badge abel-info-badge" type="button" aria-label="More about Abel" onclick="event.stopPropagation(); toggleAbelInfo()">🕊️</button>
+                    <div class="details">
+                        <strong>Second Son</strong><br>
+                        Shepherd.<br>
+                        Killed by Cain.
+                    </div>
+                </div>
+            </div>
 
             <!-- Seth Column -->
             <div class="column">
                 <div class="node seth" onclick="revealNext('enosh-node')">
-                    Seth ⭐
+                    <span class="node-title">Seth</span>
+                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleSethInfo()">✝</button>
                     <div class="details">
                         <strong>Main Patriarch Line</strong><br>
                         Lifespan: 912 years<br>
@@ -265,32 +268,473 @@
                 <!-- Generation 11: Noah's Sons -->
                 <div id="noah-children" class="branch hidden">
                     <div class="column">
-                        <div class="node">Shem</div>
+                        <div id="shem-node" class="node" onclick="revealNext('shem-children')">
+                            <span class="node-title">Shem</span>
+                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleShemInfo()">✝</button>
+                            <div class="details">
+                                <strong>Son of Noah</strong><br>
+                                Ancestor of Semitic peoples.<br>
+                                <em>Click to reveal 5 sons</em>
+                            </div>
+                        </div>
+
+                        <div id="shem-connector" class="connector hidden"></div>
+
+                        <div id="shem-children" class="branch hidden">
+                            <div class="column">
+                                <div class="node">
+                                    Elam
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        Son of Shem.<br>
+                                        Line of the Elamites.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Asshur
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        Son of Shem.<br>
+                                        Father of the Assyrians.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    <span class="node-title">Arphaxad</span>
+                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleArphaxadInfo()">✝</button>
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        Son of Shem.<br>
+                                        Line leading to Abraham.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Lud
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        Son of Shem.<br>
+                                        Line of the Lydians.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Aram
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        Son of Shem.<br>
+                                        Father of the Arameans.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="column">
                         <div id="ham-node" class="node" onclick="revealNext('ham-children')">
                             Ham
+                            <div class="details">
+                                <strong>Son of Noah</strong><br>
+                                Ancestor of Southern nations.<br>
+                                <em>Click to reveal sons</em>
+                            </div>
                         </div>
 
-                        <div id="ham-connector" class="connector hidden">↓</div>
+                        <div id="ham-connector" class="connector hidden"></div>
 
                         <div id="ham-children" class="branch hidden">
+                            <!-- Cush Branch -->
                             <div class="column">
-                                <div class="node">Cush</div>
+                                <div id="cush-node" class="node" onclick="revealNext('cush-children')">
+                                    Cush
+                                    <div class="details">
+                                        <strong>Son of Ham</strong><br>
+                                        Ethiopia &amp; Sudan.<br>
+                                        <em>Click to reveal sons &amp; Nimrod</em>
+                                    </div>
+                                </div>
+
+                                <div id="cush-connector" class="connector hidden"></div>
+
+                                <div id="cush-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Seba
+                                            <div class="details">
+                                                <strong>Son of Cush</strong><br>
+                                                Sabaean/African nation.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Havilah
+                                            <div class="details">
+                                                <strong>Son of Cush</strong><br>
+                                                Gold region of Arabia.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Sabtah
+                                            <div class="details">
+                                                <strong>Son of Cush</strong><br>
+                                                Southern Arabian tribe.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div id="raamah-node" class="node" onclick="revealNext('raamah-children')">
+                                            Raamah
+                                            <div class="details">
+                                                <strong>Son of Cush</strong><br>
+                                                Arabian merchant tribe.<br>
+                                                <em>Click to reveal 2 sons</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="raamah-connector" class="connector hidden"></div>
+
+                                        <div id="raamah-children" class="branch hidden">
+                                            <div class="column">
+                                                <div class="node">
+                                                    Sheba
+                                                    <div class="details">
+                                                        <strong>Son of Raamah</strong><br>
+                                                        Merchant nation of Sheba.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Dedan
+                                                    <div class="details">
+                                                        <strong>Son of Raamah</strong><br>
+                                                        Caravan traders of Arabia.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Sabteca
+                                            <div class="details">
+                                                <strong>Son of Cush</strong><br>
+                                                Ancient Eastern Cushite tribe.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Nimrod 👑
+                                            <div class="details">
+                                                <strong>Mighty Son of Cush</strong><br>
+                                                First empire builder &amp; hunter.<br>
+                                                Founded Babel, Erech &amp; Nineveh.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Mizraim Branch -->
                             <div class="column">
-                                <div class="node">Mizraim</div>
+                                <div id="mizraim-node" class="node" onclick="revealNext('mizraim-children')">
+                                    Mizraim
+                                    <div class="details">
+                                        <strong>Son of Ham</strong><br>
+                                        Land of Egypt.<br>
+                                        <em>Click to reveal 7 clan-nations</em>
+                                    </div>
+                                </div>
+
+                                <div id="mizraim-connector" class="connector hidden"></div>
+
+                                <div id="mizraim-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Ludim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                North African archers.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Anamim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Egyptian delta tribe.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Lehabim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Libyan desert allies.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Naphtuhim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Lower Egypt nation.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Pathrusim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Upper Egypt (Pathros).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Casluhim 🛡️
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Ancestors of the Philistines.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Caphtorim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Mizraim)</strong><br>
+                                                Crete &amp; Mediterranean islands.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Put Branch (Leaf) -->
                             <div class="column">
-                                <div class="node">Put</div>
+                                <div class="node">
+                                    Put
+                                    <div class="details">
+                                        <strong>Son of Ham</strong><br>
+                                        Line of Libya &amp; North Africa.
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Canaan Branch -->
                             <div class="column">
-                                <div class="node">Canaan</div>
+                                <div id="canaan-node" class="node" onclick="revealNext('canaan-children')">
+                                    Canaan
+                                    <div class="details">
+                                        <strong>Son of Ham</strong><br>
+                                        Father of Canaanite nations.<br>
+                                        <em>Click to reveal 11 nations</em>
+                                    </div>
+                                </div>
+
+                                <div id="canaan-connector" class="connector hidden"></div>
+
+                                <div id="canaan-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Sidon
+                                            <div class="details">
+                                                <strong>Firstborn of Canaan</strong><br>
+                                                Phoenician port city.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Heth
+                                            <div class="details">
+                                                <strong>Second Son of Canaan</strong><br>
+                                                Father of the Hittites.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Jebusites
+                                            <div class="details">
+                                                <strong>Canaanite Tribe</strong><br>
+                                                Inhabitants of ancient Jerusalem.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Amorites
+                                            <div class="details">
+                                                <strong>Canaanite Nation</strong><br>
+                                                Powerful highland kingdom.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Girgashites
+                                            <div class="details">
+                                                <strong>Canaanite Tribe</strong><br>
+                                                Ancient nation of Canaan.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Hivites
+                                            <div class="details">
+                                                <strong>Canaanite Nation</strong><br>
+                                                Foothill &amp; Syrian dwellers.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Arkites
+                                            <div class="details">
+                                                <strong>Canaanite Clan</strong><br>
+                                                Northern coastal city.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Sinites
+                                            <div class="details">
+                                                <strong>Canaanite Clan</strong><br>
+                                                Lebanon mountain region.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Arvadites
+                                            <div class="details">
+                                                <strong>Canaanite Clan</strong><br>
+                                                Island city-state mariners.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Zemarites
+                                            <div class="details">
+                                                <strong>Canaanite Clan</strong><br>
+                                                Coastal fortress city.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Hamathites
+                                            <div class="details">
+                                                <strong>Canaanite Nation</strong><br>
+                                                Northern Syrian kingdom.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="column">
-                        <div class="node">Japheth</div>
+                        <div id="japheth-node" class="node" onclick="revealNext('japheth-children')">
+                            Japheth
+                            <div class="details">
+                                <strong>Son of Noah</strong><br>
+                                Ancestor of Maritime &amp; Eurasian nations.<br>
+                                <em>Click to reveal 7 sons</em>
+                            </div>
+                        </div>
+
+                        <div id="japheth-connector" class="connector hidden"></div>
+
+                        <div id="japheth-children" class="branch hidden">
+                            <div class="column">
+                                <div class="node">
+                                    Gomer
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Cimmerians &amp; Northern nations.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Magog
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Eurasian Steppe nations.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Madai
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Line of the Medes.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Javan
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Line of Greeks &amp; lonians.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Tubal
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Anatolian &amp; Black Sea nations.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Meshech
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Northern highland peoples.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="node">
+                                    Tiras
+                                    <div class="details">
+                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        Son of Japheth.<br>
+                                        Thracian &amp; Aegean nations.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,6 +754,75 @@
             <strong>Exile &amp; Family:</strong> After eating the forbidden fruit, they were expelled from Eden into a life of hard toil and childbearing, raising Cain, Abel, Seth, and many other sons and daughters.<br><br>
             <strong>3) Their End ⏳</strong><br>
             <strong>930-Year Legacy:</strong> Adam lived for 930 years before passing away, leaving behind the foundational root generation for the entire biblical lineage tree.
+        </div>
+    </aside>
+
+    <aside id="cain-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Cain 🌾</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleCainInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Tiller of the Ground 🌾</strong><br>
+            <strong>Firstborn Son:</strong> The first child born to Adam &amp; Eve, Cain worked the soil as a farmer and brought an offering of his crops to the LORD.<br><br>
+            <strong>2) The Rejected Offering 🌾❌</strong><br>
+            <strong>Heart &amp; Faith:</strong> Unlike Abel who offered the finest firstborn of his flock with sincere faith, Cain's offering lacked genuine reverence, leading to its rejection (Hebrews 11:4).<br><br>
+            <strong>3) The First Murder ⚔️</strong><br>
+            <strong>Jealousy &amp; Tragedy:</strong> Consumed by envy despite God’s warning to master sin, Cain lured his younger brother Abel into the field and killed him.<br><br>
+            <strong>4) The Mark of Exile &amp; City Builder 🏰</strong><br>
+            <strong>Land of Nod:</strong> Exiled to Nod, God placed a protective mark upon Cain (Genesis 4:15). There, his line pioneered early music, metallurgy, and built the first named city ("Enoch").
+        </div>
+    </aside>
+
+    <aside id="abel-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Abel 🕊️</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleAbelInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) The Righteous Shepherd 🐑</strong><br>
+            <strong>Identity &amp; Faith:</strong> The second son of Adam &amp; Eve, Abel was a faithful shepherd who offered the finest firstborn of his flock with pure heart, gaining God’s favor.<br><br>
+            <strong>2) The First Martyr 🕊️</strong><br>
+            <strong>Legacy of Peace:</strong> Driven by envy, Cain rose up against Abel in the field. Though his earthly life was cut short, Abel’s faith and innocent spirit remain an eternal testament of righteousness.
+        </div>
+    </aside>
+
+    <aside id="seth-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Seth ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleSethInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Appointed Replacement 🌅</strong><br>
+            Born when Adam was 130 years old; Eve named him Seth meaning "Appointed", as God granted him in place of Abel.<br><br>
+            <strong>2) Dawn of True Worship 🕊️</strong><br>
+            During the days of Seth and his son Enosh, humanity first began to collectively call upon the name of the LORD (Genesis 4:26).
+        </div>
+    </aside>
+
+    <aside id="shem-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Shem ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleShemInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Post-Flood Patriarch ⏳</strong><br>
+            Lived for 600 years, outliving 9 generations of his descendants and witnessing the rebuilding of the post-flood world.<br><br>
+            <strong>2) Father of Nations 🌍</strong><br>
+            Blessed directly by Noah; his name means "Renown", becoming the root of the Semitic peoples and Hebrew language.
+        </div>
+    </aside>
+
+    <aside id="arphaxad-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Arphaxad ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleArphaxadInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Born 2 Years After the Flood 🕊️</strong><br>
+            The very first patriarch born in the post-deluge era (Genesis 11:10) when Shem was 100 years old.<br><br>
+            <strong>2) Chaldean Anchor 🏛️</strong><br>
+            Settled in the fertile region of Ur of the Chaldees, establishing the foundation for Abraham's birthplace.
         </div>
     </aside>
 
