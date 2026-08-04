@@ -32,43 +32,80 @@ const lineageMap = {
         'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
-        'noah-children', 'noah-children-connector'
+        'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'kenan-node': [
         'kenan-connector', 'mahalalel-node', 'mahalalel-connector',
         'jared-node', 'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
-        'noah-children', 'noah-children-connector'
+        'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'mahalalel-node': [
         'mahalalel-connector', 'jared-node', 'jared-connector',
         'seth-enoch-node', 'seth-enoch-connector', 'methuselah-node',
         'methuselah-connector', 'seth-lamech-node', 'seth-lamech-connector',
-        'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector'
+        'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'jared-node': [
         'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
-        'noah-children', 'noah-children-connector'
+        'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'seth-enoch-node': [
         'seth-enoch-connector', 'methuselah-node', 'methuselah-connector',
         'seth-lamech-node', 'seth-lamech-connector', 'noah-node',
-        'noah-connector', 'noah-children', 'noah-children-connector'
+        'noah-connector', 'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'methuselah-node': [
         'methuselah-connector', 'seth-lamech-node', 'seth-lamech-connector',
-        'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector'
+        'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'seth-lamech-node': [
         'seth-lamech-connector', 'noah-node', 'noah-connector',
-        'noah-children', 'noah-children-connector'
+        'noah-children', 'noah-children-connector',
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'noah-node': [
         'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children', 'japheth-connector', 'japheth-children'
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
+    ],
+    'noah-children': [
+        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
+        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
+        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
+        'japheth-connector', 'japheth-children'
     ],
     'shem-node': [
         'shem-connector', 'shem-children'
