@@ -414,18 +414,18 @@ body {
     }
 
     .tree-container {
-        width: 100vw;
+        width: max-content;
+        min-width: 100vw;
         height: 100vh;
         overflow-x: auto;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        margin: 0;
+        margin: 0 auto;
         padding: 20px 60px 60px 60px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: safe center;
-        justify-content: flex-start;
+        align-items: center;
     }
 
     .branch {
@@ -434,7 +434,7 @@ body {
         padding-right: 20px !important;
         min-width: max-content;
         display: flex;
-        justify-content: safe center;
+        justify-content: center;
         align-items: flex-start;
     }
 
