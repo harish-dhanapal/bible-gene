@@ -420,7 +420,7 @@ body {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         margin: 0;
-        padding: 20px 140px 80px 140px;
+        padding: 20px 350px 80px 350px;
         box-sizing: border-box;
         display: inline-flex;
         flex-direction: column;
@@ -433,9 +433,6 @@ body {
         padding-left: 20px !important;
         padding-right: 20px !important;
         min-width: max-content;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
     }
 
     .node {
