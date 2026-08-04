@@ -388,58 +388,39 @@ body {
    MOBILE & SMALL SCREEN RESPONSIVENESS
    ========================================== */
 @media (max-width: 600px) {
-    html {
+    html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-x: auto;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Fixed viewport background layer for mobile so background remains frozen when scrolling down */
-    body {
-        display: flex;
-        justify-content: safe center;
-        min-width: max-content;
-        min-height: 100vh;
-        padding: 20px 0 40px;
-        box-sizing: border-box;
-        background-attachment: scroll !important;
-        position: relative;
-    }
-
-    body::before {
-        content: "";
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: inherit;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -10;
-        pointer-events: none;
+    }
+
+    body {
+        display: block;
     }
 
     .detail-panel {
         position: fixed !important;
-        top: 12px !important;
-        right: 12px !important;
-        width: calc(100vw - 24px) !important;
+        top: 14px !important;
+        right: 14px !important;
+        width: calc(100vw - 28px) !important;
         max-width: 320px !important;
         max-height: 75vh !important;
-        z-index: 1000 !important;
+        z-index: 2000 !important;
     }
 
     .tree-container {
-        width: max-content;
-        min-width: 100vw;
-        margin: 0 auto;
-        padding: 20px 40px 40px;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0;
+        padding: 20px 40px 60px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
