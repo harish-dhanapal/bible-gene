@@ -309,6 +309,8 @@ function revealNext(targetId) {
 
             document.body.classList.remove('cain-theme', 'abel-theme');
             document.body.classList.add('seth-theme');
+            const treeContainer = document.querySelector('.tree-container');
+            if (treeContainer) treeContainer.classList.remove('cain-open');
         }
 
         // Auto-collapse Seth's tree & switch to Cain theme if opening Cain's branch
@@ -323,6 +325,13 @@ function revealNext(targetId) {
 
             document.body.classList.remove('seth-theme', 'abel-theme');
             document.body.classList.add('cain-theme');
+            const treeContainer = document.querySelector('.tree-container');
+            if (treeContainer) treeContainer.classList.add('cain-open');
+        }
+
+        if (targetId === 'lamech-children') {
+            const treeContainer = document.querySelector('.tree-container');
+            if (treeContainer) treeContainer.classList.add('cain-open');
         }
 
         // Auto-collapse Ham & Japheth if opening Shem's branch
@@ -443,14 +452,18 @@ function revealNext(targetId) {
         }
 
         // Reset background to main garden if collapsing Cain, Seth, or Gen 2
-        if (targetId === 'cain-enoch-node') {
+        if (targetId === 'cain-enoch-node' || targetId === 'lamech-children') {
             document.body.classList.remove('cain-theme');
+            const treeContainer = document.querySelector('.tree-container');
+            if (treeContainer) treeContainer.classList.remove('cain-open');
         }
         if (targetId === 'enosh-node') {
             document.body.classList.remove('seth-theme');
         }
         if (targetId === 'gen2-children') {
             document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme');
+            const treeContainer = document.querySelector('.tree-container');
+            if (treeContainer) treeContainer.classList.remove('cain-open');
         }
 
         // Scroll back up to the parent node

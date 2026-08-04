@@ -428,6 +428,10 @@ body {
         min-width: 100vw;
     }
 
+    .tree-container.cain-open {
+        padding-left: 200px !important;
+    }
+
     .branch {
         padding-top: 15px;
         padding-left: 20px !important;
