@@ -318,6 +318,21 @@ function revealNext(targetId) {
             if (japhethNode) japhethNode.classList.remove('is-cracked');
         }
 
+        // Auto-collapse Shem & Ham if opening Japheth's branch
+        if (targetId === 'japheth-children') {
+            collapseDescendants('shem-children');
+            hideElement('shem-children');
+            hideElement('shem-connector');
+            const shemNode = document.getElementById('shem-node');
+            if (shemNode) shemNode.classList.remove('is-cracked');
+
+            collapseDescendants('ham-children');
+            hideElement('ham-children');
+            hideElement('ham-connector');
+            const hamNode = document.getElementById('ham-node');
+            if (hamNode) hamNode.classList.remove('is-cracked');
+        }
+
         // Auto-collapse Mizraim & Canaan if opening Cush's branch
         if (targetId === 'cush-children') {
             collapseDescendants('mizraim-children');
@@ -414,13 +429,21 @@ function closeAllPanels() {
     panels.forEach(p => p.classList.add('hidden'));
 }
 
+function showPanel(panelId) {
+    closeAllPanels();
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+    panel.classList.remove('hidden');
+}
+
 function toggleAdamInfo() {
     const panel = document.getElementById('detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function closeAdamInfo() {
@@ -431,10 +454,11 @@ function closeAdamInfo() {
 function toggleCainInfo() {
     const panel = document.getElementById('cain-detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('cain-detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function closeCainInfo() {
@@ -445,10 +469,11 @@ function closeCainInfo() {
 function toggleAbelInfo() {
     const panel = document.getElementById('abel-detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('abel-detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function closeAbelInfo() {
@@ -459,28 +484,31 @@ function closeAbelInfo() {
 function toggleSethInfo() {
     const panel = document.getElementById('seth-detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('seth-detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function toggleShemInfo() {
     const panel = document.getElementById('shem-detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('shem-detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 function toggleArphaxadInfo() {
     const panel = document.getElementById('arphaxad-detail-panel');
     if (!panel) return;
-
-    const willShow = panel.classList.contains('hidden');
-    if (willShow) closeAllPanels();
-    panel.classList.toggle('hidden');
+    if (panel.classList.contains('hidden')) {
+        showPanel('arphaxad-detail-panel');
+    } else {
+        panel.classList.add('hidden');
+    }
 }
 
 // Close panels when the user clicks anywhere outside them
