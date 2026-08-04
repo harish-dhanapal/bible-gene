@@ -429,18 +429,27 @@ function closeAllPanels() {
     panels.forEach(p => p.classList.add('hidden'));
 }
 
-function showPanel(panelId) {
+function showPanel(panelId, event) {
     closeAllPanels();
     const panel = document.getElementById(panelId);
     if (!panel) return;
+
+    const badge = event ? (event.currentTarget || event.target) : null;
+    const parentNode = badge ? badge.closest('.node') : null;
+
+    if (parentNode) {
+        parentNode.appendChild(panel);
+        parentNode.style.zIndex = '600';
+    }
+
     panel.classList.remove('hidden');
 }
 
-function toggleAdamInfo() {
+function toggleAdamInfo(event) {
     const panel = document.getElementById('detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('detail-panel');
+        showPanel('detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
@@ -451,11 +460,11 @@ function closeAdamInfo() {
     if (panel) panel.classList.add('hidden');
 }
 
-function toggleCainInfo() {
+function toggleCainInfo(event) {
     const panel = document.getElementById('cain-detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('cain-detail-panel');
+        showPanel('cain-detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
@@ -466,11 +475,11 @@ function closeCainInfo() {
     if (panel) panel.classList.add('hidden');
 }
 
-function toggleAbelInfo() {
+function toggleAbelInfo(event) {
     const panel = document.getElementById('abel-detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('abel-detail-panel');
+        showPanel('abel-detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
@@ -481,31 +490,31 @@ function closeAbelInfo() {
     if (panel) panel.classList.add('hidden');
 }
 
-function toggleSethInfo() {
+function toggleSethInfo(event) {
     const panel = document.getElementById('seth-detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('seth-detail-panel');
+        showPanel('seth-detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
 }
 
-function toggleShemInfo() {
+function toggleShemInfo(event) {
     const panel = document.getElementById('shem-detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('shem-detail-panel');
+        showPanel('shem-detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
 }
 
-function toggleArphaxadInfo() {
+function toggleArphaxadInfo(event) {
     const panel = document.getElementById('arphaxad-detail-panel');
     if (!panel) return;
     if (panel.classList.contains('hidden')) {
-        showPanel('arphaxad-detail-panel');
+        showPanel('arphaxad-detail-panel', event);
     } else {
         panel.classList.add('hidden');
     }
