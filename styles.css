@@ -1,3 +1,7 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 /* Page setup */
 html, body {
     scroll-behavior: smooth;
@@ -5,9 +9,33 @@ html, body {
     width: 100%;
 }
 
+/* Main Title Styling - Medieval Illuminated Manuscript Font */
+h1, .tree-container h1 {
+    font-family: 'MedievalSharp', 'Cinzel', cursive, serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    margin-top: 5px !important;
+    margin-bottom: 25px !important;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+h1:hover, .tree-container h1:hover {
+    color: #fef08a !important;
+    transform: scale(1.03) !important;
+    text-shadow: 
+        0 4px 22px rgba(0, 0, 0, 0.95),
+        0 0 24px rgba(250, 204, 21, 0.95),
+        0 0 40px rgba(245, 158, 11, 0.8) !important;
+}
+
 /* Page setup with Garden of Eden background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cinzel', 'Georgia', serif;
     /* Soft dark overlay + your background image for high card contrast */
     background: 
         url('images/green%20garden.png') no-repeat center center fixed;
@@ -24,6 +52,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    box-sizing: content-box;
 }
 
 /* Base style for individual person boxes */
@@ -33,8 +64,10 @@ body {
     background-color: #ffffff;
     border: 2px solid #334e68;
     border-radius: 8px;
-    font-weight: bold;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 700;
     font-size: 1.1rem;
+    letter-spacing: 0.6px;
     cursor: pointer;
     position: relative;
     user-select: none;
@@ -45,6 +78,9 @@ body {
 .node-title {
     display: inline-block;
     padding-right: 22px;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 0.6px;
 }
 
 .info-badge {
@@ -78,18 +114,19 @@ body {
 
 /* Specialized Apple Information Badge for Adam & Eve */
 .adam-info-badge {
-    border: 1.5px solid #fbbf24 !important;
+    border: 1.5px solid #d97706 !important;
     background: linear-gradient(135deg, #78350f, #d97706) !important;
     color: #ffffff !important;
     font-size: 0.82rem !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 10px rgba(245, 158, 11, 0.65) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(217, 119, 6, 0.5) !important;
 }
 
-.adam-info-badge:hover {
+.adam-info-badge:hover, .adam-info-badge:active {
     transform: scale(1.22) !important;
-    background: #b45309 !important;
-    border-color: #fef08a !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(251, 191, 36, 0.9) !important;
+    background: #d97706 !important;
+    border-color: #fbbf24 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(245, 158, 11, 0.85) !important;
 }
 
 /* Specialized Dove Information Badge for Abel */
@@ -106,6 +143,68 @@ body {
     background: #0284c7 !important;
     border-color: #7dd3fc !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(56, 189, 248, 0.8) !important;
+}
+
+/* Specialized Footprint Information Badge for Enoch */
+.enoch-info-badge {
+    border: 1.5px solid #c084fc !important;
+    background: linear-gradient(135deg, #4c1d95, #6d28d9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(168, 85, 247, 0.6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+}
+
+.enoch-info-badge svg {
+    width: 17px !important;
+    height: 17px !important;
+    fill: #fbbf24 !important;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.enoch-info-badge:hover, .enoch-info-badge:active {
+    transform: scale(1.22) !important;
+    background: #7c3aed !important;
+    border-color: #f0abfc !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 16px rgba(192, 132, 252, 0.9) !important;
+}
+
+.enoch-info-badge:hover svg, .enoch-info-badge:active svg {
+    fill: #ffffff !important;
+}
+
+/* Specialized Noah's Ark Information Badge */
+.noah-info-badge {
+    border: 1.5px solid #60a5fa !important;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(59, 130, 246, 0.6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+}
+
+.noah-info-badge svg {
+    width: 17px !important;
+    height: 17px !important;
+    fill: #fbbf24 !important;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.noah-info-badge:hover, .noah-info-badge:active {
+    transform: scale(1.22) !important;
+    background: #2563eb !important;
+    border-color: #93c5fd !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 16px rgba(96, 165, 250, 0.9) !important;
+}
+
+.noah-info-badge:hover svg, .noah-info-badge:active svg {
+    fill: #ffffff !important;
 }
 
 /* Specialized Wheat Information Badge for Cain */
@@ -218,18 +317,26 @@ body {
     line-height: 1.45;
 }
 
-/* Dynamic Hover Layering to prevent tooltips from being obscured by sibling columns */
+/* Dynamic Hover Layering: Untrap stacking contexts so tooltips escape intermediate containers */
 .column {
     position: relative;
-    z-index: 1;
 }
 
-.column:hover {
-    z-index: 150 !important;
+.branch {
+    position: relative;
+}
+
+.column:hover, .branch:hover {
+    z-index: 500;
+}
+
+.node {
+    position: relative;
+    z-index: 10;
 }
 
 .node:hover {
-    z-index: 200 !important;
+    z-index: 10000 !important;
 }
 
 /* Tooltip Hover Box */
@@ -241,18 +348,32 @@ body {
     transform: translateX(-50%);
     width: 200px;
     padding: 10px;
-    background-color: #102a43;
+    background-color: #0f172a !important;
     color: #ffffff;
+    border: 1px solid #334155;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: normal;
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.35);
-    z-index: 300 !important;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.75);
+    z-index: 999999 !important;
     pointer-events: none;
+    opacity: 1 !important;
 }
 
 .node:hover .details {
     display: block;
+}
+
+/* Prevent extreme left and right edge child tooltips from overflowing screen edges */
+.column:first-child > .node .details {
+    left: 0 !important;
+    transform: translateX(0) !important;
+}
+
+.column:last-child > .node .details {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(0) !important;
 }
 
 /* Clean 2px Vertical Connector Line (Replaces clumsy text arrows) */
@@ -261,6 +382,9 @@ body {
     height: 20px;
     background-color: #334e68;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Helper to hide elements */
@@ -356,6 +480,8 @@ body {
     height: 20px;
     background-color: #334e68;
     transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* 2. Horizontal connection lines */
@@ -367,6 +493,8 @@ body {
     width: 100%;
     height: 2px;
     background-color: #334e68;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Trim the outer lines so the top bar stops exactly at the first and last child */
@@ -487,6 +615,10 @@ body {
 
 /* 1. Make the main heading pop over the dark leaves */
 h1 {
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     color: #ffffff;
     text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 12px rgba(0, 0, 0, 0.6);
     text-align: center;
@@ -620,5 +752,84 @@ body.seth-theme {
 /* Custom background theme for Abel */
 body.abel-theme {
     background: url('images/abel%202.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Enoch */
+body.enoch-theme {
+    background: url('images/enoch.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Methuselah */
+body.methuselah-theme {
+    background: url('images/methuselah.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Asymmetric right-shift for Joktan's 13-son branch:
+   Offsets the branch to the right so Almodad and Sheleph sit just 1-2 slots left of Joktan,
+   leaving 11 sons to flow cleanly to the right with zero left-screen cutoff. */
+#joktan-children {
+    margin-left: 630px;
+}
+
+#nahor-children {
+    margin-left: 550px;
+}
+
+#ishmael-children {
+    margin-left: 1200px;
+}
+
+#abraham-children {
+    margin-left: 250px;
+}
+
+@media (max-width: 1200px) {
+    #joktan-children {
+        margin-left: 350px;
+    }
+    #nahor-children {
+        margin-left: 300px;
+    }
+    #ishmael-children {
+        margin-left: 750px;
+    }
+    #abraham-children {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    #joktan-children {
+        margin-left: 150px;
+    }
+    #nahor-children {
+        margin-left: 120px;
+    }
+    #ishmael-children {
+        margin-left: 350px;
+    }
+    #abraham-children {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    #joktan-children {
+        margin-left: 0;
+    }
+    #nahor-children {
+        margin-left: 0;
+    }
+    #abraham-children {
+        margin-left: 0;
+    }
+}
+
+/* Custom background theme for Noah */
+body.noah-theme {
+    background: url('images/noah.png') no-repeat center center fixed;
     background-size: cover;
 }

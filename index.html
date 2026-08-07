@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogy: Adam to Noah</title>
+    <title>Bible Gene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="tree-container">
-        <h1>Adam to Noah</h1>
+        <h1>Bible Gene</h1>
 
         <!-- Generation 1: Adam & Eve -->
         <div id="root" class="node" onclick="revealNext('gen2-children')">
@@ -218,10 +222,11 @@
                 <div id="seth-enoch-connector" class="connector hidden"></div>
 
                 <!-- Generation 7: Enoch -->
-                <div id="seth-enoch-node" class="node hidden" onclick="revealNext('methuselah-node')">
-                    Enoch
+                <div id="seth-enoch-node" class="node seth hidden" onclick="revealNext('methuselah-node')">
+                    <span class="node-title">Enoch</span>
+                    <button class="info-badge enoch-info-badge" type="button" aria-label="More about Enoch" onclick="event.stopPropagation(); toggleEnochInfo()"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fbbf24"><ellipse cx="6.5" cy="15.5" rx="2.5" ry="4.2" transform="rotate(-10 6.5 15.5)"/><circle cx="4.8" cy="9.2" r="1.15"/><circle cx="6.8" cy="9.5" r="0.98"/><circle cx="8.6" cy="10.4" r="0.85"/><circle cx="9.9" cy="11.7" r="0.72"/><ellipse cx="17.2" cy="8.5" rx="2.5" ry="4.2" transform="rotate(10 17.2 8.5)"/><circle cx="14.8" cy="2.8" r="1.15"/><circle cx="16.8" cy="3.1" r="0.98"/><circle cx="18.6" cy="4.0" r="0.85"/><circle cx="19.9" cy="5.3" r="0.72"/></svg></button>
                     <div class="details">
-                        <strong>Gen 7</strong><br>
+                        <strong>Gen 7 (Line of Seth)</strong><br>
                         Walked with God (365 years)<br>
                         <em>Click to reveal child</em>
                     </div>
@@ -254,10 +259,11 @@
                 <div id="noah-connector" class="connector hidden"></div>
 
                 <!-- Generation 10: Noah -->
-                <div id="noah-node" class="node hidden" onclick="revealNext('noah-children')">
-                    Noah 🚢
+                <div id="noah-node" class="node seth hidden" onclick="revealNext('noah-children')">
+                    <span class="node-title">Noah</span>
+                    <button class="info-badge noah-info-badge" type="button" aria-label="More about Noah" onclick="event.stopPropagation(); toggleNoahInfo()"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fbbf24"><path d="M6 9.5L12 4l6 5.5H6z"/><path d="M7.5 9.5h9v3.5h-9V9.5z"/><path d="M2 13c1.5 5.5 6 7 10 7s8.5-1.5 10-7H2z"/><path d="M10 10.5h1.5v1.5H10v-1.5zm2.5 0H14v1.5h-1.5v-1.5z" fill="#0f172a"/></svg></button>
                     <div class="details">
-                        <strong>Gen 10</strong><br>
+                        <strong>Gen 10 (Line of Seth)</strong><br>
                         Lifespan: 950 years<br>
                         <em>Click to reveal sons</em>
                     </div>
@@ -302,13 +308,988 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="node">
+                                <div id="arphaxad-node" class="node" onclick="revealNext('shelah-node')">
                                     <span class="node-title">Arphaxad</span>
                                     <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleArphaxadInfo()">✝</button>
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        <strong>Gen 10 (Line of Shem)</strong><br>
                                         Son of Shem.<br>
-                                        Line leading to Abraham.
+                                        Line leading to Abraham &amp; Jesus.<br>
+                                        <em>Click to reveal son Shelah</em>
+                                    </div>
+                                </div>
+
+                                <div id="shelah-connector" class="connector hidden"></div>
+
+                                <div id="shelah-node" class="node hidden" onclick="revealNext('eber-node')">
+                                    <span class="node-title">Shelah</span>
+                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleShelahInfo()">✝</button>
+                                    <div class="details">
+                                        <strong>Gen 10 (Line of Arphaxad)</strong><br>
+                                        Son of Arphaxad.<br>
+                                        Messianic Lineage (Lifespan: 433 yrs).<br>
+                                        <em>Click to reveal son Eber</em>
+                                    </div>
+                                </div>
+
+                                <div id="eber-connector" class="connector hidden"></div>
+
+                                <div id="eber-node" class="node hidden" onclick="revealNext('eber-children')">
+                                    <span class="node-title">Eber</span>
+                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleEberInfo()">✝</button>
+                                    <div class="details">
+                                        <strong>Gen 10 (Line of Shelah)</strong><br>
+                                        Namesake root of the "Hebrews".<br>
+                                        Great-grandson of Shem (Lifespan: 464 yrs).<br>
+                                        <em>Click to reveal 2 sons</em>
+                                    </div>
+                                </div>
+
+                                <div id="eber-children-connector" class="connector hidden"></div>
+
+                                <div id="eber-children" class="branch hidden">
+                                    <div class="column">
+                                        <div id="peleg-node" class="node" onclick="revealNext('reu-node')">
+                                            <span class="node-title">Peleg</span>
+                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); togglePelegInfo()">✝</button>
+                                            <div class="details">
+                                                <strong>Gen 11 (Line of Eber)</strong><br>
+                                                Name means "Division" (Babel).<br>
+                                                Messianic Lineage (Lifespan: 239 yrs).<br>
+                                                <em>Click to reveal son Reu</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="reu-connector" class="connector hidden"></div>
+
+                                        <div id="reu-node" class="node hidden" onclick="revealNext('serug-node')">
+                                            <span class="node-title">Reu</span>
+                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleReuInfo()">✝</button>
+                                            <div class="details">
+                                                <strong>Gen 11 (Line of Peleg)</strong><br>
+                                                Son of Peleg.<br>
+                                                Friend/Companion (Lifespan: 239 yrs).<br>
+                                                <em>Click to reveal son Serug</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="serug-connector" class="connector hidden"></div>
+
+                                        <div id="serug-node" class="node hidden" onclick="revealNext('nahor-ancestor-node')">
+                                            <span class="node-title">Serug</span>
+                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleSerugInfo()">✝</button>
+                                            <div class="details">
+                                                <strong>Gen 11 (Line of Reu)</strong><br>
+                                                Great-grandfather of Abraham.<br>
+                                                Son of Reu (Lifespan: 230 yrs).<br>
+                                                <em>Click to reveal son Nahor</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="nahor-ancestor-connector" class="connector hidden"></div>
+
+                                        <div id="nahor-ancestor-node" class="node hidden" onclick="revealNext('terah-node')">
+                                            <span class="node-title">Nahor</span>
+                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleNahorAncestorInfo()">✝</button>
+                                            <div class="details">
+                                                <strong>Gen 11 (Line of Serug)</strong><br>
+                                                Grandfather of Abraham.<br>
+                                                Son of Serug (Lifespan: 148 yrs).<br>
+                                                <em>Click to reveal son Terah</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="terah-connector" class="connector hidden"></div>
+
+                                        <div id="terah-node" class="node hidden" onclick="revealNext('terah-children')">
+                                            <span class="node-title">Terah</span>
+                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleTerahInfo()">✝</button>
+                                            <div class="details">
+                                                <strong>Gen 11 (Father of Abraham)</strong><br>
+                                                Led family from Ur to Haran.<br>
+                                                Father of Abram, Nahor &amp; Haran (205 yrs).<br>
+                                                <em>Click to reveal 3 sons</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="terah-children-connector" class="connector hidden"></div>
+
+                                        <div id="terah-children" class="branch hidden">
+                                            <div class="column">
+                                                <div id="abraham-node" class="node" onclick="revealNext('abraham-children')">
+                                                    <span class="node-title">Abram (Abraham) 👑</span>
+                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleAbrahamInfo()">✝</button>
+                                                    <div class="details">
+                                                        <strong>Gen 11–25 (Father of Faith)</strong><br>
+                                                        Patriarch of the Covenant.<br>
+                                                        Father of 8 sons (Sarah, Hagar, Keturah).<br>
+                                                        <em>Click to reveal 8 sons</em>
+                                                    </div>
+                                                </div>
+
+                                                <div id="abraham-connector" class="connector hidden"></div>
+
+                                                <div id="abraham-children" class="branch hidden">
+                                                    <div class="column">
+                                                        <div id="isaac-node" class="node" onclick="revealNext('isaac-children')">
+                                                            <span class="node-title">Isaac 👑</span>
+                                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleIsaacInfo(event)">✝</button>
+                                                            <div class="details">
+                                                                <strong>Gen 21 (Son of Promise)</strong><br>
+                                                                Son of Abraham &amp; Sarah.<br>
+                                                                Covenant Heir.<br>
+                                                                Father of Esau &amp; Jacob.<br>
+                                                                <em>Click to reveal 2 sons</em>
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="isaac-connector" class="connector hidden"></div>
+
+                                                        <div id="isaac-children" class="branch hidden">
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    <span class="node-title">Esau (Edom)</span>
+                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleEsauInfo(event)">📜</button>
+                                                                    <div class="details">
+                                                                        <strong>Gen 25 &amp; 36 (Firstborn Twin)</strong><br>
+                                                                        Elder son of Isaac &amp; Rebekah.<br>
+                                                                        Father of the Edomites.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    <span class="node-title">Jacob (Israel) 👑</span>
+                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleJacobInfo(event)">✝</button>
+                                                                    <div class="details">
+                                                                        <strong>Gen 25–49 (Patriarch)</strong><br>
+                                                                        Son of Isaac &amp; Rebekah.<br>
+                                                                        Renamed Israel.<br>
+                                                                        Father of 12 Tribes &amp; Messianic Line.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div id="ishmael-node" class="node" onclick="revealNext('ishmael-children')">
+                                                            <span class="node-title">Ishmael</span>
+                                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleIshmaelInfo(event)">📜</button>
+                                                            <div class="details">
+                                                                <strong>Gen 16 &amp; 25 (Son of Hagar)</strong><br>
+                                                                Firstborn of Abraham.<br>
+                                                                Father of 12 Arabian princes.<br>
+                                                                Great desert nation.<br>
+                                                                <em>Click to reveal 12 princes</em>
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="ishmael-connector" class="connector hidden"></div>
+
+                                                        <div id="ishmael-children" class="branch hidden">
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Nebaioth
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:13 (Firstborn)</strong><br>
+                                                                        Firstborn prince of Ishmael.<br>
+                                                                        Ancestor of the Nabataeans.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Kedar
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:13 (Second Son)</strong><br>
+                                                                        Second prince of Ishmael.<br>
+                                                                        Desert archer tribe of Kedar.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Adbeel
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:13 (Third Son)</strong><br>
+                                                                        Third prince of Ishmael.<br>
+                                                                        North Arabian tribe.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Mibsam
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:13 (Fourth Son)</strong><br>
+                                                                        Fourth prince of Ishmael.<br>
+                                                                        Arabian clan.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Mishma
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:14 (Fifth Son)</strong><br>
+                                                                        Fifth prince of Ishmael.<br>
+                                                                        Arabian desert clan.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Dumah
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:14 (Sixth Son)</strong><br>
+                                                                        Sixth prince of Ishmael.<br>
+                                                                        Oasis of Dumah (Dumat al-Jandal).
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Massa
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:14 (Seventh Son)</strong><br>
+                                                                        Seventh prince of Ishmael.<br>
+                                                                        North Arabian tribe of Mas'u.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Hadad (Hadar)
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:15 (Eighth Son)</strong><br>
+                                                                        Eighth prince of Ishmael.<br>
+                                                                        Hadar in 1 Chron 1:30.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Tema
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:15 (Ninth Son)</strong><br>
+                                                                        Ninth prince of Ishmael.<br>
+                                                                        Oasis kingdom of Tayma (Job 6:19).
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Jetur
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:15 (Tenth Son)</strong><br>
+                                                                        Tenth prince of Ishmael.<br>
+                                                                        Ancestor of the Ituraeans.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Naphish
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:15 (Eleventh Son)</strong><br>
+                                                                        Eleventh prince of Ishmael.<br>
+                                                                        Transjordan Ishmaelite clan.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Kedemah
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:15 (Twelfth Son)</strong><br>
+                                                                        Twelfth prince of Ishmael.<br>
+                                                                        Eastern Arabian tribe.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Zimran
+                                                            <div class="details">
+                                                                <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                Firstborn of Keturah.<br>
+                                                                Red Sea / Arabian tribe.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div id="jokshan-node" class="node" onclick="revealNext('jokshan-children')">
+                                                            <span class="node-title">Jokshan</span>
+                                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleJokshanInfo(event)">📜</button>
+                                                            <div class="details">
+                                                                <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                Second son of Keturah.<br>
+                                                                Father of Sheba &amp; Dedan.<br>
+                                                                <em>Click to reveal 2 sons</em>
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="jokshan-connector" class="connector hidden"></div>
+
+                                                        <div id="jokshan-children" class="branch hidden">
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Sheba
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:3</strong><br>
+                                                                        Son of Jokshan.<br>
+                                                                        Arabian trading nation of Sheba.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div id="dedan-node" class="node" onclick="revealNext('dedan-children')">
+                                                                    <span class="node-title">Dedan</span>
+                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleDedanInfo(event)">📜</button>
+                                                                    <div class="details">
+                                                                        <strong>Gen 25:3 (Son of Jokshan)</strong><br>
+                                                                        Son of Jokshan.<br>
+                                                                        Father of 3 tribes.<br>
+                                                                        <em>Click to reveal 3 tribes</em>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="dedan-connector" class="connector hidden"></div>
+
+                                                                <div id="dedan-children" class="branch hidden">
+                                                                    <div class="column">
+                                                                        <div class="node">
+                                                                            Asshurim
+                                                                            <div class="details">
+                                                                                <strong>Gen 25:3</strong><br>
+                                                                                Firstborn son of Dedan.<br>
+                                                                                Nomadic tent clan.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <div class="node">
+                                                                            Letushim
+                                                                            <div class="details">
+                                                                                <strong>Gen 25:3</strong><br>
+                                                                                Second son of Dedan.<br>
+                                                                                Craftsmen / metalworker clan.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <div class="node">
+                                                                            Leummim
+                                                                            <div class="details">
+                                                                                <strong>Gen 25:3</strong><br>
+                                                                                Third son of Dedan.<br>
+                                                                                Chieftain / nation clan.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Medan
+                                                            <div class="details">
+                                                                <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                Third son of Keturah.<br>
+                                                                Northern Arabian tribe.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                         <div id="midian-node" class="node" onclick="revealNext('midian-children')">
+                                                             <span class="node-title">Midian</span>
+                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleMidianInfo(event)">📜</button>
+                                                             <div class="details">
+                                                                 <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                 Founder of the Midianites.<br>
+                                                                 Land of Jethro (Exodus 2).<br>
+                                                                 <em>Click to reveal 5 sons</em>
+                                                             </div>
+                                                         </div>
+
+                                                         <div id="midian-connector" class="connector hidden"></div>
+
+                                                         <div id="midian-children" class="branch hidden">
+                                                             <div class="column">
+                                                                 <div class="node">
+                                                                     Ephah
+                                                                     <div class="details">
+                                                                         <strong>Gen 25:4 (Firstborn)</strong><br>
+                                                                         Firstborn of Midian.<br>
+                                                                         Camel caravan trade of Ephah.
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="column">
+                                                                 <div class="node">
+                                                                     Epher
+                                                                     <div class="details">
+                                                                         <strong>Gen 25:4 (Second Son)</strong><br>
+                                                                         Second son of Midian.<br>
+                                                                         Red Sea / Midianite clan.
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="column">
+                                                                 <div class="node">
+                                                                     Hanoch
+                                                                     <div class="details">
+                                                                         <strong>Gen 25:4 (Third Son)</strong><br>
+                                                                         Third son of Midian.<br>
+                                                                         Northwest Arabian tribe.
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="column">
+                                                                 <div class="node">
+                                                                     Abida
+                                                                     <div class="details">
+                                                                         <strong>Gen 25:4 (Fourth Son)</strong><br>
+                                                                         Fourth son of Midian.<br>
+                                                                         Ancient Midianite clan.
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="column">
+                                                                 <div class="node">
+                                                                     Eldaah
+                                                                     <div class="details">
+                                                                         <strong>Gen 25:4 (Fifth Son)</strong><br>
+                                                                         Fifth son of Midian.<br>
+                                                                         Midianite desert nation.
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Ishbak
+                                                            <div class="details">
+                                                                <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                Fifth son of Keturah.<br>
+                                                                Syro-Arabian region.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Shuah
+                                                            <div class="details">
+                                                                <strong>Gen 25 (Son of Keturah)</strong><br>
+                                                                Sixth son of Keturah.<br>
+                                                                Ancestor of Bildad (Job 2:11).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div id="nahor-node" class="node" onclick="revealNext('nahor-children')">
+                                                    Nahor
+                                                    <div class="details">
+                                                        <strong>Gen 11 &amp; 22 (Line of Terah)</strong><br>
+                                                        Son of Terah.<br>
+                                                        Husband of Milcah &amp; Reumah.<br>
+                                                        Father of 12 sons.<br>
+                                                        <em>Click to reveal 12 sons</em>
+                                                    </div>
+                                                </div>
+
+                                                <div id="nahor-connector" class="connector hidden"></div>
+
+                                                <div id="nahor-children" class="branch hidden">
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Uz
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Firstborn of Nahor &amp; Milcah.<br>
+                                                                Aramean / Syrian region of Uz.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Buz
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Second son.<br>
+                                                                Ancestor of Elihu the Buzite (Job 32:2).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Kemuel
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Third son.<br>
+                                                                Father of Aram (Aramean chieftain).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Chesed
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Fourth son.<br>
+                                                                Root of Kesed / Chaldean clans.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Hazo
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Fifth son.<br>
+                                                                North Arabian / Syrian tribe.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Pildash
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Sixth son.<br>
+                                                                Mesopotamian / Aramean clan.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Jidlaph
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Milcah)</strong><br>
+                                                                Seventh son.<br>
+                                                                Northern Aramean tribe.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                         <div id="bethuel-node" class="node" onclick="revealNext('bethuel-children')">
+                                                             <span class="node-title">Bethuel</span>
+                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleBethuelInfo(event)">✝</button>
+                                                             <div class="details">
+                                                                 <strong>Gen 22 (By Milcah)</strong><br>
+                                                                 Father of Laban &amp; Rebekah.<br>
+                                                                 Messianic Lineage (Paddan-Aram).<br>
+                                                                 <em>Click to reveal Laban &amp; Rebekah</em>
+                                                             </div>
+                                                         </div>
+
+                                                         <div id="bethuel-connector" class="connector hidden"></div>
+
+                                                         <div id="bethuel-children" class="branch hidden">
+                                                             <!-- Laban Column -->
+                                                             <div class="column">
+                                                                 <div id="laban-node" class="node" onclick="revealNext('laban-children')">
+                                                                     <span class="node-title">Laban</span>
+                                                                     <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleLabanInfo(event)">✝</button>
+                                                                     <div class="details">
+                                                                         <strong>Gen 24 &amp; 29 (Son of Bethuel)</strong><br>
+                                                                         Aramean of Haran.<br>
+                                                                         Father of Leah &amp; Rachel.<br>
+                                                                         <em>Click to reveal 4 daughters/servants</em>
+                                                                     </div>
+                                                                 </div>
+
+                                                                 <div id="laban-connector" class="connector hidden"></div>
+
+                                                                 <div id="laban-children" class="branch hidden">
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Leah 👑</span>
+                                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleLeahInfo(event)">✝</button>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29 (Elder Daughter)</strong><br>
+                                                                                 First wife of Jacob.<br>
+                                                                                 Mother of 6 tribes (Judah, Levi, etc.).<br>
+                                                                                 Messianic Line ancestor.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Rachel 👑</span>
+                                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleRachelInfo(event)">✝</button>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29 (Younger Daughter)</strong><br>
+                                                                                 Beloved wife of Jacob.<br>
+                                                                                 Mother of Joseph &amp; Benjamin.<br>
+                                                                                 Matriarch of Israel.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Bilhah</span>
+                                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleBilhahInfo(event)">📜</button>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29 &amp; 30 (Servant)</strong><br>
+                                                                                 Handmaid of Rachel.<br>
+                                                                                 Mother of Dan &amp; Naphtali.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Zilpah</span>
+                                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleZilpahInfo(event)">📜</button>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29 &amp; 30 (Servant)</strong><br>
+                                                                                 Handmaid of Leah.<br>
+                                                                                 Mother of Gad &amp; Asher.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+
+                                                             <!-- Rebekah Column -->
+                                                             <div class="column">
+                                                                 <div id="rebekah-node" class="node" onclick="revealNext('rebekah-children')">
+                                                                     <span class="node-title">Rebekah 👑</span>
+                                                                     <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleRebekahInfo(event)">✝</button>
+                                                                     <div class="details">
+                                                                         <strong>Gen 24 &amp; 25 (Daughter of Bethuel)</strong><br>
+                                                                         Wife of Isaac.<br>
+                                                                         Mother of Esau &amp; Jacob.<br>
+                                                                         Messianic Line Matriarch.<br>
+                                                                         <em>Click to reveal sons</em>
+                                                                     </div>
+                                                                 </div>
+
+                                                                 <div id="rebekah-connector" class="connector hidden"></div>
+
+                                                                 <div id="rebekah-children" class="branch hidden">
+                                                                     <div class="column">
+                                                                        <div class="node">
+                                                                            <span class="node-title">Esau (Edom)</span>
+                                                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleEsauInfo(event)">📜</button>
+                                                                            <div class="details">
+                                                                                <strong>Gen 25 &amp; 36 (Firstborn Twin)</strong><br>
+                                                                                Elder son of Isaac &amp; Rebekah.<br>
+                                                                                Father of the Edomites.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Jacob (Israel) 👑</span>
+                                                                             <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleJacobInfo(event)">✝</button>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 25–49 (Patriarch)</strong><br>
+                                                                                 Son of Isaac &amp; Rebekah.<br>
+                                                                                 Renamed Israel.<br>
+                                                                                 Father of 12 Tribes &amp; Messianic Line.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Tebah
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Reumah)</strong><br>
+                                                                Ninth son.<br>
+                                                                Syrian town of Tibhath (1 Chron 18:8).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Gaham
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Reumah)</strong><br>
+                                                                Tenth son.<br>
+                                                                Aramean / Syrian clan.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Tahash
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Reumah)</strong><br>
+                                                                Eleventh son.<br>
+                                                                Syrian border region.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Maacah
+                                                            <div class="details">
+                                                                <strong>Gen 22 (By Reumah)</strong><br>
+                                                                Twelfth son.<br>
+                                                                Kingdom of Maacah (2 Sam 10:6).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div id="haran-node" class="node" onclick="revealNext('haran-children')">
+                                                    Haran
+                                                    <div class="details">
+                                                        <strong>Gen 11 (Line of Terah)</strong><br>
+                                                        Son of Terah.<br>
+                                                        Brother of Abraham &amp; Nahor.<br>
+                                                        Father of Lot, Milcah &amp; Iscah.<br>
+                                                        <em>Click to reveal 3 children</em>
+                                                    </div>
+                                                </div>
+
+                                                <div id="haran-connector" class="connector hidden"></div>
+
+                                                <div id="haran-children" class="branch hidden">
+                                                    <div class="column">
+                                                        <div id="lot-node" class="node" onclick="revealNext('lot-children')">
+                                                            <span class="node-title">Lot</span>
+                                                            <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleLotInfo(event)">✝</button>
+                                                            <div class="details">
+                                                                <strong>Gen 11–19 (Son of Haran)</strong><br>
+                                                                Nephew of Abraham.<br>
+                                                                Ancestor of Moabites &amp; Ammonites.<br>
+                                                                Line to Ruth, David &amp; Jesus.<br>
+                                                                <em>Click to reveal 4 children</em>
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="lot-connector" class="connector hidden"></div>
+
+                                                        <div id="lot-children" class="branch hidden">
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Daughter (unnamed)
+                                                                    <div class="details">
+                                                                        <strong>Gen 19:31–37</strong><br>
+                                                                        Elder daughter of Lot.<br>
+                                                                        Mother of Moab.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    Daughter (unnamed)
+                                                                    <div class="details">
+                                                                        <strong>Gen 19:31–37</strong><br>
+                                                                        Younger daughter of Lot.<br>
+                                                                        Mother of Ben-Ammi.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    <span class="node-title">Moab 👑</span>
+                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleMoabInfo(event)">✝</button>
+                                                                    <div class="details">
+                                                                        <strong>Gen 19:37</strong><br>
+                                                                        Son of Lot's elder daughter.<br>
+                                                                        Father of the Moabites.<br>
+                                                                        Line to Ruth, David &amp; Jesus.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="column">
+                                                                <div class="node">
+                                                                    <span class="node-title">Ben-Ammi</span>
+                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleBenAmmiInfo(event)">✝</button>
+                                                                    <div class="details">
+                                                                        <strong>Gen 19:38</strong><br>
+                                                                        Son of Lot's younger daughter.<br>
+                                                                        Father of the Ammonites.<br>
+                                                                        Line of King Rehoboam.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Milcah
+                                                            <div class="details">
+                                                                <strong>Gen 11 &amp; 22 (Daughter of Haran)</strong><br>
+                                                                Wife of Nahor.<br>
+                                                                Mother of Bethuel.<br>
+                                                                Grandmother of Rebekah.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column">
+                                                        <div class="node">
+                                                            Iscah
+                                                            <div class="details">
+                                                                <strong>Gen 11 (Daughter of Haran)</strong><br>
+                                                                Sister of Lot &amp; Milcah (Gen 11:29).<br>
+                                                                Identified in tradition as Sarah.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div id="joktan-node" class="node" onclick="revealNext('joktan-children')">
+                                            Joktan
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Eber)</strong><br>
+                                                Son of Eber.<br>
+                                                Father of 13 Arabian tribes.<br>
+                                                <em>Click to reveal 13 sons</em>
+                                            </div>
+                                        </div>
+
+                                        <div id="joktan-connector" class="connector hidden"></div>
+
+                                        <div id="joktan-children" class="branch hidden">
+                                            <div class="column">
+                                                <div class="node">
+                                                    Almodad
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Firstborn of Joktan.<br>
+                                                        Ancient South Arabian / Yemeni tribe.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Sheleph
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Second son of Joktan.<br>
+                                                        Salif / Sulaf region of Yemen.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Hazarmaveth
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Third son of Joktan.<br>
+                                                        Namesake of Hadramaut, S. Arabia.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Jerah
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Fourth son of Joktan.<br>
+                                                        Moon-worshipping S. Arabian tribe.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Hadoram
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Fifth son of Joktan.<br>
+                                                        Dhofar / S. Arabian region.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Uzal
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Sixth son of Joktan.<br>
+                                                        Ancient Sanaa, capital of Yemen.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Diklah
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Seventh son of Joktan.<br>
+                                                        Date-palm oasis region of Arabia.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Obal (Ebal)
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Eighth son (Ebal in 1 Chron 1:22).<br>
+                                                        S. Arabian mountain tribe.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Abimael
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Ninth son of Joktan.<br>
+                                                        Yemeni tribe ("Father is God").
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Sheba
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Tenth son of Joktan.<br>
+                                                        Sabaean incense empire of Yemen.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Ophir 🪙
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Eleventh son of Joktan.<br>
+                                                        Famed biblical gold region.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Havilah
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Twelfth son of Joktan.<br>
+                                                        Arabian sand-gold territory.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                <div class="node">
+                                                    Jobab
+                                                    <div class="details">
+                                                        <strong>Gen 10 (Line of Joktan)</strong><br>
+                                                        Thirteenth son of Joktan.<br>
+                                                        S. Arabian kingdom near Aden.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -323,12 +1304,58 @@
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="node">
+                                <div id="aram-node" class="node" onclick="revealNext('aram-children')">
                                     Aram
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Shem)</strong><br>
+                                        <strong>Gen 10 (Line of Shem)</strong><br>
                                         Son of Shem.<br>
-                                        Father of the Arameans.
+                                        Father of the Arameans.<br>
+                                        <em>Click to reveal 4 sons</em>
+                                    </div>
+                                </div>
+
+                                <div id="aram-connector" class="connector hidden"></div>
+
+                                <div id="aram-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Uz
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Aram)</strong><br>
+                                                Son of Aram.<br>
+                                                Land of Uz (Home of Job).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Hul
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Aram)</strong><br>
+                                                Son of Aram.<br>
+                                                Region near Armenia &amp; Lake Huleh.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Gether
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Aram)</strong><br>
+                                                Son of Aram.<br>
+                                                Ancient Aramean / Arabian tribe.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Mash (Meshech)
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Aram)</strong><br>
+                                                Son of Aram (Meshech in 1 Chron 1:17).<br>
+                                                Syro-Mesopotamian region.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -665,12 +1692,48 @@
 
                         <div id="japheth-children" class="branch hidden">
                             <div class="column">
-                                <div class="node">
+                                <div id="gomer-node" class="node" onclick="revealNext('gomer-children')">
                                     Gomer
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        <strong>Gen 10 (Line of Japheth)</strong><br>
                                         Son of Japheth.<br>
-                                        Cimmerians &amp; Northern nations.
+                                        Cimmerians &amp; Northern nations.<br>
+                                        <em>Click to reveal 3 sons</em>
+                                    </div>
+                                </div>
+
+                                <div id="gomer-connector" class="connector hidden"></div>
+
+                                <div id="gomer-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Ashkenaz
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Gomer)</strong><br>
+                                                Son of Gomer.<br>
+                                                Scythian / Northern Eurasian nations.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Riphath (Diphath)
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Gomer)</strong><br>
+                                                Son of Gomer (Diphath in 1 Chron 1:6).<br>
+                                                Paphlagonian / Anatolian peoples.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Togarmah
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Gomer)</strong><br>
+                                                Son of Gomer.<br>
+                                                Armenian &amp; Anatolian horsemen.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -678,7 +1741,7 @@
                                 <div class="node">
                                     Magog
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        <strong>Gen 10 (Line of Japheth)</strong><br>
                                         Son of Japheth.<br>
                                         Eurasian Steppe nations.
                                     </div>
@@ -688,19 +1751,65 @@
                                 <div class="node">
                                     Madai
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        <strong>Gen 10 (Line of Japheth)</strong><br>
                                         Son of Japheth.<br>
                                         Line of the Medes.
                                     </div>
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="node">
+                                <div id="javan-node" class="node" onclick="revealNext('javan-children')">
                                     Javan
                                     <div class="details">
-                                        <strong>Gen 12 (Line of Japheth)</strong><br>
+                                        <strong>Gen 10 (Line of Japheth)</strong><br>
                                         Son of Japheth.<br>
-                                        Line of Greeks &amp; lonians.
+                                        Line of Greeks &amp; Ionians.<br>
+                                        <em>Click to reveal 4 sons</em>
+                                    </div>
+                                </div>
+
+                                <div id="javan-connector" class="connector hidden"></div>
+
+                                <div id="javan-children" class="branch hidden">
+                                    <div class="column">
+                                        <div class="node">
+                                            Elishah
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Javan)</strong><br>
+                                                Son of Javan.<br>
+                                                Aeolian Greeks / Cyprus maritime traders.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Tarshish
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Javan)</strong><br>
+                                                Son of Javan.<br>
+                                                Western Mediterranean (Tartessos/Spain).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Kittim
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Javan)</strong><br>
+                                                Son of Javan.<br>
+                                                Cypriots &amp; Aegean seafarers.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="node">
+                                            Dodanim (Rodanim)
+                                            <div class="details">
+                                                <strong>Gen 10 (Line of Javan)</strong><br>
+                                                Son of Javan (Rodanim in 1 Chron 1:7).<br>
+                                                Rhodian &amp; Aegean islanders.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -823,6 +1932,363 @@
             The very first patriarch born in the post-deluge era (Genesis 11:10) when Shem was 100 years old.<br><br>
             <strong>2) Chaldean Anchor 🏛️</strong><br>
             Settled in the fertile region of Ur of the Chaldees, establishing the foundation for Abraham's birthplace.
+        </div>
+    </aside>
+
+    <aside id="shelah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Shelah ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleShelahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Post-Deluge Patriarch 📜</strong><br>
+            Born 35 years after Arphaxad (Genesis 11:12–15), living 433 years as a foundational pillar of the post-flood world.<br><br>
+            <strong>2) Messianic Ancestor ✝</strong><br>
+            Direct ancestor in the sacred lineage connecting Noah, Abraham, King David, and Jesus Christ (Luke 3:35).
+        </div>
+    </aside>
+
+    <aside id="eber-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Eber ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleEberInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Namesake of the Hebrew Nation 🏛️</strong><br>
+            The root progenitor from whom the name "Hebrew" (Ivri — "one who crossed over") originates (Genesis 10:21).<br><br>
+            <strong>2) Longest-Lived Post-Flood Patriarch ⏳</strong><br>
+            Lived for 464 years, outliving six generations of his descendants and witnessing the Rise of Babel.
+        </div>
+    </aside>
+
+    <aside id="peleg-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Peleg ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="togglePelegInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) The Great Division 🌍</strong><br>
+            His name means "Division" because "in his days the earth was divided" (Genesis 10:25)—referencing the dispersion at Babel.<br><br>
+            <strong>2) Lineage of Promise 🌅</strong><br>
+            Preserved the main ancestral covenant line continuing through Reu, Serug, Nahor, Terah, and Abraham.
+        </div>
+    </aside>
+
+    <aside id="reu-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Reu ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleReuInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Post-Babel Patriarch 📜</strong><br>
+            Born 32 years after Peleg (Genesis 11:18–21) during the post-dispersion era, living 239 years.<br><br>
+            <strong>2) Messianic Covenant Line ✝</strong><br>
+            Direct ancestor in the line of promise connecting Shem, Eber, and Abraham.
+        </div>
+    </aside>
+
+    <aside id="serug-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Serug ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleSerugInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Great-Grandfather of Abraham 🏛️</strong><br>
+            Lived for 230 years (Genesis 11:20–23) in Mesopotamia during the rise of early post-flood urban civilizations.<br><br>
+            <strong>2) Sacred Lineage 🕊️</strong><br>
+            Preserved the unbroken genealogical chain from Noah to Abraham (Luke 3:35).
+        </div>
+    </aside>
+
+    <aside id="nahor-ancestor-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Nahor (Grandfather of Abraham) ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleNahorAncestorInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Patriarch of Ur 📜</strong><br>
+            Son of Serug and father of Terah (Genesis 11:24–25), living 148 years in Chaldea.<br><br>
+            <strong>2) Namesake Ancestor 🌿</strong><br>
+            His grandson Nahor (Terah's son) was named after him, establishing the northern Mesopotamian city of Nahor.
+        </div>
+    </aside>
+
+    <aside id="terah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Terah ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleTerahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Migration from Ur 🏜️</strong><br>
+            Left Ur of the Chaldees with Abram, Sarai, and Lot to travel toward Canaan, settling in Haran (Genesis 11:31).<br><br>
+            <strong>2) Father of Three Nations 👨‍👦‍👦</strong><br>
+            Fathered Abram (father of Israel), Nahor (father of Aramaean tribes), and Haran (father of Moab &amp; Ammon through Lot).
+        </div>
+    </aside>
+
+    <aside id="abraham-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Abram (Abraham) 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleAbrahamInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Friend of God &amp; Father of Faith 🌟</strong><br>
+            Called by God out of Haran to Canaan (Genesis 12:1–3). Given the everlasting covenant of faith and promise.<br><br>
+            <strong>2) Father of Nations 👑</strong><br>
+            Renamed Abraham ("Father of a Multitude"). Father of Isaac and Ishmael; supreme patriarch of Israel and ancestor of Jesus Christ (Matthew 1:1, Luke 3:34).
+        </div>
+    </aside>
+
+    <aside id="ishmael-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Ishmael 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleIshmaelInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Firstborn Son of Abraham 🏜️</strong><br>
+            Born to Abraham and Hagar (Genesis 16:15), living 137 years.<br><br>
+            <strong>2) Father of 12 Princes 👑</strong><br>
+            Blessed by God to father 12 princes (Nebaioth, Kedar, Adbeel, Mibsam, Mishma, Dumah, Massa, Hadad, Tema, Jetur, Naphish, Kedemah), founding great desert nations from Havilah unto Shur (Genesis 25:12–18).
+        </div>
+    </aside>
+
+    <aside id="jokshan-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Jokshan 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleJokshanInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Son of Abraham &amp; Keturah 🏜️</strong><br>
+            Second son born to Abraham and Keturah (Genesis 25:1–3).<br><br>
+            <strong>2) Father of Sheba &amp; Dedan 🐪</strong><br>
+            Fathered Sheba and Dedan, establishing major South Arabian and North Arabian spice caravan trading routes (Jeremiah 25:23).
+        </div>
+    </aside>
+
+    <aside id="dedan-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Dedan 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleDedanInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Chieftain of Dedan 🏜️</strong><br>
+            Son of Jokshan and grandson of Abraham and Keturah (Genesis 25:3).<br><br>
+            <strong>2) Father of Three Clans 🐪</strong><br>
+            Fathered the Asshurim, Letushim, and Leummim tribes inhabiting northern Arabia and the caravan routes (Isaiah 21:13).
+        </div>
+    </aside>
+
+    <aside id="midian-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Midian 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleMidianInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Father of the Midianites 🏜️</strong><br>
+            Fourth son of Abraham and Keturah (Genesis 25:1–4), founder of the powerful Midianite nation in Sinai &amp; Transjordan.<br><br>
+            <strong>2) Father of 5 Chieftain Clans 🐫</strong><br>
+            Fathered Ephah, Epher, Hanoch, Abida, and Eldaah, famous for merchant caravans (Genesis 37:28) and the land of Jethro &amp; Moses (Exodus 2:15).
+        </div>
+    </aside>
+
+    <aside id="isaac-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Isaac 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleIsaacInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Child of Promise &amp; Covenant Heir ✨</strong><br>
+            Born to Abraham and Sarah in their old age (Genesis 21:1–3) as the miraculous child of God's divine promise.<br><br>
+            <strong>2) Messianic Covenant Pillar 🕊️</strong><br>
+            Willing sacrifice on Mount Moriah (Genesis 22). Husband of Rebekah and father of Jacob, preserving the unbroken lineage to King David and Jesus Christ (Matthew 1:2).
+        </div>
+    </aside>
+
+    <aside id="bethuel-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Bethuel ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleBethuelInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Patriarch of Padan-Aram 📜</strong><br>
+            Son of Nahor &amp; Milcah (Genesis 22:22–23), residing in Haran/Northern Mesopotamia.<br><br>
+            <strong>2) Father of Covenant Matriarchs 🕊️</strong><br>
+            Father of Rebekah (wife of Isaac) and Laban (father of Leah &amp; Rachel), establishing the key maternal roots of Israel.
+        </div>
+    </aside>
+
+    <aside id="laban-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Laban 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleLabanInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Aramean Chieftain of Haran 🏜️</strong><br>
+            Son of Bethuel and brother of Rebekah (Genesis 24:29 &amp; Genesis 29), hosting Abraham's servant and later Jacob in Paddan-Aram.<br><br>
+            <strong>2) Father of the Matriarchs 👑✝</strong><br>
+            Father of Leah and Rachel, through whom the 12 Tribes of Israel and the Messianic royal house were born.
+        </div>
+    </aside>
+
+    <aside id="leah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Leah 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleLeahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) First Wife of Jacob 👑✝</strong><br>
+            Elder daughter of Laban (Genesis 29:16–35), mother of six sons of Israel (Reuben, Simeon, Levi, Judah, Issachar, Zebulun) and Dinah.<br><br>
+            <strong>2) Direct Messianic Ancestor ✝</strong><br>
+            Mother of Judah, connecting directly into the royal house of King David and Jesus Christ (Matthew 1:2).
+        </div>
+    </aside>
+
+    <aside id="rachel-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Rachel 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleRachelInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Beloved Matriarch of Israel 👑✝</strong><br>
+            Younger daughter of Laban (Genesis 29:18–30), beloved wife of Jacob.<br><br>
+            <strong>2) Mother of Joseph &amp; Benjamin 🌾</strong><br>
+            Mother of Joseph (vizier of Egypt) and Benjamin; celebrated matriarch buried near Bethlehem (Genesis 35:19).
+        </div>
+    </aside>
+
+    <aside id="bilhah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Bilhah 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleBilhahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Handmaid of Rachel 📜</strong><br>
+            Servant given to Rachel by Laban (Genesis 29:29 &amp; 30:3–8), given to Jacob as a wife.<br><br>
+            <strong>2) Mother of Two Tribes 🛡️</strong><br>
+            Mother of Dan ("God has judged") and Naphtali ("My wrestling"), establishing two major tribes of Israel.
+        </div>
+    </aside>
+
+    <aside id="zilpah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Zilpah 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleZilpahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Handmaid of Leah 📜</strong><br>
+            Servant given to Leah by Laban (Genesis 29:24 &amp; 30:9–13), given to Jacob as a wife.<br><br>
+            <strong>2) Mother of Two Tribes 🛡️</strong><br>
+            Mother of Gad ("Good fortune") and Asher ("Happy"), establishing two major tribes of Israel.
+        </div>
+    </aside>
+
+    <aside id="rebekah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Rebekah 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleRebekahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Matriarch of the Covenant 👑✝</strong><br>
+            Daughter of Bethuel (Genesis 24:58–67), traveled from Haran to become the wife of Isaac in answer to divine prayer.<br><br>
+            <strong>2) Mother of Israel ✝</strong><br>
+            Received God's prophecy regarding twin sons Esau and Jacob (Genesis 25:23); direct Messianic ancestor through Jacob.
+        </div>
+    </aside>
+
+    <aside id="esau-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Esau (Edom) 📜</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleEsauInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Firstborn Twin Son 🏜️</strong><br>
+            Elder son of Isaac &amp; Rebekah (Genesis 25:25–34), skilled hunter also called Edom ("Red").<br><br>
+            <strong>2) Father of the Edomites ⛰️</strong><br>
+            Established the nation and kings of Edom in Mount Seir (Genesis 36:1).
+        </div>
+    </aside>
+
+    <aside id="jacob-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Jacob (Israel) 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleJacobInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Patriarch Renamed Israel 👑✝</strong><br>
+            Son of Isaac &amp; Rebekah (Genesis 25:26 &amp; 32:28), wrestled with God at Penuel and received the divine name Israel.<br><br>
+            <strong>2) Father of the 12 Tribes 🌟✝</strong><br>
+            Father of the 12 Tribes of Israel and key patriarch in the direct Messianic lineage to King David and Jesus Christ (Matthew 1:2).
+        </div>
+    </aside>
+
+    <aside id="lot-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Lot ✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleLotInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Nephew &amp; Companion of Abraham 🏜️</strong><br>
+            Traveled with Abram from Ur to Haran and into Canaan (Genesis 12:4), later settling in the fertile Jordan valley near Sodom.<br><br>
+            <strong>2) Father of Nations &amp; Messianic Ancestor 🕊️</strong><br>
+            Father of Moab and Ben-Ammi (Genesis 19:36–38). Ancestor of Ruth the Moabite, connecting directly into the Davidic and Messianic line of Jesus Christ (Matthew 1:5).
+        </div>
+    </aside>
+
+    <aside id="moab-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Moab 👑✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleMoabInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Founder of the Moabites 🏜️</strong><br>
+            Born to Lot's elder daughter (Genesis 19:37), establishing the kingdom of Moab east of the Dead Sea.<br><br>
+            <strong>2) Direct Messianic Ancestor 👑✝</strong><br>
+            Ancestor of Ruth the Moabite (Ruth 4:18–22), who married Boaz and became the great-grandmother of King David and direct lineage ancestor of Jesus Christ (Matthew 1:5).
+        </div>
+    </aside>
+
+    <aside id="benammi-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Ben-Ammi 🛡️✝</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleBenAmmiInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Founder of the Ammonites 🛡️</strong><br>
+            Born to Lot's younger daughter (Genesis 19:38), founder of the kingdom of Ammon (modern Amman, Jordan).<br><br>
+            <strong>2) Kingdom Lineage Connection 📜</strong><br>
+            Ancestor of Naamah the Ammonitess, wife of King Solomon and mother of King Rehoboam of Judah (1 Kings 14:21).
+        </div>
+    </aside>
+
+    <aside id="enoch-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Enoch 👣</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleEnochInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Walked Intimately with God 👣</strong><br>
+            Lived in close, unbroken fellowship with God for 300 years after fathering Methuselah (Genesis 5:22–24).<br><br>
+            <strong>2) Translated Without Death ✨</strong><br>
+            One of only two figures in Scripture taken directly into God's presence without experiencing physical death (Hebrews 11:5).<br><br>
+            <strong>3) 7th Generation Hero of Faith 7️⃣</strong><br>
+            Stands as the 7th patriarch from Adam, celebrated in Jude 1:14–15 as a prophet of righteousness and exemplar of faith.
+        </div>
+    </aside>
+
+    <aside id="noah-detail-panel" class="detail-panel hidden" aria-live="polite">
+        <div class="detail-panel-header">
+            <strong>Noah ⛵</strong>
+            <button class="detail-panel-close" type="button" aria-label="Close info panel" onclick="toggleNoahInfo()">×</button>
+        </div>
+        <div class="detail-panel-body">
+            <strong>1) Found Grace in God's Eyes ✨</strong><br>
+            Genesis 6:8 — In a generation destined for judgment, Noah alone is specifically said to have found favor (grace) in the eyes of the Lord, becoming the recipient of God's saving plan.<br><br>
+            <strong>2) Complete Obedience to God's Commands 🛠️</strong><br>
+            Genesis 6:22; 7:5 — Noah followed every instruction God gave regarding the Ark, its dimensions, and the preservation of life, demonstrating unwavering obedience without alteration.<br><br>
+            <strong>3) 120 Years of Faithful Endurance ⏳</strong><br>
+            2 Peter 2:5 & Genesis 6:3 — Built the massive Ark on dry land for over 120 years, faithfully preaching righteousness to an unbelieving world despite constant mockery.<br><br>
+            <strong>4) First Post-Flood Altar of Worship 🔥</strong><br>
+            Genesis 8:20 — Noah's very first action upon stepping onto dry ground was to build an altar and offer burnt offerings of thanksgiving and worship to God.
         </div>
     </aside>
 
