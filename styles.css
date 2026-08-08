@@ -1,0 +1,832 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Page setup */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Main Title Styling - Medieval Illuminated Manuscript Font */
+h1, .tree-container h1 {
+    font-family: 'MedievalSharp', 'Cinzel', cursive, serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    position: fixed !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    letter-spacing: 2px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+h1:hover, .tree-container h1:hover {
+    color: #fef08a !important;
+    transform: translateX(-50%) scale(1.03) !important;
+    text-shadow: 
+        0 4px 22px rgba(0, 0, 0, 0.95),
+        0 0 24px rgba(250, 204, 21, 0.95),
+        0 0 40px rgba(245, 158, 11, 0.8) !important;
+}
+
+/* Page setup with Garden of Eden background */
+body {
+    font-family: 'Cinzel', 'Georgia', serif;
+    /* Soft dark overlay + your background image for high card contrast */
+    background: 
+        url('images/green%20garden.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 400px;
+    margin: 0;
+    transition: background 0.6s ease-in-out;
+}
+
+.tree-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 200px);
+    padding-left: 40px;
+    padding-right: 200px;
+    min-width: max-content;
+}
+
+/* Base style for individual person boxes */
+.node {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    border: 2px solid #334e68;
+    border-radius: 8px;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    box-sizing: border-box;
+    min-width: 120px;
+}
+
+.node-title {
+    display: inline-block;
+    padding-right: 22px;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.info-badge {
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #d97706;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #fbbf24;
+    font-size: 0.78rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 6px rgba(217, 119, 6, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.info-badge:hover {
+    transform: scale(1.22);
+    color: #ffffff;
+    border-color: #fbbf24;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.7);
+}
+
+/* Specialized Apple Information Badge for Adam & Eve */
+.adam-info-badge {
+    border: 1.5px solid #d97706 !important;
+    background: linear-gradient(135deg, #78350f, #d97706) !important;
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(217, 119, 6, 0.5) !important;
+}
+
+.adam-info-badge:hover, .adam-info-badge:active {
+    transform: scale(1.22) !important;
+    background: #d97706 !important;
+    border-color: #fbbf24 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(245, 158, 11, 0.85) !important;
+}
+
+/* Specialized Dove Information Badge for Abel */
+.abel-info-badge {
+    border: 1.5px solid #38bdf8 !important;
+    background: linear-gradient(135deg, #0f172a, #0284c7) !important;
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(56, 189, 248, 0.45) !important;
+}
+
+.abel-info-badge:hover {
+    transform: scale(1.22) !important;
+    background: #0284c7 !important;
+    border-color: #7dd3fc !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(56, 189, 248, 0.8) !important;
+}
+
+/* Specialized Footprint Information Badge for Enoch */
+.enoch-info-badge {
+    border: 1.5px solid #c084fc !important;
+    background: linear-gradient(135deg, #4c1d95, #6d28d9) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(168, 85, 247, 0.6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+}
+
+.enoch-info-badge svg {
+    width: 17px !important;
+    height: 17px !important;
+    fill: #fbbf24 !important;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.enoch-info-badge:hover, .enoch-info-badge:active {
+    transform: scale(1.22) !important;
+    background: #7c3aed !important;
+    border-color: #f0abfc !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 16px rgba(192, 132, 252, 0.9) !important;
+}
+
+.enoch-info-badge:hover svg, .enoch-info-badge:active svg {
+    fill: #ffffff !important;
+}
+
+/* Specialized Noah's Ark Information Badge */
+.noah-info-badge {
+    border: 1.5px solid #60a5fa !important;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(59, 130, 246, 0.6) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+}
+
+.noah-info-badge svg {
+    width: 17px !important;
+    height: 17px !important;
+    fill: #fbbf24 !important;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.noah-info-badge:hover, .noah-info-badge:active {
+    transform: scale(1.22) !important;
+    background: #2563eb !important;
+    border-color: #93c5fd !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 16px rgba(96, 165, 250, 0.9) !important;
+}
+
+.noah-info-badge:hover svg, .noah-info-badge:active svg {
+    fill: #ffffff !important;
+}
+
+/* Specialized Wheat Information Badge for Cain */
+.cain-info-badge {
+    border: 1.5px solid #d97706 !important;
+    background: linear-gradient(135deg, #2d120d, #9a3412) !important;
+    color: #fbbf24 !important;
+    font-size: 0.82rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(217, 119, 6, 0.5) !important;
+}
+
+.cain-info-badge:hover {
+    transform: scale(1.22) !important;
+    background: #ea580c !important;
+    color: #ffffff !important;
+    border-color: #fde047 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(234, 88, 12, 0.85) !important;
+}
+
+/* Specialized Golden Cross Information Button for Lineage of Jesus */
+.cross-info-badge {
+    border: 1.5px solid #d97706 !important;
+    background: linear-gradient(135deg, #1e293b, #78350f) !important;
+    color: #fbbf24 !important;
+    font-size: 0.82rem !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(217, 119, 6, 0.5) !important;
+}
+
+.cross-info-badge:hover {
+    transform: scale(1.22) !important;
+    background: #d97706 !important;
+    color: #ffffff !important;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(245, 158, 11, 0.85) !important;
+}
+
+/* Golden Messianic Cross Badge for Lineage of Jesus */
+.lineage-cross {
+    color: #d97706;
+    font-weight: bold;
+    font-size: 0.98rem;
+    margin-left: 3px;
+    display: inline-block;
+    text-shadow: 0 0 6px rgba(245, 158, 11, 0.65);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    vertical-align: baseline;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.node:hover .lineage-cross {
+    transform: scale(1.25);
+    color: #f59e0b;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.9);
+}
+
+.detail-panel {
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+    width: min(340px, 86vw) !important;
+    max-height: 82vh !important;
+    overflow-y: auto !important;
+    padding: 16px !important;
+    background: linear-gradient(145deg, #0f172a, #1e293b) !important;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(251, 191, 36, 0.4) !important;
+    border-radius: 12px !important;
+    font-size: 0.85rem !important;
+    font-weight: normal !important;
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 0, 0, 0.3) !important;
+    z-index: 1000 !important;
+    text-align: left !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    animation: panelSlideIn 0.25s ease-out forwards;
+}
+
+@keyframes panelSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.detail-panel-header {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.detail-panel-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.detail-panel-body {
+    line-height: 1.45;
+}
+
+/* Dynamic Hover Layering: Untrap stacking contexts so tooltips escape intermediate containers */
+.column {
+    position: relative;
+}
+
+.branch {
+    position: relative;
+}
+
+.column:hover, .branch:hover {
+    z-index: 500;
+}
+
+.node {
+    position: relative;
+    z-index: 10;
+}
+
+.node:hover {
+    z-index: 10000 !important;
+}
+
+/* Tooltip Hover Box */
+.node .details {
+    display: none;
+    position: absolute !important;
+    bottom: 125% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #0f172a !important;
+    color: #ffffff;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.75);
+    z-index: 999999 !important;
+    pointer-events: none;
+    opacity: 1 !important;
+}
+
+.node:hover .details {
+    display: block;
+}
+
+/* Prevent extreme left and right edge child tooltips from overflowing screen edges */
+.column:first-child > .node .details {
+    left: 0 !important;
+    transform: translateX(0) !important;
+}
+
+.column:last-child > .node .details {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(0) !important;
+}
+
+/* Clean 2px Horizontal Connector Line */
+.connector {
+    width: 30px;
+    height: 2px;
+    background-color: #334e68;
+    margin: auto 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Helper to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================
+   FAMILY TREE CONNECTOR SYSTEM
+   ========================================== */
+
+/* Vertical Branch Container (Stacking Siblings) */
+.branch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 0;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.branch:not(.hidden) {
+    animation: branchFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.connector:not(.hidden) {
+    animation: connectorFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes branchFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-12px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Smooth Fold-Up Collapse Animation for Branches, Connectors, and Nodes */
+.branch.collapsing, .connector.collapsing, .node.collapsing {
+    animation: nodeFoldUp 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+@keyframes nodeFoldUp {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-6px) scale(0.9);
+    }
+}
+
+@keyframes connectorFadeIn {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+
+/* Individual Column (Row Item for Node + Child Connector/Branch) */
+.column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 12px 0;
+}
+
+.column > .node {
+    min-width: 80px;
+    text-align: center;
+}
+
+/* 1. Horizontal tick going LEFT from node center to vertical branch line */
+.column::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 30px;
+    height: 2px;
+    background-color: #334e68;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 2. Vertical connection lines along siblings */
+.column::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 2px;
+    height: 100%;
+    background-color: #334e68;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Trim the outer lines so the left bar stops exactly at the first and last child */
+.column:first-child::after {
+    top: 50%;
+    height: 50%;
+}
+
+.column:last-child::after {
+    top: 0;
+    height: 50%;
+}
+
+/* Single child exception */
+.column:only-child::after {
+    display: none;
+}
+
+/* ==========================================
+   MOBILE & SMALL SCREEN RESPONSIVENESS
+   ========================================== */
+@media (max-width: 600px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    body {
+        display: flex;
+        padding-top: 80px;
+        padding-bottom: 60px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .detail-panel {
+        position: fixed !important;
+        top: 14px !important;
+        right: 14px !important;
+        width: calc(100vw - 28px) !important;
+        max-width: 320px !important;
+        max-height: 75vh !important;
+        z-index: 2000 !important;
+    }
+
+    .tree-container {
+        min-height: calc(100vh - 140px);
+        margin: 0;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: max-content;
+    }
+
+    .tree-container.cain-open {
+        padding-left: 40px !important;
+    }
+
+    .branch {
+        padding-top: 0;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        min-width: max-content;
+    }
+
+    .node {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .column > .node {
+        min-width: 55px;
+    }
+
+    /* Adjust connectors to match 15px mobile branch padding */
+    .connector {
+        height: 15px;
+    }
+
+    .column::before {
+        top: -15px;
+        height: 15px;
+    }
+
+    .column::after {
+        top: -15px;
+    }
+
+    .node .details {
+        width: 140px;
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+
+    /* Prevent left & right edge child tooltips from overflowing mobile screen */
+    .column:first-child > .node .details {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .column:last-child > .node .details {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+   COLOR & READABILITY IMPROVEMENTS
+   ========================================== */
+
+/* 1. Make the main heading pop over the dark leaves */
+h1 {
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8), 0px 0px 12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* 2. Enhance node card borders & text for crisp contrast */
+.node {
+    background-color: #ffffff;
+    color: #0f172a; /* Deep dark text */
+    border: 2px solid #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: visible;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.node:active {
+    transform: scale(0.94);
+}
+
+/* Ensure inner text content stays above crack overlays while keeping tooltips floating */
+.node > *:not(.info-badge):not(.details) {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================
+   CRACKED EGG ACTIVE STATE DESIGN
+   ========================================== */
+.node.is-cracked {
+    background-color: #fffbeb !important; /* Soft warm eggshell tint */
+    border-color: #d97706 !important; /* Amber golden border */
+    color: #78350f !important; /* Rich dark amber text */
+    box-shadow: 0 0 16px rgba(217, 119, 6, 0.5), 
+                inset 0 0 12px rgba(245, 158, 11, 0.3),
+                0px 6px 16px rgba(0, 0, 0, 0.35) !important;
+    transform: scale(1.03);
+    animation: eggHatchCrack 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Procedural Glowing Crack Lines Overlay */
+.node.is-cracked::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 70' preserveAspectRatio='none'%3E%3Cg stroke='%23d97706' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='0.85'%3E%3Cpath d='M 20,0 L 32,18 L 22,34 L 42,48 L 30,70'/%3E%3Cpath d='M 70,0 L 60,16 L 80,32 L 64,52 L 72,70'/%3E%3Cpath d='M 120,0 L 108,22 L 124,40 L 106,58 L 116,70'/%3E%3Cpath d='M 32,18 L 60,16'/%3E%3Cpath d='M 80,32 L 108,22'/%3E%3C/g%3E%3Cg stroke='%23fbbf24' stroke-width='1.2' fill='none' stroke-linecap='round' opacity='0.9'%3E%3Cpath d='M 20,0 L 32,18 L 22,34'/%3E%3Cpath d='M 70,0 L 60,16 L 80,32'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Cracked Egg Hatch Indicator Badge */
+.node.is-cracked::after {
+    content: "🐣";
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 0.72rem;
+    opacity: 0.9;
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.3));
+    z-index: 2;
+}
+
+@keyframes eggHatchCrack {
+    0% {
+        transform: scale(0.92);
+        filter: brightness(1.2);
+    }
+    50% {
+        transform: scale(1.07) rotate(-1.5deg);
+        box-shadow: 0 0 24px rgba(245, 158, 11, 0.85);
+    }
+    100% {
+        transform: scale(1.03) rotate(0deg);
+    }
+}
+
+/* 3. Brighten standalone connectors */
+.connector {
+    width: 30px;
+    height: 2px;
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    margin: auto 0;
+    flex-shrink: 0;
+}
+
+/* 4. Brighten branch connector lines (horizontal ticks + vertical bars) */
+.column::before {
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+.column::after {
+    background-color: #f9f6f6;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* 5. Tooltip box adjustment for dark theme compatibility */
+.node .details {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom background theme for Cain's branch */
+body.cain-theme {
+    /* Replace 'cain-bg.png' with your chosen image inside the images folder */
+    background: url('images/cain.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Seth's branch */
+body.seth-theme {
+    /* Replace 'seth-bg.png' with your chosen image inside the images folder */
+    background: url('images/seth.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Abel */
+body.abel-theme {
+    background: url('images/abel%202.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Enoch */
+body.enoch-theme {
+    background: url('images/enoch.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Custom background theme for Methuselah */
+body.methuselah-theme {
+    background: url('images/methuselah.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Unified tree container right-shift when Seth's lineage is active:
+   Moves the entire tree (parent nodes, vertical connectors, and child branches)
+   together as a single unbroken unit, keeping ALL connector lines 100% intact. */
+body.seth-theme .tree-container,
+body.enoch-theme .tree-container,
+body.methuselah-theme .tree-container,
+body.noah-theme .tree-container {
+    padding-left: 40px;
+    transition: padding-left 0.4s ease;
+}
+
+@media (max-width: 1200px) {
+    body.seth-theme .tree-container,
+    body.enoch-theme .tree-container,
+    body.methuselah-theme .tree-container,
+    body.noah-theme .tree-container {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.seth-theme .tree-container,
+    body.enoch-theme .tree-container,
+    body.methuselah-theme .tree-container,
+    body.noah-theme .tree-container {
+        padding-left: 10px;
+    }
+}
+
+#joktan-children,
+#nahor-children,
+#ishmael-children,
+#esau-children,
+#esau-rebekah-children,
+#abraham-children {
+    margin-left: 0;
+}
+
+/* Custom background theme for Noah */
+body.noah-theme {
+    background: url('images/noah.png') no-repeat center center fixed;
+    background-size: cover;
+}
