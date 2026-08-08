@@ -220,16 +220,40 @@ const lineageMap = {
         'esau-connector', 'esau-children'
     ],
     'esau-node': [
-        'esau-connector', 'esau-children'
+        'esau-connector', 'esau-children', 'eliphaz-connector', 'eliphaz-children', 'reuel-connector', 'reuel-children'
     ],
     'esau-children': [
-        'esau-connector', 'esau-children'
+        'esau-connector', 'esau-children', 'eliphaz-connector', 'eliphaz-children', 'reuel-connector', 'reuel-children'
+    ],
+    'eliphaz-node': [
+        'eliphaz-connector', 'eliphaz-children'
+    ],
+    'eliphaz-children': [
+        'eliphaz-connector', 'eliphaz-children'
+    ],
+    'reuel-node': [
+        'reuel-connector', 'reuel-children'
+    ],
+    'reuel-children': [
+        'reuel-connector', 'reuel-children'
     ],
     'esau-rebekah-node': [
-        'esau-rebekah-connector', 'esau-rebekah-children'
+        'esau-rebekah-connector', 'esau-rebekah-children', 'eliphaz-rebekah-connector', 'eliphaz-rebekah-children', 'reuel-rebekah-connector', 'reuel-rebekah-children'
     ],
     'esau-rebekah-children': [
-        'esau-rebekah-connector', 'esau-rebekah-children'
+        'esau-rebekah-connector', 'esau-rebekah-children', 'eliphaz-rebekah-connector', 'eliphaz-rebekah-children', 'reuel-rebekah-connector', 'reuel-rebekah-children'
+    ],
+    'eliphaz-rebekah-node': [
+        'eliphaz-rebekah-connector', 'eliphaz-rebekah-children'
+    ],
+    'eliphaz-rebekah-children': [
+        'eliphaz-rebekah-connector', 'eliphaz-rebekah-children'
+    ],
+    'reuel-rebekah-node': [
+        'reuel-rebekah-connector', 'reuel-rebekah-children'
+    ],
+    'reuel-rebekah-children': [
+        'reuel-rebekah-connector', 'reuel-rebekah-children'
     ],
     'ishmael-node': [
         'ishmael-connector', 'ishmael-children'
@@ -257,26 +281,22 @@ const lineageMap = {
     ],
     'nahor-node': [
         'nahor-connector', 'nahor-children', 'bethuel-connector', 'bethuel-children',
-        'laban-connector', 'laban-children', 'rebekah-connector', 'rebekah-children'
+        'laban-connector', 'laban-children'
     ],
     'nahor-children': [
         'bethuel-connector', 'bethuel-children',
-        'laban-connector', 'laban-children', 'rebekah-connector', 'rebekah-children'
+        'laban-connector', 'laban-children'
     ],
     'bethuel-node': [
-        'bethuel-connector', 'bethuel-children', 'laban-connector', 'laban-children',
-        'rebekah-connector', 'rebekah-children'
+        'bethuel-connector', 'bethuel-children', 'laban-connector', 'laban-children'
     ],
     'bethuel-children': [
-        'laban-connector', 'laban-children',
-        'rebekah-connector', 'rebekah-children'
+        'laban-connector', 'laban-children'
     ],
     'laban-node': [
         'laban-connector', 'laban-children'
     ],
-    'rebekah-node': [
-        'rebekah-connector', 'rebekah-children'
-    ],
+    'rebekah-node': [],
     'haran-node': [
         'haran-connector', 'haran-children', 'lot-connector', 'lot-children'
     ],
@@ -387,8 +407,16 @@ const connectorMap = {
     'isaac-children': 'isaac-connector',
     'esau-node': 'esau-connector',
     'esau-children': 'esau-connector',
+    'eliphaz-node': 'eliphaz-connector',
+    'eliphaz-children': 'eliphaz-connector',
+    'reuel-node': 'reuel-connector',
+    'reuel-children': 'reuel-connector',
     'esau-rebekah-node': 'esau-rebekah-connector',
     'esau-rebekah-children': 'esau-rebekah-connector',
+    'eliphaz-rebekah-node': 'eliphaz-rebekah-connector',
+    'eliphaz-rebekah-children': 'eliphaz-rebekah-connector',
+    'reuel-rebekah-node': 'reuel-rebekah-connector',
+    'reuel-rebekah-children': 'reuel-rebekah-connector',
     'ishmael-node': 'ishmael-connector',
     'ishmael-children': 'ishmael-connector',
     'jokshan-node': 'jokshan-connector',
@@ -467,8 +495,16 @@ const parentMap = {
     'isaac-children': 'isaac-node',
     'esau-node': 'isaac-children',
     'esau-children': 'esau-node',
+    'eliphaz-node': 'esau-children',
+    'eliphaz-children': 'eliphaz-node',
+    'reuel-node': 'esau-children',
+    'reuel-children': 'reuel-node',
     'esau-rebekah-node': 'rebekah-children',
     'esau-rebekah-children': 'esau-rebekah-node',
+    'eliphaz-rebekah-node': 'esau-rebekah-children',
+    'eliphaz-rebekah-children': 'eliphaz-rebekah-node',
+    'reuel-rebekah-node': 'esau-rebekah-children',
+    'reuel-rebekah-children': 'reuel-rebekah-node',
     'ishmael-node': 'abraham-children',
     'ishmael-children': 'ishmael-node',
     'jokshan-node': 'abraham-children',
@@ -484,7 +520,6 @@ const parentMap = {
     'laban-node': 'bethuel-children',
     'laban-children': 'laban-node',
     'rebekah-node': 'bethuel-children',
-    'rebekah-children': 'rebekah-node',
     'haran-node': 'terah-children',
     'haran-children': 'haran-node',
     'lot-node': 'haran-children',
@@ -835,6 +870,24 @@ function revealNext(targetId) {
             hideElement('laban-connector');
             const labNode = document.getElementById('laban-node');
             if (labNode) labNode.classList.remove('is-cracked');
+        }
+
+        // Auto-collapse Reuel if opening Eliphaz's branch
+        if (targetId === 'eliphaz-children') {
+            collapseDescendants('reuel-children');
+            hideElement('reuel-children');
+            hideElement('reuel-connector');
+            const rNode = document.getElementById('reuel-node');
+            if (rNode) rNode.classList.remove('is-cracked');
+        }
+
+        // Auto-collapse Eliphaz if opening Reuel's branch
+        if (targetId === 'reuel-children') {
+            collapseDescendants('eliphaz-children');
+            hideElement('eliphaz-children');
+            hideElement('eliphaz-connector');
+            const eNode = document.getElementById('eliphaz-node');
+            if (eNode) eNode.classList.remove('is-cracked');
         }
 
         // --- ABRAHAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
@@ -1367,6 +1420,8 @@ function scrollToNode(nodeId) {
         }
     }
     if (nodeId === 'gen2-children') target = 'root';
+    if (nodeId === 'noah-children') target = 'ham-node';
+    if (nodeId === 'terah-children') target = 'nahor-node';
 
     const performScroll = () => {
         const element = document.getElementById(target) || document.getElementById(nodeId);
