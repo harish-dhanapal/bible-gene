@@ -214,10 +214,22 @@ const lineageMap = {
         'midian-connector', 'midian-children'
     ],
     'isaac-node': [
-        'isaac-connector', 'isaac-children', 'esau-connector', 'esau-children'
+        'isaac-connector', 'isaac-children', 'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
     ],
     'isaac-children': [
-        'esau-connector', 'esau-children'
+        'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+    ],
+    'jacob-node': [
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+    ],
+    'jacob-children': [
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+    ],
+    'joseph-node': [
+        'joseph-connector', 'joseph-children'
+    ],
+    'joseph-children': [
+        'joseph-connector', 'joseph-children'
     ],
     'esau-node': [
         'esau-connector', 'esau-children', 'eliphaz-connector', 'eliphaz-children', 'reuel-connector', 'reuel-children'
@@ -405,6 +417,10 @@ const connectorMap = {
     'abraham-children': 'abraham-connector',
     'isaac-node': 'isaac-connector',
     'isaac-children': 'isaac-connector',
+    'jacob-node': 'jacob-connector',
+    'jacob-children': 'jacob-connector',
+    'joseph-node': 'joseph-connector',
+    'joseph-children': 'joseph-connector',
     'esau-node': 'esau-connector',
     'esau-children': 'esau-connector',
     'eliphaz-node': 'eliphaz-connector',
@@ -493,6 +509,10 @@ const parentMap = {
     'abraham-children': 'abraham-node',
     'isaac-node': 'abraham-children',
     'isaac-children': 'isaac-node',
+    'jacob-node': 'isaac-children',
+    'jacob-children': 'jacob-node',
+    'joseph-node': 'jacob-children',
+    'joseph-children': 'joseph-node',
     'esau-node': 'isaac-children',
     'esau-children': 'esau-node',
     'eliphaz-node': 'esau-children',
@@ -1422,6 +1442,7 @@ function scrollToNode(nodeId) {
     if (nodeId === 'gen2-children') target = 'root';
     if (nodeId === 'noah-children') target = 'ham-node';
     if (nodeId === 'terah-children') target = 'nahor-node';
+    if (nodeId === 'jacob-children') target = 'joseph-node';
 
     const performScroll = () => {
         const element = document.getElementById(target) || document.getElementById(nodeId);

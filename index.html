@@ -626,16 +626,178 @@
                                                                 </div>
                                                             </div>
                                                             <div class="column">
-                                                                <div class="node">
-                                                                    <span class="node-title">Jacob (Israel) 👑</span>
-                                                                    <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleJacobInfo(event)">✝</button>
-                                                                    <div class="details">
-                                                                        <strong>Gen 25–49 (Patriarch)</strong><br>
-                                                                        Son of Isaac &amp; Rebekah.<br>
-                                                                        Renamed Israel.<br>
-                                                                        Father of 12 Tribes &amp; Messianic Line.
-                                                                    </div>
-                                                                </div>
+                                                                 <div id="jacob-node" class="node" onclick="revealNext('jacob-children')">
+                                                                     <span class="node-title">Jacob (Israel) 👑</span>
+                                                                     <button class="info-badge cross-info-badge" type="button" aria-label="Special lineage info" onclick="event.stopPropagation(); toggleJacobInfo(event)">✝</button>
+                                                                     <div class="details">
+                                                                         <strong>Gen 25–49 (Patriarch)</strong><br>
+                                                                         Son of Isaac &amp; Rebekah.<br>
+                                                                         Renamed Israel.<br>
+                                                                         Father of 12 Tribes &amp; Dinah.<br>
+                                                                         <em>Click to reveal 12 sons &amp; Dinah</em>
+                                                                     </div>
+                                                                 </div>
+
+                                                                 <div id="jacob-connector" class="connector hidden"></div>
+
+                                                                 <div id="jacob-children" class="branch hidden">
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Reuben
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29:32 (Firstborn by Leah)</strong><br>
+                                                                                 Firstborn son of Jacob.<br>
+                                                                                 Tribe of Reuben.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Simeon
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29:33 (Son of Leah)</strong><br>
+                                                                                 Second son of Jacob.<br>
+                                                                                 Tribe of Simeon.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Levi
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29:34 (Son of Leah)</strong><br>
+                                                                                 Third son of Jacob.<br>
+                                                                                 Priestly Tribe (Moses, Aaron, Levites).
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             <span class="node-title">Judah 👑</span>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 29:35 (Son of Leah)</strong><br>
+                                                                                 Fourth son of Jacob.<br>
+                                                                                 Royal Messianic Tribe (King David &amp; Jesus).
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Dan
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:6 (Son of Bilhah)</strong><br>
+                                                                                 Fifth son of Jacob.<br>
+                                                                                 Tribe of Dan (Samson).
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Naphtali
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:8 (Son of Bilhah)</strong><br>
+                                                                                 Sixth son of Jacob.<br>
+                                                                                 Tribe of Naphtali.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Gad
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:11 (Son of Zilpah)</strong><br>
+                                                                                 Seventh son of Jacob.<br>
+                                                                                 Tribe of Gad.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Asher
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:13 (Son of Zilpah)</strong><br>
+                                                                                 Eighth son of Jacob.<br>
+                                                                                 Tribe of Asher.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Issachar
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:18 (Son of Leah)</strong><br>
+                                                                                 Ninth son of Jacob.<br>
+                                                                                 Tribe of Issachar.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Zebulun
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:20 (Son of Leah)</strong><br>
+                                                                                 Tenth son of Jacob.<br>
+                                                                                 Tribe of Zebulun.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div id="joseph-node" class="node" onclick="revealNext('joseph-children')">
+                                                                             <span class="node-title">Joseph 👑</span>
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:24 (Son of Rachel)</strong><br>
+                                                                                 Eleventh son of Jacob.<br>
+                                                                                 Ruler of Egypt (Coat of many colors).<br>
+                                                                                 Father of Manasseh &amp; Ephraim.<br>
+                                                                                 <em>Click to reveal 2 sons</em>
+                                                                             </div>
+                                                                         </div>
+
+                                                                         <div id="joseph-connector" class="connector hidden"></div>
+
+                                                                         <div id="joseph-children" class="branch hidden">
+                                                                             <div class="column">
+                                                                                 <div class="node">
+                                                                                     Manasseh
+                                                                                     <div class="details">
+                                                                                         <strong>Gen 41:51 (Firstborn in Egypt)</strong><br>
+                                                                                         Elder son of Joseph &amp; Asenath.<br>
+                                                                                         Half-tribe of Manasseh.
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+                                                                             <div class="column">
+                                                                                 <div class="node">
+                                                                                     Ephraim
+                                                                                     <div class="details">
+                                                                                         <strong>Gen 41:52 (Second Son)</strong><br>
+                                                                                         Younger son of Joseph &amp; Asenath.<br>
+                                                                                         Chief tribe of Northern Israel.
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Benjamin
+                                                                             <div class="details">
+                                                                                 <strong>Gen 35:18 (Son of Rachel)</strong><br>
+                                                                                 Twelfth son of Jacob.<br>
+                                                                                 Tribe of Benjamin (King Saul, Paul).
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="column">
+                                                                         <div class="node">
+                                                                             Dinah
+                                                                             <div class="details">
+                                                                                 <strong>Gen 30:21 (Daughter of Leah)</strong><br>
+                                                                                 Daughter of Jacob &amp; Leah.
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
