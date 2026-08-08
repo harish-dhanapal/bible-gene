@@ -829,8 +829,9 @@ function revealNext(targetId) {
             if (jNode) jNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Nahor & Haran if opening Abraham's branch
+        // Auto-collapse Nahor & Haran if opening Abraham's branch, and reset all sub-branches under Abraham
         if (targetId === 'abraham-children') {
+            collapseDescendants('abraham-children');
             collapseDescendants('nahor-children');
             hideElement('nahor-children');
             hideElement('nahor-connector');
@@ -907,6 +908,26 @@ function revealNext(targetId) {
             hideElement('eliphaz-children');
             hideElement('eliphaz-connector');
             const eNode = document.getElementById('eliphaz-node');
+            if (eNode) eNode.classList.remove('is-cracked');
+        }
+
+        // --- ISAAC'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        // Auto-collapse Jacob if opening Esau's branch
+        if (targetId === 'esau-children') {
+            collapseDescendants('jacob-children');
+            hideElement('jacob-children');
+            hideElement('jacob-connector');
+            const jNode = document.getElementById('jacob-node');
+            if (jNode) jNode.classList.remove('is-cracked');
+        }
+
+        // Auto-collapse Esau if opening Jacob's branch
+        if (targetId === 'jacob-children') {
+            collapseDescendants('esau-children');
+            hideElement('esau-children');
+            hideElement('esau-connector');
+            const eNode = document.getElementById('esau-node');
             if (eNode) eNode.classList.remove('is-cracked');
         }
 
@@ -1442,7 +1463,6 @@ function scrollToNode(nodeId) {
     if (nodeId === 'gen2-children') target = 'root';
     if (nodeId === 'noah-children') target = 'ham-node';
     if (nodeId === 'terah-children') target = 'nahor-node';
-    if (nodeId === 'jacob-children') target = 'joseph-node';
 
     const performScroll = () => {
         const element = document.getElementById(target) || document.getElementById(nodeId);
@@ -1503,6 +1523,36 @@ function showElement(id) {
 
 function collapseDescendants(parentId) {
     if (lineageMap[parentId]) {
-        lineageMap[parentId].forEach(childId => hideElement(childId, true));
+        lineageMap[parentId].forEach(childId => {
+            hideElement(childId, true);
+            const childContainer = document.getElementById(childId);
+            if (childContainer) {
+                childContainer.querySelectorAll('.branch').forEach(b => {
+                    b.classList.add('hidden');
+                    b.classList.remove('collapsing');
+                });
+                childContainer.querySelectorAll('.connector').forEach(c => {
+                    c.classList.add('hidden');
+                    c.classList.remove('collapsing');
+                });
+                childContainer.querySelectorAll('.node').forEach(n => {
+                    n.classList.remove('is-cracked');
+                });
+            }
+        });
+    }
+    const container = document.getElementById(parentId);
+    if (container) {
+        container.querySelectorAll('.branch').forEach(b => {
+            b.classList.add('hidden');
+            b.classList.remove('collapsing');
+        });
+        container.querySelectorAll('.connector').forEach(c => {
+            c.classList.add('hidden');
+            c.classList.remove('collapsing');
+        });
+        container.querySelectorAll('.node').forEach(n => {
+            n.classList.remove('is-cracked');
+        });
     }
 }
