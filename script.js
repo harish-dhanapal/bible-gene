@@ -204,27 +204,108 @@ const lineageMap = {
     'abraham-node': [
         'abraham-connector', 'abraham-children', 'isaac-connector', 'isaac-children',
         'ishmael-connector', 'ishmael-children', 'jokshan-connector', 'jokshan-children',
-        'dedan-connector', 'dedan-children', 'midian-connector', 'midian-children'
+        'dedan-connector', 'dedan-children', 'midian-connector', 'midian-children',
+        'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children',
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children',
+        'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children',
+        'joseph-connector', 'joseph-children', 'esau-connector', 'esau-children'
     ],
     'abraham-children': [
         'isaac-connector', 'isaac-children',
         'ishmael-connector', 'ishmael-children',
         'jokshan-connector', 'jokshan-children',
         'dedan-connector', 'dedan-children',
-        'midian-connector', 'midian-children'
+        'midian-connector', 'midian-children',
+        'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children',
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children',
+        'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children',
+        'joseph-connector', 'joseph-children', 'esau-connector', 'esau-children'
     ],
     'isaac-node': [
-        'isaac-connector', 'isaac-children', 'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+        'isaac-connector', 'isaac-children', 'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
     ],
     'isaac-children': [
-        'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+        'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
     ],
     'jacob-node': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
     ],
     'jacob-children': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
     ],
+    'levi-node': [
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+    ],
+    'levi-children': [
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+    ],
+    'merari-node': [
+        'merari-connector', 'merari-children'
+    ],
+    'merari-children': [
+        'merari-connector', 'merari-children'
+    ],
+    'kohath-node': [
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+    ],
+    'kohath-children': [
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+    ],
+    'amram-node': [
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+    ],
+    'amram-children': [
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+    ],
+    'aaron-node': [
+        'aaron-connector', 'aaron-children'
+    ],
+    'aaron-children': [
+        'aaron-connector', 'aaron-children'
+    ],
+    'gershon-node': [
+        'gershon-connector', 'gershon-children', 'libni-connector', 'libni-children', 'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'gershon-children': [
+        'gershon-connector', 'gershon-children', 'libni-connector', 'libni-children', 'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'libni-node': [
+        'libni-connector', 'libni-children', 'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'libni-children': [
+        'libni-connector', 'libni-children', 'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'jahath-node': [
+        'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'jahath-children': [
+        'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'zimmah-node': [
+        'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'zimmah-children': [
+        'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'joah-node': [
+        'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'joah-children': [
+        'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'iddo-node': [
+        'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'iddo-children': [
+        'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'zerah-levite-node': [
+        'zerah-levite-connector', 'zerah-levite-children'
+    ],
+    'zerah-levite-children': [
+        'zerah-levite-connector', 'zerah-levite-children'
+    ],
+
     'simeon-node': [
         'simeon-connector', 'simeon-children', 'shaul-connector', 'shaul-children', 'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
     ],
@@ -477,6 +558,30 @@ const connectorMap = {
     'reuben-children': 'reuben-connector',
     'simeon-node': 'simeon-connector',
     'simeon-children': 'simeon-connector',
+    'levi-node': 'levi-connector',
+    'levi-children': 'levi-connector',
+    'gershon-node': 'gershon-connector',
+    'gershon-children': 'gershon-connector',
+    'libni-node': 'libni-connector',
+    'libni-children': 'libni-connector',
+    'jahath-node': 'jahath-connector',
+    'jahath-children': 'jahath-connector',
+    'zimmah-node': 'zimmah-connector',
+    'zimmah-children': 'zimmah-connector',
+    'joah-node': 'joah-connector',
+    'joah-children': 'joah-connector',
+    'iddo-node': 'iddo-connector',
+    'iddo-children': 'iddo-connector',
+    'zerah-levite-node': 'zerah-levite-connector',
+    'zerah-levite-children': 'zerah-levite-connector',
+    'merari-node': 'merari-connector',
+    'merari-children': 'merari-connector',
+    'kohath-node': 'kohath-connector',
+    'kohath-children': 'kohath-connector',
+    'amram-node': 'amram-connector',
+    'amram-children': 'amram-connector',
+    'aaron-node': 'aaron-connector',
+    'aaron-children': 'aaron-connector',
     'shaul-node': 'shaul-connector',
     'shaul-children': 'shaul-connector',
     'shallum-node': 'shallum-connector',
@@ -587,6 +692,30 @@ const parentMap = {
     'reuben-children': 'reuben-node',
     'simeon-node': 'jacob-children',
     'simeon-children': 'simeon-node',
+    'levi-node': 'jacob-children',
+    'levi-children': 'levi-node',
+    'gershon-node': 'levi-children',
+    'gershon-children': 'gershon-node',
+    'libni-node': 'gershon-children',
+    'libni-children': 'libni-node',
+    'jahath-node': 'libni-children',
+    'jahath-children': 'jahath-node',
+    'zimmah-node': 'jahath-children',
+    'zimmah-children': 'zimmah-node',
+    'joah-node': 'zimmah-children',
+    'joah-children': 'joah-node',
+    'iddo-node': 'joah-children',
+    'iddo-children': 'iddo-node',
+    'zerah-levite-node': 'iddo-children',
+    'zerah-levite-children': 'zerah-levite-node',
+    'merari-node': 'levi-children',
+    'merari-children': 'merari-node',
+    'kohath-node': 'levi-children',
+    'kohath-children': 'kohath-node',
+    'amram-node': 'kohath-children',
+    'amram-children': 'amram-node',
+    'aaron-node': 'amram-children',
+    'aaron-children': 'aaron-node',
     'shaul-node': 'simeon-children',
     'shaul-children': 'shaul-node',
     'shallum-node': 'shaul-children',
@@ -1035,6 +1164,12 @@ function revealNext(targetId) {
             hideElement('simeon-connector');
             const simNode = document.getElementById('simeon-node');
             if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'simeon-children') {
@@ -1043,6 +1178,32 @@ function revealNext(targetId) {
             hideElement('reuben-connector');
             const reuNode = document.getElementById('reuben-node');
             if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'levi-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
 
             collapseDescendants('joseph-children');
             hideElement('joseph-children');
@@ -1063,6 +1224,56 @@ function revealNext(targetId) {
             hideElement('simeon-connector');
             const simNode = document.getElementById('simeon-node');
             if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+        }
+
+        // --- LEVI'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        if (targetId === 'gershon-children') {
+            collapseDescendants('kohath-children');
+            hideElement('kohath-children');
+            hideElement('kohath-connector');
+            const kohNode = document.getElementById('kohath-node');
+            if (kohNode) kohNode.classList.remove('is-cracked');
+
+            collapseDescendants('merari-children');
+            hideElement('merari-children');
+            hideElement('merari-connector');
+            const merNode = document.getElementById('merari-node');
+            if (merNode) merNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'kohath-children') {
+            collapseDescendants('gershon-children');
+            hideElement('gershon-children');
+            hideElement('gershon-connector');
+            const gerNode = document.getElementById('gershon-node');
+            if (gerNode) gerNode.classList.remove('is-cracked');
+
+            collapseDescendants('merari-children');
+            hideElement('merari-children');
+            hideElement('merari-connector');
+            const merNode = document.getElementById('merari-node');
+            if (merNode) merNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'merari-children') {
+            collapseDescendants('gershon-children');
+            hideElement('gershon-children');
+            hideElement('gershon-connector');
+            const gerNode = document.getElementById('gershon-node');
+            if (gerNode) gerNode.classList.remove('is-cracked');
+
+            collapseDescendants('kohath-children');
+            hideElement('kohath-children');
+            hideElement('kohath-connector');
+            const kohNode = document.getElementById('kohath-node');
+            if (kohNode) kohNode.classList.remove('is-cracked');
         }
 
         // --- ABRAHAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
