@@ -246,22 +246,28 @@ const lineageMap = {
         'merari-connector', 'merari-children'
     ],
     'kohath-node': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
     ],
     'kohath-children': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
     ],
     'amram-node': [
-        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
     ],
     'amram-children': [
-        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children'
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
     ],
     'aaron-node': [
-        'aaron-connector', 'aaron-children'
+        'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
     ],
     'aaron-children': [
-        'aaron-connector', 'aaron-children'
+        'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
+    ],
+    'eleazar-node': [
+        'eleazar-connector', 'eleazar-children'
+    ],
+    'eleazar-children': [
+        'eleazar-connector', 'eleazar-children'
     ],
     'gershon-node': [
         'gershon-connector', 'gershon-children', 'libni-connector', 'libni-children', 'jahath-connector', 'jahath-children', 'zimmah-connector', 'zimmah-children', 'joah-connector', 'joah-children', 'iddo-connector', 'iddo-children', 'zerah-levite-connector', 'zerah-levite-children'
@@ -582,6 +588,8 @@ const connectorMap = {
     'amram-children': 'amram-connector',
     'aaron-node': 'aaron-connector',
     'aaron-children': 'aaron-connector',
+    'eleazar-node': 'eleazar-connector',
+    'eleazar-children': 'eleazar-connector',
     'shaul-node': 'shaul-connector',
     'shaul-children': 'shaul-connector',
     'shallum-node': 'shallum-connector',
@@ -716,6 +724,8 @@ const parentMap = {
     'amram-children': 'amram-node',
     'aaron-node': 'amram-children',
     'aaron-children': 'aaron-node',
+    'eleazar-node': 'aaron-children',
+    'eleazar-children': 'eleazar-node',
     'shaul-node': 'simeon-children',
     'shaul-children': 'shaul-node',
     'shallum-node': 'shaul-children',
