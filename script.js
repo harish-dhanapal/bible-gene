@@ -220,10 +220,64 @@ const lineageMap = {
         'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
     ],
     'jacob-node': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children'
     ],
     'jacob-children': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children'
+    ],
+    'simeon-node': [
+        'simeon-connector', 'simeon-children', 'shaul-connector', 'shaul-children', 'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'simeon-children': [
+        'simeon-connector', 'simeon-children', 'shaul-connector', 'shaul-children', 'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'shaul-node': [
+        'shaul-connector', 'shaul-children', 'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'shaul-children': [
+        'shaul-connector', 'shaul-children', 'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'shallum-node': [
+        'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'shallum-children': [
+        'shallum-connector', 'shallum-children', 'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'mibsam-node': [
+        'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'mibsam-children': [
+        'mibsam-connector', 'mibsam-children', 'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'mishma-node': [
+        'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'mishma-children': [
+        'mishma-connector', 'mishma-children', 'hammuel-connector', 'hammuel-children'
+    ],
+    'hammuel-node': [
+        'hammuel-connector', 'hammuel-children'
+    ],
+    'hammuel-children': [
+        'hammuel-connector', 'hammuel-children'
+    ],
+    'reuben-node': [
+        'reuben-connector', 'reuben-children', 'pallu-connector', 'pallu-children', 'eliab-connector', 'eliab-children'
+    ],
+    'reuben-children': [
+        'reuben-connector', 'reuben-children', 'pallu-connector', 'pallu-children', 'eliab-connector', 'eliab-children'
+    ],
+    'pallu-node': [
+        'pallu-connector', 'pallu-children', 'eliab-connector', 'eliab-children'
+    ],
+    'pallu-children': [
+        'pallu-connector', 'pallu-children', 'eliab-connector', 'eliab-children'
+    ],
+    'eliab-node': [
+        'eliab-connector', 'eliab-children'
+    ],
+    'eliab-children': [
+        'eliab-connector', 'eliab-children'
     ],
     'joseph-node': [
         'joseph-connector', 'joseph-children'
@@ -419,6 +473,24 @@ const connectorMap = {
     'isaac-children': 'isaac-connector',
     'jacob-node': 'jacob-connector',
     'jacob-children': 'jacob-connector',
+    'reuben-node': 'reuben-connector',
+    'reuben-children': 'reuben-connector',
+    'simeon-node': 'simeon-connector',
+    'simeon-children': 'simeon-connector',
+    'shaul-node': 'shaul-connector',
+    'shaul-children': 'shaul-connector',
+    'shallum-node': 'shallum-connector',
+    'shallum-children': 'shallum-connector',
+    'mibsam-node': 'mibsam-connector',
+    'mibsam-children': 'mibsam-connector',
+    'mishma-node': 'mishma-connector',
+    'mishma-children': 'mishma-connector',
+    'hammuel-node': 'hammuel-connector',
+    'hammuel-children': 'hammuel-connector',
+    'pallu-node': 'pallu-connector',
+    'pallu-children': 'pallu-connector',
+    'eliab-node': 'eliab-connector',
+    'eliab-children': 'eliab-connector',
     'joseph-node': 'joseph-connector',
     'joseph-children': 'joseph-connector',
     'esau-node': 'esau-connector',
@@ -511,6 +583,24 @@ const parentMap = {
     'isaac-children': 'isaac-node',
     'jacob-node': 'isaac-children',
     'jacob-children': 'jacob-node',
+    'reuben-node': 'jacob-children',
+    'reuben-children': 'reuben-node',
+    'simeon-node': 'jacob-children',
+    'simeon-children': 'simeon-node',
+    'shaul-node': 'simeon-children',
+    'shaul-children': 'shaul-node',
+    'shallum-node': 'shaul-children',
+    'shallum-children': 'shallum-node',
+    'mibsam-node': 'shallum-children',
+    'mibsam-children': 'mibsam-node',
+    'mishma-node': 'mibsam-children',
+    'mishma-children': 'mishma-node',
+    'hammuel-node': 'mishma-children',
+    'hammuel-children': 'hammuel-node',
+    'pallu-node': 'reuben-children',
+    'pallu-children': 'pallu-node',
+    'eliab-node': 'pallu-children',
+    'eliab-children': 'eliab-node',
     'joseph-node': 'jacob-children',
     'joseph-children': 'joseph-node',
     'esau-node': 'isaac-children',
@@ -929,6 +1019,50 @@ function revealNext(targetId) {
             hideElement('esau-connector');
             const eNode = document.getElementById('esau-node');
             if (eNode) eNode.classList.remove('is-cracked');
+        }
+
+        // --- JACOB'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        if (targetId === 'reuben-children') {
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'simeon-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'joseph-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
         }
 
         // --- ABRAHAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
