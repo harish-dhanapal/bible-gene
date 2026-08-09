@@ -33,10 +33,12 @@ const lineageMap = {
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
         'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'kenan-node': [
         'kenan-connector', 'mahalalel-node', 'mahalalel-connector',
@@ -44,71 +46,89 @@ const lineageMap = {
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
         'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'mahalalel-node': [
         'mahalalel-connector', 'jared-node', 'jared-connector',
         'seth-enoch-node', 'seth-enoch-connector', 'methuselah-node',
         'methuselah-connector', 'seth-lamech-node', 'seth-lamech-connector',
         'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'jared-node': [
         'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
         'seth-lamech-connector', 'noah-node', 'noah-connector',
         'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'seth-enoch-node': [
         'seth-enoch-connector', 'methuselah-node', 'methuselah-connector',
         'seth-lamech-node', 'seth-lamech-connector', 'noah-node',
         'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'methuselah-node': [
         'methuselah-connector', 'seth-lamech-node', 'seth-lamech-connector',
         'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'seth-lamech-node': [
         'seth-lamech-connector', 'noah-node', 'noah-connector',
         'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'noah-node': [
         'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'noah-children': [
-        'shem-connector', 'shem-children', 'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children'
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
     'shem-node': [
-        'shem-connector', 'shem-children', 'aram-connector', 'aram-children',
+        'shem-connector', 'shem-children',
+        'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'aram-connector', 'aram-children',
         'shelah-connector', 'shelah-node', 'eber-connector', 'eber-node',
         'eber-children-connector', 'eber-children', 'joktan-connector', 'joktan-children',
         'reu-connector', 'reu-node', 'serug-connector', 'serug-node',
@@ -117,6 +137,7 @@ const lineageMap = {
         'haran-connector', 'haran-children', 'abraham-connector', 'abraham-children'
     ],
     'shem-children': [
+        'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
         'aram-connector', 'aram-children',
         'shelah-connector', 'shelah-node', 'eber-connector', 'eber-node',
         'eber-children-connector', 'eber-children', 'joktan-connector', 'joktan-children',
@@ -246,16 +267,46 @@ const lineageMap = {
         'merari-connector', 'merari-children'
     ],
     'kohath-node': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children'
     ],
     'kohath-children': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children'
+    ],
+    'izhar-node': [
+        'izhar-connector', 'izhar-children'
+    ],
+    'izhar-children': [
+        'izhar-connector', 'izhar-children'
     ],
     'amram-node': [
-        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
     ],
     'amram-children': [
-        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
+        'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
+    ],
+    'moses-node': [
+        'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
+    ],
+    'moses-children': [
+        'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
+    ],
+    'gershom-moses-node': [
+        'gershom-moses-connector', 'gershom-moses-children'
+    ],
+    'gershom-moses-children': [
+        'gershom-moses-connector', 'gershom-moses-children'
+    ],
+    'eliezer-node': [
+        'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
+    ],
+    'eliezer-children': [
+        'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
+    ],
+    'rehabiah-node': [
+        'rehabiah-connector', 'rehabiah-children'
+    ],
+    'rehabiah-children': [
+        'rehabiah-connector', 'rehabiah-children'
     ],
     'aaron-node': [
         'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children'
@@ -458,14 +509,16 @@ const lineageMap = {
     ],
     'ham-node': [
         'ham-connector', 'ham-children',
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children',
-        'canaan-connector', 'canaan-children'
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-children',
+        'put-node',
+        'canaan-node', 'canaan-connector', 'canaan-children'
     ],
     'ham-children': [
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children',
-        'canaan-connector', 'canaan-children'
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children',
+        'put-node',
+        'canaan-node', 'canaan-connector', 'canaan-children'
     ],
     'cush-node': [
         'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children'
@@ -490,8 +543,16 @@ const lineageMap = {
     ],
     'japheth-node': [
         'japheth-connector', 'japheth-children',
-        'gomer-connector', 'gomer-children',
-        'javan-connector', 'javan-children'
+        'gomer-node', 'gomer-connector', 'gomer-children',
+        'magog-node', 'madai-node',
+        'javan-node', 'javan-connector', 'javan-children',
+        'tubal-node', 'meshech-japheth-node', 'tiras-node'
+    ],
+    'japheth-children': [
+        'gomer-node', 'gomer-connector', 'gomer-children',
+        'magog-node', 'madai-node',
+        'javan-node', 'javan-connector', 'javan-children',
+        'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ],
 
     // Root Generation 2
@@ -505,18 +566,18 @@ const lineageMap = {
         'seth-enoch-node', 'seth-enoch-connector', 'methuselah-node',
         'methuselah-connector', 'seth-lamech-node', 'seth-lamech-connector',
         'noah-node', 'noah-connector', 'noah-children', 'noah-children-connector',
-        'shem-connector', 'shem-children', 'aram-connector', 'aram-children',
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node', 'aram-connector', 'aram-children',
         'shelah-connector', 'shelah-node', 'eber-connector', 'eber-node',
         'eber-children-connector', 'eber-children', 'joktan-connector', 'joktan-children',
         'reu-connector', 'reu-node', 'serug-connector', 'serug-node',
         'nahor-ancestor-connector', 'nahor-ancestor-node', 'terah-connector', 'terah-node',
         'terah-children-connector', 'terah-children', 'nahor-connector', 'nahor-children',
         'haran-connector', 'haran-children', 'abraham-connector', 'abraham-children',
-        'ham-connector', 'ham-children', 
-        'cush-connector', 'cush-children', 'raamah-connector', 'raamah-children',
-        'mizraim-connector', 'mizraim-children', 'canaan-connector', 'canaan-children',
-        'japheth-connector', 'japheth-children',
-        'gomer-connector', 'gomer-children', 'javan-connector', 'javan-children'
+        'ham-node', 'ham-connector', 'ham-children', 
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ]
 };
 
@@ -584,8 +645,18 @@ const connectorMap = {
     'merari-children': 'merari-connector',
     'kohath-node': 'kohath-connector',
     'kohath-children': 'kohath-connector',
+    'izhar-node': 'izhar-connector',
+    'izhar-children': 'izhar-connector',
     'amram-node': 'amram-connector',
     'amram-children': 'amram-connector',
+    'moses-node': 'moses-connector',
+    'moses-children': 'moses-connector',
+    'gershom-moses-node': 'gershom-moses-connector',
+    'gershom-moses-children': 'gershom-moses-connector',
+    'eliezer-node': 'eliezer-connector',
+    'eliezer-children': 'eliezer-connector',
+    'rehabiah-node': 'rehabiah-connector',
+    'rehabiah-children': 'rehabiah-connector',
     'aaron-node': 'aaron-connector',
     'aaron-children': 'aaron-connector',
     'eleazar-node': 'eleazar-connector',
@@ -720,8 +791,22 @@ const parentMap = {
     'merari-children': 'merari-node',
     'kohath-node': 'levi-children',
     'kohath-children': 'kohath-node',
+    'izhar-node': 'kohath-children',
+    'izhar-children': 'izhar-node',
+    'korah-node': 'izhar-children',
+    'nepheg-node': 'izhar-children',
+    'zichri-node': 'izhar-children',
     'amram-node': 'kohath-children',
     'amram-children': 'amram-node',
+    'moses-node': 'amram-children',
+    'moses-children': 'moses-node',
+    'gershom-moses-node': 'moses-children',
+    'gershom-moses-children': 'gershom-moses-node',
+    'shubael-node': 'gershom-moses-children',
+    'eliezer-node': 'moses-children',
+    'eliezer-children': 'eliezer-node',
+    'rehabiah-node': 'eliezer-children',
+    'rehabiah-children': 'rehabiah-node',
     'aaron-node': 'amram-children',
     'aaron-children': 'aaron-node',
     'eleazar-node': 'aaron-children',
@@ -773,6 +858,9 @@ const parentMap = {
     'haran-children': 'haran-node',
     'lot-node': 'haran-children',
     'lot-children': 'lot-node',
+    'elam-node': 'shem-children',
+    'asshur-node': 'shem-children',
+    'lud-node': 'shem-children',
     'ham-node': 'noah-children',
     'ham-children': 'ham-node',
     'cush-node': 'ham-children',
@@ -781,14 +869,20 @@ const parentMap = {
     'raamah-children': 'raamah-node',
     'mizraim-node': 'ham-children',
     'mizraim-children': 'mizraim-node',
+    'put-node': 'ham-children',
     'canaan-node': 'ham-children',
     'canaan-children': 'canaan-node',
     'japheth-node': 'noah-children',
     'japheth-children': 'japheth-node',
     'gomer-node': 'japheth-children',
     'gomer-children': 'gomer-node',
+    'magog-node': 'japheth-children',
+    'madai-node': 'japheth-children',
     'javan-node': 'japheth-children',
-    'javan-children': 'javan-node'
+    'javan-children': 'javan-node',
+    'tubal-node': 'japheth-children',
+    'meshech-japheth-node': 'japheth-children',
+    'tiras-node': 'japheth-children'
 };
 
 // Helper to get the parent node element for a given target branch ID
@@ -1060,7 +1154,6 @@ function revealNext(targetId) {
 
         // Auto-collapse Nahor & Haran if opening Abraham's branch, and reset all sub-branches under Abraham
         if (targetId === 'abraham-children') {
-            collapseDescendants('abraham-children');
             collapseDescendants('nahor-children');
             hideElement('nahor-children');
             hideElement('nahor-connector');
@@ -1286,6 +1379,60 @@ function revealNext(targetId) {
             if (kohNode) kohNode.classList.remove('is-cracked');
         }
 
+        // --- KOHATH'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        if (targetId === 'amram-children') {
+            collapseDescendants('izhar-children');
+            hideElement('izhar-children');
+            hideElement('izhar-connector');
+            const izhNode = document.getElementById('izhar-node');
+            if (izhNode) izhNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'izhar-children') {
+            collapseDescendants('amram-children');
+            hideElement('amram-children');
+            hideElement('amram-connector');
+            const amrNode = document.getElementById('amram-node');
+            if (amrNode) amrNode.classList.remove('is-cracked');
+        }
+
+        // --- AMRAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        if (targetId === 'aaron-children') {
+            collapseDescendants('moses-children');
+            hideElement('moses-children');
+            hideElement('moses-connector');
+            const mosNode = document.getElementById('moses-node');
+            if (mosNode) mosNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'moses-children') {
+            collapseDescendants('aaron-children');
+            hideElement('aaron-children');
+            hideElement('aaron-connector');
+            const aarNode = document.getElementById('aaron-node');
+            if (aarNode) aarNode.classList.remove('is-cracked');
+        }
+
+        // --- MOSES'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
+
+        if (targetId === 'gershom-moses-children') {
+            collapseDescendants('eliezer-children');
+            hideElement('eliezer-children');
+            hideElement('eliezer-connector');
+            const eliNode = document.getElementById('eliezer-node');
+            if (eliNode) eliNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'eliezer-children') {
+            collapseDescendants('gershom-moses-children');
+            hideElement('gershom-moses-children');
+            hideElement('gershom-moses-connector');
+            const gerNode = document.getElementById('gershom-moses-node');
+            if (gerNode) gerNode.classList.remove('is-cracked');
+        }
+
         // --- ABRAHAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
 
         if (targetId === 'isaac-children') {
@@ -1370,9 +1517,21 @@ function revealNext(targetId) {
 
         // Show target element and its immediate connector
         targetElement.classList.remove('hidden');
+        targetElement.classList.remove('collapsing');
         if (connectorMap[targetId]) {
             showElement(connectorMap[targetId]);
         }
+
+        // Un-hide the primary (first) node in each column inside this branch.
+        // collapseDescendants() explicitly adds 'hidden' to every node listed in
+        // the lineageMap — including nodes inside child branches. When the branch
+        // container is re-opened, those nodes must be individually un-hidden.
+        // Using :first-child ensures we only reveal each column's HEAD node, so
+        // linear chains (e.g. Seth→Enosh→Kenan) don't all cascade open at once.
+        targetElement.querySelectorAll(':scope > .column > .node:first-child').forEach(function(n) {
+            n.classList.remove('hidden');
+            n.classList.remove('collapsing');
+        });
 
         // Mark the active parent node as cracked while its branch is open
         if (parentNode) {
