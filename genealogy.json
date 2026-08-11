@@ -1,0 +1,2872 @@
+﻿[
+    {
+        "id":  "root",
+        "name":  "Adam \u0026 Eve",
+        "parentId":  null,
+        "generation":  1,
+        "details":  [
+
+                    ],
+        "emoji":  "ðŸƒ",
+        "special":  false
+    },
+    {
+        "id":  "cain",
+        "name":  "Cain",
+        "parentId":  "root",
+        "generation":  2,
+        "details":  [
+                        "Firstborn Son",
+                        "Farmer.",
+                        "Killed Abel.",
+                        "Exiled to Land of Nod."
+                    ],
+        "emoji":  "ðŸŒ¾",
+        "special":  false
+    },
+    {
+        "id":  "cain-enoch",
+        "name":  "Enoch",
+        "parentId":  "cain",
+        "generation":  3,
+        "details":  [
+                        "Line of Cain (Gen 3)",
+                        "City named after him."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "irad",
+        "name":  "Irad",
+        "parentId":  "cain-enoch",
+        "generation":  4,
+        "details":  [
+                        "Line of Cain (Gen 4)",
+                        "Son of Enoch."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mehujael",
+        "name":  "Mehujael",
+        "parentId":  "irad",
+        "generation":  5,
+        "details":  [
+                        "Line of Cain (Gen 5)",
+                        "Son of Irad."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "methushael",
+        "name":  "Methushael",
+        "parentId":  "mehujael",
+        "generation":  6,
+        "details":  [
+                        "Line of Cain (Gen 6)",
+                        "Son of Mehujael."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "lamech",
+        "name":  "Lamech",
+        "parentId":  "methushael",
+        "generation":  7,
+        "details":  [
+                        "Line of Cain (Gen 7)",
+                        "Husband of Adah \u0026 Zillah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jabal",
+        "name":  "Jabal",
+        "parentId":  "lamech",
+        "generation":  8,
+        "details":  [
+                        "Son of Adah",
+                        "Father of tent-dwellers \u0026 livestock herders."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jubal",
+        "name":  "Jubal",
+        "parentId":  "lamech",
+        "generation":  8,
+        "details":  [
+                        "Son of Adah",
+                        "Father of musicians (harp \u0026 flute)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tubal-cain",
+        "name":  "Tubal-Cain",
+        "parentId":  "lamech",
+        "generation":  8,
+        "details":  [
+                        "Son of Zillah",
+                        "Craftsman of bronze \u0026 iron tools."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "naamah",
+        "name":  "Naamah",
+        "parentId":  "lamech",
+        "generation":  8,
+        "details":  [
+                        "Daughter of Zillah",
+                        "Sister of Tubal-Cain."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abel",
+        "name":  "Abel",
+        "parentId":  "root",
+        "generation":  2,
+        "details":  [
+                        "Second Son",
+                        "Shepherd.",
+                        "Killed by Cain."
+                    ],
+        "emoji":  "ðŸ•Šï¸",
+        "special":  false
+    },
+    {
+        "id":  "seth",
+        "name":  "Seth",
+        "parentId":  "root",
+        "generation":  2,
+        "details":  [
+                        "Main Patriarch Line",
+                        "Lifespan: 912 years"
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "enosh",
+        "name":  "Enosh",
+        "parentId":  "seth",
+        "generation":  3,
+        "details":  [
+                        "Gen 3 (Line of Seth)",
+                        "Lifespan: 905 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kenan",
+        "name":  "Kenan",
+        "parentId":  "enosh",
+        "generation":  4,
+        "details":  [
+                        "Gen 4",
+                        "Lifespan: 910 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mahalalel",
+        "name":  "Mahalalel",
+        "parentId":  "kenan",
+        "generation":  5,
+        "details":  [
+                        "Gen 5",
+                        "Lifespan: 895 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jared",
+        "name":  "Jared",
+        "parentId":  "mahalalel",
+        "generation":  6,
+        "details":  [
+                        "Gen 6",
+                        "Lifespan: 962 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "seth-enoch",
+        "name":  "Enoch",
+        "parentId":  "jared",
+        "generation":  7,
+        "details":  [
+                        "Gen 7 (Line of Seth)",
+                        "Walked with God (365 years)"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "methuselah",
+        "name":  "Methuselah",
+        "parentId":  "seth-enoch",
+        "generation":  8,
+        "details":  [
+                        "Gen 8",
+                        "Lifespan: 969 years (Longest)"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "seth-lamech",
+        "name":  "Lamech",
+        "parentId":  "methuselah",
+        "generation":  9,
+        "details":  [
+                        "Gen 9",
+                        "Lifespan: 777 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "noah",
+        "name":  "Noah",
+        "parentId":  "seth-lamech",
+        "generation":  10,
+        "details":  [
+                        "Gen 10 (Line of Seth)",
+                        "Lifespan: 950 years"
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shem",
+        "name":  "Shem",
+        "parentId":  "noah",
+        "generation":  11,
+        "details":  [
+                        "Son of Noah",
+                        "Ancestor of Semitic peoples."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "elam",
+        "name":  "Elam",
+        "parentId":  "shem",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Shem)",
+                        "Son of Shem.",
+                        "Line of the Elamites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "asshur",
+        "name":  "Asshur",
+        "parentId":  "shem",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Shem)",
+                        "Son of Shem.",
+                        "Father of the Assyrians."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "arphaxad",
+        "name":  "Arphaxad",
+        "parentId":  "shem",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Shem)",
+                        "Son of Shem.",
+                        "Line leading to Abraham \u0026 Jesus."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "shelah",
+        "name":  "Shelah",
+        "parentId":  "arphaxad",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Arphaxad)",
+                        "Son of Arphaxad.",
+                        "Messianic Lineage (Lifespan: 433 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "eber",
+        "name":  "Eber",
+        "parentId":  "shelah",
+        "generation":  14,
+        "details":  [
+                        "Gen 10 (Line of Shelah)",
+                        "Namesake root of the \"Hebrews\".",
+                        "Great-grandson of Shem (Lifespan: 464 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "peleg",
+        "name":  "Peleg",
+        "parentId":  "eber",
+        "generation":  15,
+        "details":  [
+                        "Gen 11 (Line of Eber)",
+                        "Name means \"Division\" (Babel).",
+                        "Messianic Lineage (Lifespan: 239 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "reu",
+        "name":  "Reu",
+        "parentId":  "peleg",
+        "generation":  16,
+        "details":  [
+                        "Gen 11 (Line of Peleg)",
+                        "Son of Peleg.",
+                        "Friend/Companion (Lifespan: 239 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "serug",
+        "name":  "Serug",
+        "parentId":  "reu",
+        "generation":  17,
+        "details":  [
+                        "Gen 11 (Line of Reu)",
+                        "Great-grandfather of Abraham.",
+                        "Son of Reu (Lifespan: 230 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "nahor-ancestor",
+        "name":  "Nahor",
+        "parentId":  "serug",
+        "generation":  18,
+        "details":  [
+                        "Gen 11 (Line of Serug)",
+                        "Grandfather of Abraham.",
+                        "Son of Serug (Lifespan: 148 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "terah",
+        "name":  "Terah",
+        "parentId":  "nahor-ancestor",
+        "generation":  19,
+        "details":  [
+                        "Gen 11 (Father of Abraham)",
+                        "Led family from Ur to Haran.",
+                        "Father of Abram, Nahor \u0026 Haran (205 yrs)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "abraham",
+        "name":  "Abram (Abraham) ðŸ‘‘",
+        "parentId":  "terah",
+        "generation":  20,
+        "details":  [
+                        "Gen 11â€“25 (Father of Faith)",
+                        "Patriarch of the Covenant.",
+                        "Father of 8 sons (Sarah, Hagar, Keturah)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "isaac",
+        "name":  "Isaac ðŸ‘‘",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 21 (Son of Promise)",
+                        "Son of Abraham \u0026 Sarah.",
+                        "Covenant Heir.",
+                        "Father of Esau \u0026 Jacob."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "esau",
+        "name":  "Esau (Edom)",
+        "parentId":  "isaac",
+        "generation":  22,
+        "details":  [
+                        "Gen 25 \u0026 36 (Firstborn Twin)",
+                        "Elder son of Isaac \u0026 Rebekah.",
+                        "Father of 5 Edomite sons."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "eliphaz",
+        "name":  "Eliphaz",
+        "parentId":  "esau",
+        "generation":  23,
+        "details":  [
+                        "Gen 36:4 (By Adah)",
+                        "Firstborn son of Esau.",
+                        "Father of 6 Edomite sons."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "teman",
+        "name":  "Teman",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:11 (By Adah)",
+                        "Firstborn of Eliphaz.",
+                        "Edomite chieftain (Temanite)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "omar",
+        "name":  "Omar",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:11",
+                        "Second son of Eliphaz.",
+                        "Edomite chieftain."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zepho",
+        "name":  "Zepho",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:11",
+                        "Third son of Eliphaz.",
+                        "Edomite chieftain (Zephi)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gatam",
+        "name":  "Gatam",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:11",
+                        "Fourth son of Eliphaz.",
+                        "Edomite chieftain."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kenaz",
+        "name":  "Kenaz",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:11",
+                        "Fifth son of Eliphaz.",
+                        "Ancestor of Kenizzites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "amalek",
+        "name":  "Amalek",
+        "parentId":  "eliphaz",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:12 (By Timna)",
+                        "Son of Eliphaz by concubine Timna.",
+                        "Ancestor of Amalekites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "reuel",
+        "name":  "Reuel",
+        "parentId":  "esau",
+        "generation":  23,
+        "details":  [
+                        "Gen 36:4 (By Basemath)",
+                        "Second son of Esau.",
+                        "Father of 4 Edomite chieftains."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nahath",
+        "name":  "Nahath",
+        "parentId":  "reuel",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:13 (By Basemath)",
+                        "Firstborn son of Reuel.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zerah",
+        "name":  "Zerah",
+        "parentId":  "reuel",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:13",
+                        "Second son of Reuel.",
+                        "Father of Jobab (Edomite King)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shammah",
+        "name":  "Shammah",
+        "parentId":  "reuel",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:13",
+                        "Third son of Reuel.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mizzah",
+        "name":  "Mizzah",
+        "parentId":  "reuel",
+        "generation":  24,
+        "details":  [
+                        "Gen 36:13",
+                        "Fourth son of Reuel.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jeush",
+        "name":  "Jeush",
+        "parentId":  "esau",
+        "generation":  23,
+        "details":  [
+                        "Gen 36:5 (By Oholibamah)",
+                        "Third son of Esau.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jalam",
+        "name":  "Jalam",
+        "parentId":  "esau",
+        "generation":  23,
+        "details":  [
+                        "Gen 36:5 (By Oholibamah)",
+                        "Fourth son of Esau.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "korah-2",
+        "name":  "Korah",
+        "parentId":  "esau",
+        "generation":  23,
+        "details":  [
+                        "Gen 36:5 (By Oholibamah)",
+                        "Fifth son of Esau.",
+                        "Edomite chieftain in Seir."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jacob",
+        "name":  "Jacob (Israel) ðŸ‘‘",
+        "parentId":  "isaac",
+        "generation":  22,
+        "details":  [
+                        "Gen 25â€“49 (Patriarch)",
+                        "Son of Isaac \u0026 Rebekah.",
+                        "Renamed Israel.",
+                        "Father of 12 Tribes \u0026 Dinah."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "reuben",
+        "name":  "Reuben",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 29:32 (Firstborn by Leah)",
+                        "Firstborn son of Jacob.",
+                        "Father of 4 sons (Gen 46:9)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hanoch-reuben",
+        "name":  "Hanoch",
+        "parentId":  "reuben",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:9 (Firstborn)",
+                        "Firstborn son of Reuben.",
+                        "Clan of the Hanochites (Num 26:5)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "pallu",
+        "name":  "Pallu",
+        "parentId":  "reuben",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:9 \u0026 Num 26:5â€“8",
+                        "Second son of Reuben.",
+                        "Father of Eliab."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eliab",
+        "name":  "Eliab",
+        "parentId":  "pallu",
+        "generation":  25,
+        "details":  [
+                        "Num 26:8â€“9",
+                        "Son of Pallu.",
+                        "Father of Nemuel, Dathan \u0026 Abiram."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nemuel",
+        "name":  "Nemuel",
+        "parentId":  "eliab",
+        "generation":  26,
+        "details":  [
+                        "Num 26:9",
+                        "Firstborn son of Eliab.",
+                        "Brother of Dathan \u0026 Abiram."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dathan",
+        "name":  "Dathan",
+        "parentId":  "eliab",
+        "generation":  26,
+        "details":  [
+                        "Num 26:9 \u0026 Deut 11:6",
+                        "Son of Eliab.",
+                        "Rebelled against Moses (Korah\u0027s rebellion)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abiram",
+        "name":  "Abiram",
+        "parentId":  "eliab",
+        "generation":  26,
+        "details":  [
+                        "Num 26:9 \u0026 Ps 106:17",
+                        "Son of Eliab.",
+                        "Rebelled against Moses (Korah\u0027s rebellion)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hezron",
+        "name":  "Hezron",
+        "parentId":  "reuben",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:9 (Third Son)",
+                        "Third son of Reuben.",
+                        "Clan of the Hezronites (Num 26:6)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "carmi",
+        "name":  "Carmi",
+        "parentId":  "reuben",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:9 (Fourth Son)",
+                        "Fourth son of Reuben.",
+                        "Clan of the Carmites (Num 26:6)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "simeon",
+        "name":  "Simeon",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 29:33 \u0026 Gen 46:10",
+                        "Second son of Jacob.",
+                        "Father of 6 sons."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nemuel-jemuel",
+        "name":  "Nemuel (Jemuel)",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 Num 26:12",
+                        "Firstborn son of Simeon.",
+                        "Clan of Nemuelites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jamin",
+        "name":  "Jamin",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 Num 26:12",
+                        "Son of Simeon.",
+                        "Clan of Jaminites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jarib-jachin",
+        "name":  "Jarib (Jachin)",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 1 Chr 4:24",
+                        "Son of Simeon.",
+                        "Clan of Jachinites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zerah-zohar",
+        "name":  "Zerah (Zohar)",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 Num 26:13",
+                        "Son of Simeon.",
+                        "Clan of Zerahites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shaul",
+        "name":  "Shaul",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 1 Chr 4:24â€“25",
+                        "Son of Simeon (by Canaanite woman).",
+                        "Father of Shallum."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shallum",
+        "name":  "Shallum",
+        "parentId":  "shaul",
+        "generation":  25,
+        "details":  [
+                        "1 Chr 4:25",
+                        "Son of Shaul.",
+                        "Father of Mibsam."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mibsam",
+        "name":  "Mibsam",
+        "parentId":  "shallum",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 4:25",
+                        "Son of Shallum.",
+                        "Father of Mishma."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mishma",
+        "name":  "Mishma",
+        "parentId":  "mibsam",
+        "generation":  27,
+        "details":  [
+                        "1 Chr 4:25â€“26",
+                        "Son of Mibsam.",
+                        "Father of Hammuel."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hammuel",
+        "name":  "Hammuel (Hamuel)",
+        "parentId":  "mishma",
+        "generation":  28,
+        "details":  [
+                        "1 Chr 4:26",
+                        "Son of Mishma.",
+                        "Father of Zaccur \u0026 Shimei."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zaccur",
+        "name":  "Zaccur",
+        "parentId":  "hammuel",
+        "generation":  29,
+        "details":  [
+                        "1 Chr 4:26",
+                        "Son of Hammuel."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shimei-hammuel",
+        "name":  "Shimei",
+        "parentId":  "hammuel",
+        "generation":  29,
+        "details":  [
+                        "1 Chr 4:26â€“27",
+                        "Son of Hammuel.",
+                        "Had 16 sons \u0026 6 daughters."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ohad",
+        "name":  "Ohad",
+        "parentId":  "simeon",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:10 \u0026 Ex 6:15",
+                        "Son of Simeon."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "levi",
+        "name":  "Levi ðŸ‘‘",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 29:34 \u0026 Gen 46:11",
+                        "Third son of Jacob.",
+                        "Father of 3 Priestly Clans."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "gershon",
+        "name":  "Gershon (Gershom)",
+        "parentId":  "levi",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:11 \u0026 Ex 6:16â€“17",
+                        "Firstborn son of Levi.",
+                        "Father of 2 Levitical Clans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "libni",
+        "name":  "Libni (Ladan)",
+        "parentId":  "gershon",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:17 \u0026 1 Chr 6:20",
+                        "Firstborn son of Gershon.",
+                        "Father of Jahath."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jahath",
+        "name":  "Jahath",
+        "parentId":  "libni",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 6:20",
+                        "Son of Libni.",
+                        "Father of Zimmah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zimmah",
+        "name":  "Zimmah",
+        "parentId":  "jahath",
+        "generation":  27,
+        "details":  [
+                        "1 Chr 6:20",
+                        "Son of Jahath.",
+                        "Father of Joah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "joah",
+        "name":  "Joah",
+        "parentId":  "zimmah",
+        "generation":  28,
+        "details":  [
+                        "1 Chr 6:21",
+                        "Son of Zimmah.",
+                        "Father of Iddo."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "iddo",
+        "name":  "Iddo (Adaiah)",
+        "parentId":  "joah",
+        "generation":  29,
+        "details":  [
+                        "1 Chr 6:21 \u0026 1 Chr 6:41",
+                        "Son of Joah.",
+                        "Father of Zerah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zerah-levite",
+        "name":  "Zerah",
+        "parentId":  "iddo",
+        "generation":  30,
+        "details":  [
+                        "1 Chr 6:21",
+                        "Son of Iddo.",
+                        "Father of Jeatherai."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jeatherai-ethni",
+        "name":  "Jeatherai (Ethni)",
+        "parentId":  "zerah-levite",
+        "generation":  31,
+        "details":  [
+                        "1 Chr 6:21 \u0026 1 Chr 6:41",
+                        "Son of Zerah.",
+                        "Levitical musician family line."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shimei-gershon",
+        "name":  "Shimei",
+        "parentId":  "gershon",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:17 \u0026 Num 3:18",
+                        "Second son of Gershon.",
+                        "Clan of Shimeites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kohath",
+        "name":  "Kohath ðŸ‘‘",
+        "parentId":  "levi",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:11 \u0026 Ex 6:16â€“18",
+                        "Second son of Levi.",
+                        "Father of 4 Levitical Clans."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "amram",
+        "name":  "Amram ðŸ‘‘",
+        "parentId":  "kohath",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:18â€“20 \u0026 Num 26:59",
+                        "Married Jochebed.",
+                        "Father of Aaron, Moses \u0026 Miriam."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "aaron",
+        "name":  "Aaron ðŸ‘‘",
+        "parentId":  "amram",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:20â€“23 \u0026 1 Chr 6:3",
+                        "First High Priest of Israel.",
+                        "Father of High Priestly Line."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "nadab",
+        "name":  "Nadab",
+        "parentId":  "aaron",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:23 \u0026 Lev 10:1â€“2",
+                        "Firstborn son of Aaron.",
+                        "Offered unauthorized fire."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abihu",
+        "name":  "Abihu",
+        "parentId":  "aaron",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:23 \u0026 Lev 10:1â€“2",
+                        "Second son of Aaron.",
+                        "Offered unauthorized fire."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eleazar",
+        "name":  "Eleazar ðŸ‘‘",
+        "parentId":  "aaron",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:23 \u0026 Num 20:28",
+                        "Third son of Aaron.",
+                        "2nd High Priest of Israel.",
+                        "Click for High Priestly Succession (23 Gen)"
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "ithamar",
+        "name":  "Ithamar ðŸ‘‘",
+        "parentId":  "aaron",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:23 \u0026 Ex 38:21",
+                        "Fourth son of Aaron.",
+                        "Priest \u0026 Tabernacle Overseer."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "moses",
+        "name":  "Moses ðŸ‘‘",
+        "parentId":  "amram",
+        "generation":  26,
+        "details":  [
+                        "Ex 2:1â€“10 \u0026 Ex 6:20",
+                        "Prophet, Lawgiver \u0026 Leader.",
+                        "Led Israel out of Egypt.",
+                        "Married Zipporah."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "gershom-moses",
+        "name":  "Gershom",
+        "parentId":  "moses",
+        "generation":  27,
+        "details":  [
+                        "Ex 2:22 \u0026 1 Chr 23:15",
+                        "Firstborn son of Moses.",
+                        "Name means \"stranger there\"."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shubael",
+        "name":  "Shubael (Shebuel)",
+        "parentId":  "gershom-moses",
+        "generation":  28,
+        "details":  [
+                        "1 Chr 23:16 \u0026 26:24",
+                        "Son of Gershom.",
+                        "Chief officer over the treasuries."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eliezer",
+        "name":  "Eliezer",
+        "parentId":  "moses",
+        "generation":  27,
+        "details":  [
+                        "Ex 18:4 \u0026 1 Chr 23:15",
+                        "Second son of Moses.",
+                        "Name means \"God is my help\"."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "rehabiah",
+        "name":  "Rehabiah",
+        "parentId":  "eliezer",
+        "generation":  28,
+        "details":  [
+                        "1 Chr 23:17 \u0026 26:25",
+                        "Son of Eliezer.",
+                        "Chief of Eliezer\u0027s descendants."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "miriam",
+        "name":  "Miriam ðŸ‘‘",
+        "parentId":  "amram",
+        "generation":  26,
+        "details":  [
+                        "Ex 15:20 \u0026 Num 26:59",
+                        "Prophetess of Israel.",
+                        "Sister of Aaron \u0026 Moses."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "izhar",
+        "name":  "Izhar",
+        "parentId":  "kohath",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:18â€“21",
+                        "Second son of Kohath.",
+                        "Father of Korah, Nepheg \u0026 Zichri."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "korah",
+        "name":  "Korah",
+        "parentId":  "izhar",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:21 \u0026 Num 16",
+                        "Firstborn son of Izhar.",
+                        "Leader of Korah\u0027s rebellion."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nepheg",
+        "name":  "Nepheg",
+        "parentId":  "izhar",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:21",
+                        "Second son of Izhar.",
+                        "Levite of Izharite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zichri",
+        "name":  "Zichri",
+        "parentId":  "izhar",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:21",
+                        "Third son of Izhar.",
+                        "Levite of Izharite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hebron",
+        "name":  "Hebron",
+        "parentId":  "kohath",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:18 \u0026 Num 3:19",
+                        "Third son of Kohath.",
+                        "Clan of Hebronites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "uzziel",
+        "name":  "Uzziel",
+        "parentId":  "kohath",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:18â€“22",
+                        "Fourth son of Kohath.",
+                        "Father of Mishael, Elzaphan \u0026 Sithri."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "merari",
+        "name":  "Merari",
+        "parentId":  "levi",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:11 \u0026 Ex 6:16â€“19",
+                        "Third son of Levi.",
+                        "Father of 2 Levitical Clans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mahli",
+        "name":  "Mahli",
+        "parentId":  "merari",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:19 \u0026 Num 3:20",
+                        "Firstborn son of Merari.",
+                        "Clan of Mahlites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mushi",
+        "name":  "Mushi",
+        "parentId":  "merari",
+        "generation":  25,
+        "details":  [
+                        "Ex 6:19 \u0026 Num 3:20",
+                        "Second son of Merari.",
+                        "Clan of Mushites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "judah",
+        "name":  "Judah ðŸ‘‘",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 29:35 (Son of Leah)",
+                        "Fourth son of Jacob.",
+                        "Royal Messianic Tribe (King David \u0026 Jesus)."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "dan",
+        "name":  "Dan",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:6 (Son of Bilhah)",
+                        "Fifth son of Jacob.",
+                        "Tribe of Dan (Samson)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "naphtali",
+        "name":  "Naphtali",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:8 (Son of Bilhah)",
+                        "Sixth son of Jacob.",
+                        "Tribe of Naphtali."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gad",
+        "name":  "Gad",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:11 (Son of Zilpah)",
+                        "Seventh son of Jacob.",
+                        "Tribe of Gad."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "asher",
+        "name":  "Asher",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:13 (Son of Zilpah)",
+                        "Eighth son of Jacob.",
+                        "Tribe of Asher."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "issachar",
+        "name":  "Issachar",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:18 (Son of Leah)",
+                        "Ninth son of Jacob.",
+                        "Tribe of Issachar."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zebulun",
+        "name":  "Zebulun",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:20 (Son of Leah)",
+                        "Tenth son of Jacob.",
+                        "Tribe of Zebulun."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "joseph",
+        "name":  "Joseph ðŸ‘‘",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:24 (Son of Rachel)",
+                        "Eleventh son of Jacob.",
+                        "Ruler of Egypt (Coat of many colors).",
+                        "Father of Manasseh \u0026 Ephraim."
+                    ],
+        "emoji":  "ðŸ‘‘",
+        "special":  false
+    },
+    {
+        "id":  "manasseh",
+        "name":  "Manasseh",
+        "parentId":  "joseph",
+        "generation":  24,
+        "details":  [
+                        "Gen 41:51 (Firstborn in Egypt)",
+                        "Elder son of Joseph \u0026 Asenath.",
+                        "Half-tribe of Manasseh."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ephraim",
+        "name":  "Ephraim",
+        "parentId":  "joseph",
+        "generation":  24,
+        "details":  [
+                        "Gen 41:52 (Second Son)",
+                        "Younger son of Joseph \u0026 Asenath.",
+                        "Chief tribe of Northern Israel."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "benjamin",
+        "name":  "Benjamin",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 35:18 (Son of Rachel)",
+                        "Twelfth son of Jacob.",
+                        "Tribe of Benjamin (King Saul, Paul)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dinah",
+        "name":  "Dinah",
+        "parentId":  "jacob",
+        "generation":  23,
+        "details":  [
+                        "Gen 30:21 (Daughter of Leah)",
+                        "Daughter of Jacob \u0026 Leah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ishmael",
+        "name":  "Ishmael",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 16 \u0026 25 (Son of Hagar)",
+                        "Firstborn of Abraham.",
+                        "Father of 12 Arabian princes.",
+                        "Great desert nation."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "nebaioth",
+        "name":  "Nebaioth",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:13 (Firstborn)",
+                        "Firstborn prince of Ishmael.",
+                        "Ancestor of the Nabataeans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kedar",
+        "name":  "Kedar",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:13 (Second Son)",
+                        "Second prince of Ishmael.",
+                        "Desert archer tribe of Kedar."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "adbeel",
+        "name":  "Adbeel",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:13 (Third Son)",
+                        "Third prince of Ishmael.",
+                        "North Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mibsam-2",
+        "name":  "Mibsam",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:13 (Fourth Son)",
+                        "Fourth prince of Ishmael.",
+                        "Arabian clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mishma-2",
+        "name":  "Mishma",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:14 (Fifth Son)",
+                        "Fifth prince of Ishmael.",
+                        "Arabian desert clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dumah",
+        "name":  "Dumah",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:14 (Sixth Son)",
+                        "Sixth prince of Ishmael.",
+                        "Oasis of Dumah (Dumat al-Jandal)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "massa",
+        "name":  "Massa",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:14 (Seventh Son)",
+                        "Seventh prince of Ishmael.",
+                        "North Arabian tribe of Mas\u0027u."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hadad-hadar",
+        "name":  "Hadad (Hadar)",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:15 (Eighth Son)",
+                        "Eighth prince of Ishmael.",
+                        "Hadar in 1 Chron 1:30."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tema",
+        "name":  "Tema",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:15 (Ninth Son)",
+                        "Ninth prince of Ishmael.",
+                        "Oasis kingdom of Tayma (Job 6:19)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jetur",
+        "name":  "Jetur",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:15 (Tenth Son)",
+                        "Tenth prince of Ishmael.",
+                        "Ancestor of the Ituraeans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "naphish",
+        "name":  "Naphish",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:15 (Eleventh Son)",
+                        "Eleventh prince of Ishmael.",
+                        "Transjordan Ishmaelite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kedemah",
+        "name":  "Kedemah",
+        "parentId":  "ishmael",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:15 (Twelfth Son)",
+                        "Twelfth prince of Ishmael.",
+                        "Eastern Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zimran",
+        "name":  "Zimran",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Firstborn of Keturah.",
+                        "Red Sea / Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jokshan",
+        "name":  "Jokshan",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Second son of Keturah.",
+                        "Father of Sheba \u0026 Dedan."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "sheba-jokshan",
+        "name":  "Sheba",
+        "parentId":  "jokshan",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:3",
+                        "Son of Jokshan.",
+                        "Arabian trading nation of Sheba."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dedan",
+        "name":  "Dedan",
+        "parentId":  "jokshan",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:3 (Son of Jokshan)",
+                        "Son of Jokshan.",
+                        "Father of 3 tribes."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "asshurim",
+        "name":  "Asshurim",
+        "parentId":  "dedan",
+        "generation":  23,
+        "details":  [
+                        "Gen 25:3",
+                        "Firstborn son of Dedan.",
+                        "Nomadic tent clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "letushim",
+        "name":  "Letushim",
+        "parentId":  "dedan",
+        "generation":  23,
+        "details":  [
+                        "Gen 25:3",
+                        "Second son of Dedan.",
+                        "Craftsmen / metalworker clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "leummim",
+        "name":  "Leummim",
+        "parentId":  "dedan",
+        "generation":  23,
+        "details":  [
+                        "Gen 25:3",
+                        "Third son of Dedan.",
+                        "Chieftain / nation clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "medan",
+        "name":  "Medan",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Third son of Keturah.",
+                        "Northern Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "midian",
+        "name":  "Midian",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Founder of the Midianites.",
+                        "Land of Jethro (Exodus 2)."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "ephah",
+        "name":  "Ephah",
+        "parentId":  "midian",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:4 (Firstborn)",
+                        "Firstborn of Midian.",
+                        "Camel caravan trade of Ephah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "epher",
+        "name":  "Epher",
+        "parentId":  "midian",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:4 (Second Son)",
+                        "Second son of Midian.",
+                        "Red Sea / Midianite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hanoch-midian",
+        "name":  "Hanoch",
+        "parentId":  "midian",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:4 (Third Son)",
+                        "Third son of Midian.",
+                        "Northwest Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abida",
+        "name":  "Abida",
+        "parentId":  "midian",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:4 (Fourth Son)",
+                        "Fourth son of Midian.",
+                        "Ancient Midianite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eldaah",
+        "name":  "Eldaah",
+        "parentId":  "midian",
+        "generation":  22,
+        "details":  [
+                        "Gen 25:4 (Fifth Son)",
+                        "Fifth son of Midian.",
+                        "Midianite desert nation."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ishbak",
+        "name":  "Ishbak",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Fifth son of Keturah.",
+                        "Syro-Arabian region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shuah",
+        "name":  "Shuah",
+        "parentId":  "abraham",
+        "generation":  21,
+        "details":  [
+                        "Gen 25 (Son of Keturah)",
+                        "Sixth son of Keturah.",
+                        "Ancestor of Bildad (Job 2:11)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nahor",
+        "name":  "Nahor",
+        "parentId":  "terah",
+        "generation":  20,
+        "details":  [
+                        "Gen 11 \u0026 22 (Line of Terah)",
+                        "Son of Terah.",
+                        "Husband of Milcah \u0026 Reumah.",
+                        "Father of 12 sons."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "uz-nahor",
+        "name":  "Uz",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Firstborn of Nahor \u0026 Milcah.",
+                        "Aramean / Syrian region of Uz."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "buz",
+        "name":  "Buz",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Second son.",
+                        "Ancestor of Elihu the Buzite (Job 32:2)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kemuel",
+        "name":  "Kemuel",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Third son.",
+                        "Father of Aram (Aramean chieftain)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "chesed",
+        "name":  "Chesed",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Fourth son.",
+                        "Root of Kesed / Chaldean clans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hazo",
+        "name":  "Hazo",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Fifth son.",
+                        "North Arabian / Syrian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "pildash",
+        "name":  "Pildash",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Sixth son.",
+                        "Mesopotamian / Aramean clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jidlaph",
+        "name":  "Jidlaph",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Seventh son.",
+                        "Northern Aramean tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "bethuel",
+        "name":  "Bethuel",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Milcah)",
+                        "Father of Laban \u0026 Rebekah.",
+                        "Messianic Lineage (Paddan-Aram)."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "laban",
+        "name":  "Laban",
+        "parentId":  "bethuel",
+        "generation":  22,
+        "details":  [
+                        "Gen 24 \u0026 29 (Son of Bethuel)",
+                        "Aramean of Haran.",
+                        "Father of Leah \u0026 Rachel."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "leah",
+        "name":  "Leah ðŸ‘‘",
+        "parentId":  "laban",
+        "generation":  23,
+        "details":  [
+                        "Gen 29 (Elder Daughter)",
+                        "First wife of Jacob.",
+                        "Mother of 6 tribes (Judah, Levi, etc.).",
+                        "Messianic Line ancestor."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "rachel",
+        "name":  "Rachel ðŸ‘‘",
+        "parentId":  "laban",
+        "generation":  23,
+        "details":  [
+                        "Gen 29 (Younger Daughter)",
+                        "Beloved wife of Jacob.",
+                        "Mother of Joseph \u0026 Benjamin.",
+                        "Matriarch of Israel."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "bilhah",
+        "name":  "Bilhah",
+        "parentId":  "laban",
+        "generation":  23,
+        "details":  [
+                        "Gen 29 \u0026 30 (Servant)",
+                        "Handmaid of Rachel.",
+                        "Mother of Dan \u0026 Naphtali."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "zilpah",
+        "name":  "Zilpah",
+        "parentId":  "laban",
+        "generation":  23,
+        "details":  [
+                        "Gen 29 \u0026 30 (Servant)",
+                        "Handmaid of Leah.",
+                        "Mother of Gad \u0026 Asher."
+                    ],
+        "emoji":  "ðŸ“œ",
+        "special":  true
+    },
+    {
+        "id":  "rebekah",
+        "name":  "Rebekah ðŸ‘‘",
+        "parentId":  "bethuel",
+        "generation":  22,
+        "details":  [
+                        "Gen 24 \u0026 25 (Daughter of Bethuel)",
+                        "Wife of Isaac.",
+                        "Mother of Esau \u0026 Jacob.",
+                        "Messianic Line Matriarch."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "tebah",
+        "name":  "Tebah",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Reumah)",
+                        "Ninth son.",
+                        "Syrian town of Tibhath (1 Chron 18:8)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gaham",
+        "name":  "Gaham",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Reumah)",
+                        "Tenth son.",
+                        "Aramean / Syrian clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tahash",
+        "name":  "Tahash",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Reumah)",
+                        "Eleventh son.",
+                        "Syrian border region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "maacah",
+        "name":  "Maacah",
+        "parentId":  "nahor",
+        "generation":  21,
+        "details":  [
+                        "Gen 22 (By Reumah)",
+                        "Twelfth son.",
+                        "Kingdom of Maacah (2 Sam 10:6)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "haran",
+        "name":  "Haran",
+        "parentId":  "terah",
+        "generation":  20,
+        "details":  [
+                        "Gen 11 (Line of Terah)",
+                        "Son of Terah.",
+                        "Brother of Abraham \u0026 Nahor.",
+                        "Father of Lot, Milcah \u0026 Iscah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "lot",
+        "name":  "Lot",
+        "parentId":  "haran",
+        "generation":  21,
+        "details":  [
+                        "Gen 11â€“19 (Son of Haran)",
+                        "Nephew of Abraham.",
+                        "Ancestor of Moabites \u0026 Ammonites.",
+                        "Line to Ruth, David \u0026 Jesus."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "daughter-unnamed-lot",
+        "name":  "Daughter (unnamed)",
+        "parentId":  "lot",
+        "generation":  22,
+        "details":  [
+                        "Gen 19:31â€“37",
+                        "Elder daughter of Lot.",
+                        "Mother of Moab."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "daughter-unnamed-lot-2",
+        "name":  "Daughter (unnamed)",
+        "parentId":  "lot",
+        "generation":  22,
+        "details":  [
+                        "Gen 19:31â€“37",
+                        "Younger daughter of Lot.",
+                        "Mother of Ben-Ammi."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "moab",
+        "name":  "Moab ðŸ‘‘",
+        "parentId":  "lot",
+        "generation":  22,
+        "details":  [
+                        "Gen 19:37",
+                        "Son of Lot\u0027s elder daughter.",
+                        "Father of the Moabites.",
+                        "Line to Ruth, David \u0026 Jesus."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "ben-ammi",
+        "name":  "Ben-Ammi",
+        "parentId":  "lot",
+        "generation":  22,
+        "details":  [
+                        "Gen 19:38",
+                        "Son of Lot\u0027s younger daughter.",
+                        "Father of the Ammonites.",
+                        "Line of King Rehoboam."
+                    ],
+        "emoji":  "âœ",
+        "special":  true
+    },
+    {
+        "id":  "milcah",
+        "name":  "Milcah",
+        "parentId":  "haran",
+        "generation":  21,
+        "details":  [
+                        "Gen 11 \u0026 22 (Daughter of Haran)",
+                        "Wife of Nahor.",
+                        "Mother of Bethuel.",
+                        "Grandmother of Rebekah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "iscah",
+        "name":  "Iscah",
+        "parentId":  "haran",
+        "generation":  21,
+        "details":  [
+                        "Gen 11 (Daughter of Haran)",
+                        "Sister of Lot \u0026 Milcah (Gen 11:29).",
+                        "Identified in tradition as Sarah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "joktan",
+        "name":  "Joktan",
+        "parentId":  "eber",
+        "generation":  15,
+        "details":  [
+                        "Gen 10 (Line of Eber)",
+                        "Son of Eber.",
+                        "Father of 13 Arabian tribes."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "almodad",
+        "name":  "Almodad",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Firstborn of Joktan.",
+                        "Ancient South Arabian / Yemeni tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sheleph",
+        "name":  "Sheleph",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Second son of Joktan.",
+                        "Salif / Sulaf region of Yemen."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hazarmaveth",
+        "name":  "Hazarmaveth",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Third son of Joktan.",
+                        "Namesake of Hadramaut, S. Arabia."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jerah",
+        "name":  "Jerah",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Fourth son of Joktan.",
+                        "Moon-worshipping S. Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hadoram",
+        "name":  "Hadoram",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Fifth son of Joktan.",
+                        "Dhofar / S. Arabian region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "uzal",
+        "name":  "Uzal",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Sixth son of Joktan.",
+                        "Ancient Sanaa, capital of Yemen."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "diklah",
+        "name":  "Diklah",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Seventh son of Joktan.",
+                        "Date-palm oasis region of Arabia."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "obal-ebal",
+        "name":  "Obal (Ebal)",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Eighth son (Ebal in 1 Chron 1:22).",
+                        "S. Arabian mountain tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abimael",
+        "name":  "Abimael",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Ninth son of Joktan.",
+                        "Yemeni tribe (\"Father is God\")."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sheba-joktan",
+        "name":  "Sheba",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Tenth son of Joktan.",
+                        "Sabaean incense empire of Yemen."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ophir",
+        "name":  "Ophir ðŸª™",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Eleventh son of Joktan.",
+                        "Famed biblical gold region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "havilah-joktan",
+        "name":  "Havilah",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Twelfth son of Joktan.",
+                        "Arabian sand-gold territory."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jobab",
+        "name":  "Jobab",
+        "parentId":  "joktan",
+        "generation":  16,
+        "details":  [
+                        "Gen 10 (Line of Joktan)",
+                        "Thirteenth son of Joktan.",
+                        "S. Arabian kingdom near Aden."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "lud",
+        "name":  "Lud",
+        "parentId":  "shem",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Shem)",
+                        "Son of Shem.",
+                        "Line of the Lydians."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "aram",
+        "name":  "Aram",
+        "parentId":  "shem",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Shem)",
+                        "Son of Shem.",
+                        "Father of the Arameans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "uz-aram",
+        "name":  "Uz",
+        "parentId":  "aram",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Aram)",
+                        "Son of Aram.",
+                        "Land of Uz (Home of Job)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hul",
+        "name":  "Hul",
+        "parentId":  "aram",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Aram)",
+                        "Son of Aram.",
+                        "Region near Armenia \u0026 Lake Huleh."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gether",
+        "name":  "Gether",
+        "parentId":  "aram",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Aram)",
+                        "Son of Aram.",
+                        "Ancient Aramean / Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mash-meshech",
+        "name":  "Mash (Meshech)",
+        "parentId":  "aram",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Aram)",
+                        "Son of Aram (Meshech in 1 Chron 1:17).",
+                        "Syro-Mesopotamian region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ham",
+        "name":  "Ham",
+        "parentId":  "noah",
+        "generation":  11,
+        "details":  [
+                        "Son of Noah",
+                        "Ancestor of Southern nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "cush",
+        "name":  "Cush",
+        "parentId":  "ham",
+        "generation":  12,
+        "details":  [
+                        "Son of Ham",
+                        "Ethiopia \u0026 Sudan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "seba",
+        "name":  "Seba",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Son of Cush",
+                        "Sabaean/African nation."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "havilah-cush",
+        "name":  "Havilah",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Son of Cush",
+                        "Gold region of Arabia."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sabtah",
+        "name":  "Sabtah",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Son of Cush",
+                        "Southern Arabian tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "raamah",
+        "name":  "Raamah",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Son of Cush",
+                        "Arabian merchant tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sheba-raamah",
+        "name":  "Sheba",
+        "parentId":  "raamah",
+        "generation":  14,
+        "details":  [
+                        "Son of Raamah",
+                        "Merchant nation of Sheba."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dedan-2",
+        "name":  "Dedan",
+        "parentId":  "raamah",
+        "generation":  14,
+        "details":  [
+                        "Son of Raamah",
+                        "Caravan traders of Arabia."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sabteca",
+        "name":  "Sabteca",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Son of Cush",
+                        "Ancient Eastern Cushite tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nimrod",
+        "name":  "Nimrod ðŸ‘‘",
+        "parentId":  "cush",
+        "generation":  13,
+        "details":  [
+                        "Mighty Son of Cush",
+                        "First empire builder \u0026 hunter.",
+                        "Founded Babel, Erech \u0026 Nineveh."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mizraim",
+        "name":  "Mizraim",
+        "parentId":  "ham",
+        "generation":  12,
+        "details":  [
+                        "Son of Ham",
+                        "Land of Egypt."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ludim",
+        "name":  "Ludim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "North African archers."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "anamim",
+        "name":  "Anamim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Egyptian delta tribe."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "lehabim",
+        "name":  "Lehabim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Libyan desert allies."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "naphtuhim",
+        "name":  "Naphtuhim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Lower Egypt nation."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "pathrusim",
+        "name":  "Pathrusim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Upper Egypt (Pathros)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "casluhim",
+        "name":  "Casluhim ðŸ›¡ï¸",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Ancestors of the Philistines."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "caphtorim",
+        "name":  "Caphtorim",
+        "parentId":  "mizraim",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Mizraim)",
+                        "Crete \u0026 Mediterranean islands."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "put",
+        "name":  "Put",
+        "parentId":  "ham",
+        "generation":  12,
+        "details":  [
+                        "Son of Ham",
+                        "Line of Libya \u0026 North Africa."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "canaan",
+        "name":  "Canaan",
+        "parentId":  "ham",
+        "generation":  12,
+        "details":  [
+                        "Son of Ham",
+                        "Father of Canaanite nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sidon",
+        "name":  "Sidon",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Firstborn of Canaan",
+                        "Phoenician port city."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "heth",
+        "name":  "Heth",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Second Son of Canaan",
+                        "Father of the Hittites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jebusites",
+        "name":  "Jebusites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Tribe",
+                        "Inhabitants of ancient Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "amorites",
+        "name":  "Amorites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Nation",
+                        "Powerful highland kingdom."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "girgashites",
+        "name":  "Girgashites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Tribe",
+                        "Ancient nation of Canaan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hivites",
+        "name":  "Hivites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Nation",
+                        "Foothill \u0026 Syrian dwellers."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "arkites",
+        "name":  "Arkites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Clan",
+                        "Northern coastal city."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sinites",
+        "name":  "Sinites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Clan",
+                        "Lebanon mountain region."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "arvadites",
+        "name":  "Arvadites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Clan",
+                        "Island city-state mariners."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zemarites",
+        "name":  "Zemarites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Clan",
+                        "Coastal fortress city."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hamathites",
+        "name":  "Hamathites",
+        "parentId":  "canaan",
+        "generation":  13,
+        "details":  [
+                        "Canaanite Nation",
+                        "Northern Syrian kingdom."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "japheth",
+        "name":  "Japheth",
+        "parentId":  "noah",
+        "generation":  11,
+        "details":  [
+                        "Son of Noah",
+                        "Ancestor of Maritime \u0026 Eurasian nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gomer",
+        "name":  "Gomer",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Cimmerians \u0026 Northern nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ashkenaz",
+        "name":  "Ashkenaz",
+        "parentId":  "gomer",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Gomer)",
+                        "Son of Gomer.",
+                        "Scythian / Northern Eurasian nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "riphath-diphath",
+        "name":  "Riphath (Diphath)",
+        "parentId":  "gomer",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Gomer)",
+                        "Son of Gomer (Diphath in 1 Chron 1:6).",
+                        "Paphlagonian / Anatolian peoples."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "togarmah",
+        "name":  "Togarmah",
+        "parentId":  "gomer",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Gomer)",
+                        "Son of Gomer.",
+                        "Armenian \u0026 Anatolian horsemen."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "magog",
+        "name":  "Magog",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Eurasian Steppe nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "madai",
+        "name":  "Madai",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Line of the Medes."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "javan",
+        "name":  "Javan",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 10 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Line of Greeks \u0026 Ionians."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elishah",
+        "name":  "Elishah",
+        "parentId":  "javan",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Javan)",
+                        "Son of Javan.",
+                        "Aeolian Greeks / Cyprus maritime traders."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tarshish",
+        "name":  "Tarshish",
+        "parentId":  "javan",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Javan)",
+                        "Son of Javan.",
+                        "Western Mediterranean (Tartessos/Spain)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kittim",
+        "name":  "Kittim",
+        "parentId":  "javan",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Javan)",
+                        "Son of Javan.",
+                        "Cypriots \u0026 Aegean seafarers."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "dodanim-rodanim",
+        "name":  "Dodanim (Rodanim)",
+        "parentId":  "javan",
+        "generation":  13,
+        "details":  [
+                        "Gen 10 (Line of Javan)",
+                        "Son of Javan (Rodanim in 1 Chron 1:7).",
+                        "Rhodian \u0026 Aegean islanders."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tubal",
+        "name":  "Tubal",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Anatolian \u0026 Black Sea nations."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "meshech",
+        "name":  "Meshech",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Northern highland peoples."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tiras",
+        "name":  "Tiras",
+        "parentId":  "japheth",
+        "generation":  12,
+        "details":  [
+                        "Gen 12 (Line of Japheth)",
+                        "Son of Japheth.",
+                        "Thracian \u0026 Aegean nations."
+                    ],
+        "special":  false
+    }
+]

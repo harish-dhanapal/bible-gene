@@ -1,8 +1,34 @@
+// ============================================================
+// PART 1 — STATIC MAPS & SPECIAL BEHAVIORS CONFIG
+// ============================================================
+
+// Lookup config for special one-off non-structural behaviors
+const SPECIAL_BEHAVIORS = {
+    'abel': {
+        nodeId: 'abel-node',
+        extraClasses: 'abel',
+        onclick: () => toggleAbelTheme()
+    },
+    'cain': { extraClasses: 'cain' },
+    'seth': { extraClasses: 'seth' },
+    'seth-enoch': { extraClasses: 'seth' },
+    'noah': { extraClasses: 'seth' }
+};
+
+// Nodes that have an empty branch container in legacy HTML/JS structure despite having 0 children in JSON
+const EMPTY_BRANCH_NODES = new Set(['eleazar', 'rehabiah']);
+
 // Mapping of parent nodes to their entire list of downstream child IDs & connectors
 const lineageMap = {
     // Cain's Branch
     'cain-enoch-node': [
         'cain-enoch-connector', 'irad-node', 'irad-connector', 
+        'mehujael-node', 'mehujael-connector', 'methushael-node', 
+        'methushael-connector', 'lamech-node', 'lamech-connector', 
+        'lamech-children', 'lamech-children-connector'
+    ],
+    'cain-children': [
+        'cain-connector', 'cain-enoch-node', 'cain-enoch-connector', 'irad-node', 'irad-connector', 
         'mehujael-node', 'mehujael-connector', 'methushael-node', 
         'methushael-connector', 'lamech-node', 'lamech-connector', 
         'lamech-children', 'lamech-children-connector'
@@ -28,6 +54,20 @@ const lineageMap = {
     // Seth's Lineage down to Noah
     'enosh-node': [
         'enosh-connector', 'kenan-node', 'kenan-connector',
+        'mahalalel-node', 'mahalalel-connector', 'jared-node',
+        'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
+        'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
+        'seth-lamech-connector', 'noah-node', 'noah-connector',
+        'noah-children', 'noah-children-connector',
+        'shem-node', 'shem-connector', 'shem-children', 'elam-node', 'asshur-node', 'arphaxad-node', 'lud-node', 'aram-node',
+        'ham-node', 'ham-connector', 'ham-children',
+        'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
+        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'japheth-node', 'japheth-connector', 'japheth-children',
+        'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
+    ],
+    'seth-children': [
+        'seth-connector', 'enosh-node', 'enosh-connector', 'kenan-node', 'kenan-connector',
         'mahalalel-node', 'mahalalel-connector', 'jared-node',
         'jared-connector', 'seth-enoch-node', 'seth-enoch-connector',
         'methuselah-node', 'methuselah-connector', 'seth-lamech-node',
@@ -516,7 +556,7 @@ const lineageMap = {
     ],
     'ham-children': [
         'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
-        'mizraim-node', 'mizraim-connector', 'mizraim-children',
+        'mizraim-node', 'mizraim-children',
         'put-node',
         'canaan-node', 'canaan-connector', 'canaan-children'
     ],
@@ -575,7 +615,7 @@ const lineageMap = {
         'haran-connector', 'haran-children', 'abraham-connector', 'abraham-children',
         'ham-node', 'ham-connector', 'ham-children', 
         'cush-node', 'cush-connector', 'cush-children', 'raamah-node', 'raamah-connector', 'raamah-children',
-        'mizraim-node', 'mizraim-connector', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
+        'mizraim-node', 'mizraim-children', 'put-node', 'canaan-node', 'canaan-connector', 'canaan-children',
         'japheth-node', 'japheth-connector', 'japheth-children',
         'gomer-node', 'gomer-connector', 'gomer-children', 'magog-node', 'madai-node', 'javan-node', 'javan-connector', 'javan-children', 'tubal-node', 'meshech-japheth-node', 'tiras-node'
     ]
@@ -885,7 +925,315 @@ const parentMap = {
     'tiras-node': 'japheth-children'
 };
 
-// Helper to get the parent node element for a given target branch ID
+// ============================================================
+// PART 2A — RESTORED LEGACY TREE HELPER FUNCTIONS & BUILDER
+// ============================================================
+
+// Utility: create a DOM element with optional id, classes and attributes
+function el(tag, opts = {}) {
+    const e = document.createElement(tag);
+    if (opts.id)      e.id = opts.id;
+    if (opts.cls)     e.className = opts.cls;
+    if (opts.html)    e.innerHTML = opts.html;
+    if (opts.text)    e.textContent = opts.text;
+    if (opts.onclick) e.onclick = opts.onclick;
+    if (opts.attrs)   Object.entries(opts.attrs).forEach(([k, v]) => e.setAttribute(k, v));
+    return e;
+}
+
+// Build details inner HTML from a genealogy entry
+function buildDetailsHtml(node) {
+    if (!node.details || node.details.length === 0) return '';
+    const parts = node.details.map((d, i) => {
+        if (i === 0) return `<strong>${d}</strong>`;
+        return d;
+    });
+    return `<div class="details">${parts.join('<br>')}</div>`;
+}
+
+// Build the badge button for a node (emoji / cross / special SVGs)
+function buildBadgeHtml(node) {
+    const id = node.id;
+    const emoji = node.emoji;
+
+    // Special SVG badges for Enoch and Noah
+    if (id === 'seth-enoch') {
+        return `<button class="info-badge enoch-info-badge" type="button" aria-label="More about Enoch" onclick="event.stopPropagation(); toggleEnochInfo()"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fbbf24"><ellipse cx="6.5" cy="15.5" rx="2.5" ry="4.2" transform="rotate(-10 6.5 15.5)"/><circle cx="4.8" cy="9.2" r="1.15"/><circle cx="6.8" cy="9.5" r="0.98"/><circle cx="8.6" cy="10.4" r="0.85"/><circle cx="9.9" cy="11.7" r="0.72"/><ellipse cx="17.2" cy="8.5" rx="2.5" ry="4.2" transform="rotate(10 17.2 8.5)"/><circle cx="14.8" cy="2.8" r="1.15"/><circle cx="16.8" cy="3.1" r="0.98"/><circle cx="18.6" cy="4.0" r="0.85"/><circle cx="19.9" cy="5.3" r="0.72"/></svg></button>`;
+    }
+    if (id === 'noah') {
+        return `<button class="info-badge noah-info-badge" type="button" aria-label="More about Noah" onclick="event.stopPropagation(); toggleNoahInfo()"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fbbf24"><path d="M6 9.5L12 4l6 5.5H6z"/><path d="M7.5 9.5h9v3.5h-9V9.5z"/><path d="M2 13c1.5 5.5 6 7 10 7s8.5-1.5 10-7H2z"/><path d="M10 10.5h1.5v1.5H10v-1.5zm2.5 0H14v1.5h-1.5v-1.5z" fill="#0f172a"/></svg></button>`;
+    }
+
+    if (!emoji) return '';
+
+    // Determine badge class and toggle function
+    const badgeMap = {
+        'root': { cls: 'adam-info-badge',  fn: 'toggleAdamInfo()' },
+        'cain': { cls: 'cain-info-badge',  fn: 'toggleCainInfo()' },
+        'abel': { cls: 'abel-info-badge',  fn: 'toggleAbelInfo()' },
+        'seth': { cls: 'cross-info-badge', fn: 'toggleSethInfo()' },
+        'shem': { cls: 'cross-info-badge', fn: 'toggleShemInfo()' },
+        'arphaxad': { cls: 'cross-info-badge', fn: 'toggleArphaxadInfo()' },
+        'shelah':   { cls: 'cross-info-badge', fn: 'toggleShelahInfo()' },
+        'eber':     { cls: 'cross-info-badge', fn: 'toggleEberInfo()' },
+        'peleg':    { cls: 'cross-info-badge', fn: 'togglePelegInfo()' },
+        'reu':      { cls: 'cross-info-badge', fn: 'toggleReuInfo()' },
+        'serug':    { cls: 'cross-info-badge', fn: 'toggleSerugInfo()' },
+        'nahor-ancestor': { cls: 'cross-info-badge', fn: 'toggleNahorAncestorInfo()' },
+        'terah':    { cls: 'cross-info-badge', fn: 'toggleTerahInfo()' },
+        'abraham':  { cls: 'cross-info-badge', fn: 'toggleAbrahamInfo()' },
+        'ishmael':  { cls: 'cross-info-badge', fn: 'toggleIshmaelInfo()' },
+        'jokshan':  { cls: 'cross-info-badge', fn: 'toggleJokshanInfo()' },
+        'dedan':    { cls: 'cross-info-badge', fn: 'toggleDedanInfo()' },
+        'midian':   { cls: 'cross-info-badge', fn: 'toggleMidianInfo()' },
+        'isaac':    { cls: 'cross-info-badge', fn: 'toggleIsaacInfo(event)' },
+        'bethuel':  { cls: 'cross-info-badge', fn: 'toggleBethuelInfo()' },
+        'laban':    { cls: 'cross-info-badge', fn: 'toggleLabanInfo()' },
+        'leah':     { cls: 'cross-info-badge', fn: 'toggleLeahInfo()' },
+        'rachel':   { cls: 'cross-info-badge', fn: 'toggleRachelInfo()' },
+        'bilhah':   { cls: 'cross-info-badge', fn: 'toggleBilhahInfo()' },
+        'zilpah':   { cls: 'cross-info-badge', fn: 'toggleZilpahInfo()' },
+        'rebekah':  { cls: 'cross-info-badge', fn: 'toggleRebekahInfo()' },
+        'esau':     { cls: 'cross-info-badge', fn: 'toggleEsauInfo(event)' },
+        'jacob':    { cls: 'cross-info-badge', fn: 'toggleJacobInfo(event)' },
+        'lot':      { cls: 'cross-info-badge', fn: 'toggleLotInfo()' },
+        'moab':     { cls: 'cross-info-badge', fn: 'toggleMoabInfo()' },
+        'ben-ammi': { cls: 'cross-info-badge', fn: 'toggleBenAmmiInfo()' },
+    };
+
+    const info = badgeMap[id];
+    if (info) {
+        return `<button class="info-badge ${info.cls}" type="button" aria-label="More info" onclick="event.stopPropagation(); ${info.fn}">${emoji}</button>`;
+    }
+    return `<span class="info-badge">${emoji}</span>`;
+}
+
+// Determine extra CSS classes for special nodes
+function getNodeExtraClasses(node) {
+    const classes = [];
+    if (node.id === 'cain')       classes.push('cain');
+    if (node.id === 'abel')       classes.push('abel');
+    if (node.id === 'seth')       classes.push('seth');
+    if (node.id === 'seth-enoch') classes.push('seth');
+    if (node.id === 'noah')       classes.push('seth');
+    return classes.join(' ');
+}
+
+// IDs that have a <span class="node-title"> wrapper
+const TITLE_WRAP_IDS = new Set([
+    'root','cain','abel','seth','seth-enoch','noah',
+    'shem','arphaxad','shelah','eber','peleg','reu','serug',
+    'nahor-ancestor','terah','abraham','isaac','esau','jacob',
+    'reuben','pallu','eliab','simeon','levi','gershon','libni',
+    'jahath','zimmah','joah','iddo','zerah-levite','merari',
+    'kohath','izhar','amram','moses','gershom-moses','eliezer',
+    'rehabiah','aaron','eleazar','shaul','shallum','mibsam',
+    'mishma','hammuel','joseph','ishmael','jokshan','dedan',
+    'midian','nahor','haran','lot','bethuel','laban','rebekah',
+    'leah','rachel','bilhah','zilpah','moab','ben-ammi',
+    'ham','cush','raamah','mizraim','canaan','japheth','gomer','javan'
+]);
+
+// Build content of a node element
+function buildNodeContent(node) {
+    const badge = buildBadgeHtml(node);
+    const details = buildDetailsHtml(node);
+    const useTitleWrap = TITLE_WRAP_IDS.has(node.id);
+    const nameHtml = useTitleWrap
+        ? `<span class="node-title">${node.name}</span>`
+        : node.name;
+    return nameHtml + badge + details;
+}
+
+
+
+// Map single-child linear steps to match legacy click targets
+const LINEAR_STEP_CLICK_TARGETS = {
+    'cain': 'cain-enoch-node',
+    'cain-enoch': 'irad-node',
+    'irad': 'mehujael-node',
+    'mehujael': 'methushael-node',
+    'methushael': 'lamech-node',
+    'seth': 'enosh-node',
+    'enosh': 'kenan-node',
+    'kenan': 'mahalalel-node',
+    'mahalalel': 'jared-node',
+    'jared': 'seth-enoch-node',
+    'seth-enoch': 'methuselah-node',
+    'methuselah': 'seth-lamech-node',
+    'seth-lamech': 'noah-node',
+    'arphaxad': 'shelah-node',
+    'shelah': 'eber-node',
+    'peleg': 'reu-node',
+    'reu': 'serug-node',
+    'serug': 'nahor-ancestor-node',
+    'nahor-ancestor': 'terah-node'
+};
+
+// Derive connector ID directly from targetId (matches revealNext auto-collapse expectations)
+function computeConnectorId(targetId) {
+    const CUSTOM_CONNECTORS = {
+        'gen2-children': 'gen2-connector',
+        'lamech-children': 'lamech-children-connector',
+        'noah-children': 'noah-children-connector',
+        'eber-children': 'eber-children-connector',
+        'terah-children': 'terah-children-connector'
+    };
+    if (CUSTOM_CONNECTORS[targetId]) return CUSTOM_CONNECTORS[targetId];
+
+    if (targetId.endsWith('-node')) {
+        return targetId.replace('-node', '-connector');
+    }
+    if (targetId.endsWith('-children')) {
+        return targetId.replace('-children', '-connector');
+    }
+    return `${targetId}-connector`;
+}
+
+// ============================================================
+// PART 2B — NEW GENERIC RECURSIVE TREE RENDERER
+// ============================================================
+
+const EXPLICIT_NODE_IDS = {
+    'elam': 'elam-node',
+    'asshur': 'asshur-node',
+    'rebekah': 'rebekah-node',
+    'lud': 'lud-node',
+    'put': 'put-node',
+    'magog': 'magog-node',
+    'madai': 'madai-node',
+    'tubal': 'tubal-node',
+    'meshech': 'meshech-japheth-node',
+    'tiras': 'tiras-node'
+};
+
+// Generic recursive renderer
+function renderNode(personId, container, currentColumn = null) {
+    const person = nodeMap[personId];
+    if (!person) return;
+
+    // 1. Column Container
+    let colEl;
+    if (personId === 'root') {
+        colEl = container;
+    } else if (currentColumn) {
+        colEl = currentColumn;
+    } else {
+        colEl = document.createElement('div');
+        colEl.className = 'column';
+        container.appendChild(colEl);
+    }
+
+    // 2. Create Node Element
+    const nodeEl = document.createElement('div');
+    const special = SPECIAL_BEHAVIORS[personId] || {};
+
+    const classes = ['node'];
+    if (special.extraClasses) classes.push(special.extraClasses);
+    if (getNodeExtraClasses(person)) classes.push(getNodeExtraClasses(person));
+
+    // Visibility defaults: root, cain, abel, seth visible; others hidden
+    if (personId !== 'root' && personId !== 'cain' && personId !== 'abel' && personId !== 'seth') {
+        classes.push('hidden');
+    }
+    nodeEl.className = classes.join(' ');
+
+    // Element ID (matches legacy 100%)
+    if (personId === 'root') {
+        nodeEl.id = 'root';
+    } else if (special.nodeId) {
+        nodeEl.id = special.nodeId;
+    } else if (EXPLICIT_NODE_IDS[personId]) {
+        nodeEl.id = EXPLICIT_NODE_IDS[personId];
+    } else if (personId === 'cain' || personId === 'seth') {
+        // Legacy passed null for cain and seth node DOM IDs
+    } else if (LINEAR_STEP_CLICK_TARGETS[personId] || (childrenMap[personId] && childrenMap[personId].length > 0) || EMPTY_BRANCH_NODES.has(personId)) {
+        nodeEl.id = `${personId}-node`;
+    }
+
+    nodeEl.innerHTML = buildNodeContent(person);
+
+    // 3. Children Branch Rendering & Click Wiring
+    const children = childrenMap[personId] || [];
+    const hasBranch = (children.length > 0) || EMPTY_BRANCH_NODES.has(personId);
+
+    if (hasBranch) {
+        let targetId;
+        if (personId === 'root') {
+            targetId = 'gen2-children';
+        } else if (LINEAR_STEP_CLICK_TARGETS[personId]) {
+            targetId = LINEAR_STEP_CLICK_TARGETS[personId];
+        } else {
+            targetId = `${personId}-children`;
+        }
+
+        if (special.onclick) {
+            nodeEl.onclick = special.onclick;
+        } else {
+            nodeEl.onclick = () => revealNext(targetId);
+        }
+
+        colEl.appendChild(nodeEl);
+
+        // Connector Element - derived from targetId!
+        const connectorId = computeConnectorId(targetId);
+        const connectorEl = document.createElement('div');
+        connectorEl.id = connectorId;
+        connectorEl.className = 'connector hidden';
+        colEl.appendChild(connectorEl);
+
+        // Branch Container Element
+        if (children.length === 1 && LINEAR_STEP_CLICK_TARGETS[personId]) {
+            // For linear 1-child chain steps, child renders directly into same column
+            renderNode(children[0].id, container, colEl);
+            return;
+        }
+
+        let branchId = (personId === 'root') ? 'gen2-children' : `${personId}-children`;
+        const branchEl = document.createElement('div');
+        branchEl.id = branchId;
+        branchEl.className = 'branch hidden';
+        colEl.appendChild(branchEl);
+
+        // Recursively render each child into branch container
+        if (children.length > 0) {
+            children.forEach(child => {
+                renderNode(child.id, branchEl);
+            });
+        }
+
+    } else {
+        // Leaf Node
+        if (special.onclick) {
+            nodeEl.onclick = special.onclick;
+        }
+        colEl.appendChild(nodeEl);
+    }
+}
+
+// Master tree builder entry point using generic recursive renderer
+function buildTree(map, data) {
+    const container = document.querySelector('.tree-container');
+    nodeMap = map;
+
+    // Group people by parentId
+    childrenMap = {};
+    data.forEach(person => {
+        const pId = person.parentId || 'root';
+        if (person.id !== 'root') {
+            if (!childrenMap[pId]) childrenMap[pId] = [];
+            childrenMap[pId].push(person);
+        }
+    });
+
+    // Start recursive render from root
+    renderNode('root', container);
+}
+
+// ============================================================
+// PART 3 — INTERACTION LOGIC (unchanged)
+// ============================================================
+
 function getParentElementForTarget(targetId) {
     if (targetId === 'cain-enoch-node') return document.querySelector('.node.cain');
     if (targetId === 'enosh-node') return document.querySelector('.node.seth');
@@ -894,16 +1242,11 @@ function getParentElementForTarget(targetId) {
     return null;
 }
 
-// Function to toggle Abel's theme AND collapse open branches
 function toggleAbelTheme() {
     const abelNode = document.getElementById('abel-node');
-
-    // Smooth camera glide to Abel first
     if (abelNode) {
         scrollToNode('abel-node');
     }
-
-    // 1. Collapse Cain's branch if expanded
     if (typeof collapseDescendants === 'function') {
         collapseDescendants('cain-enoch-node');
         hideElement('cain-enoch-node');
@@ -911,8 +1254,6 @@ function toggleAbelTheme() {
         const cainNode = document.querySelector('.node.cain');
         if (cainNode) cainNode.classList.remove('is-cracked');
     }
-
-    // 2. Collapse Seth's branch if expanded
     if (typeof collapseDescendants === 'function') {
         collapseDescendants('enosh-node');
         hideElement('enosh-node');
@@ -920,17 +1261,10 @@ function toggleAbelTheme() {
         const sethNode = document.querySelector('.node.seth');
         if (sethNode) sethNode.classList.remove('is-cracked');
     }
-
-    // 3. Clear Cain, Seth, Enoch, Noah, and Methuselah themes if active
     document.body.classList.remove('cain-theme', 'seth-theme', 'enoch-theme', 'noah-theme', 'methuselah-theme');
-    
-    // 4. Toggle Abel theme on/off
     document.body.classList.toggle('abel-theme');
 }
 
-// Abel theme toggling is called directly via onclick="toggleAbelTheme()" in index.html
-
-// Ensure click on info-badge button does not trigger node animations
 document.addEventListener('click', (event) => {
     if (event.target.closest('.info-badge')) return;
 });
@@ -943,16 +1277,12 @@ function revealNext(targetId) {
     const isHidden = targetElement.classList.contains('hidden');
 
     if (isHidden) {
-        // --- EXPAND BRANCH ---
-
-        // Reset all custom themes back to main Garden when opening root/gen2
         if (targetId === 'gen2-children') {
             document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme');
             const abelNode = document.getElementById('abel-node');
             if (abelNode) abelNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Cain's tree & switch to Seth theme if opening Seth's branch (Enosh, Kenan, Mahalalel, Jared)
         if (targetId === 'enosh-node' || targetId === 'kenan-node' || targetId === 'mahalalel-node' || targetId === 'jared-node') {
             collapseDescendants('cain-enoch-node');
             hideElement('cain-enoch-node');
@@ -968,7 +1298,6 @@ function revealNext(targetId) {
             if (treeContainer) treeContainer.classList.remove('cain-open');
         }
 
-        // Auto-collapse Seth's tree & switch to Cain theme if opening Cain's branch
         if (targetId === 'cain-enoch-node') {
             collapseDescendants('enosh-node');
             hideElement('enosh-node');
@@ -984,13 +1313,11 @@ function revealNext(targetId) {
             if (treeContainer) treeContainer.classList.add('cain-open');
         }
 
-        // Enoch clicked -> Apply Enoch theme (images/enoch.png)
         if (targetId === 'methuselah-node') {
             document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'noah-theme', 'methuselah-theme');
             document.body.classList.add('enoch-theme');
         }
 
-        // Methuselah clicked -> Apply Methuselah theme (images/methuselah.jpg)
         if (targetId === 'seth-lamech-node') {
             document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'noah-theme');
             document.body.classList.add('methuselah-theme');
@@ -1006,7 +1333,6 @@ function revealNext(targetId) {
             if (treeContainer) treeContainer.classList.add('cain-open');
         }
 
-        // Auto-collapse Ham & Japheth if opening Shem's branch
         if (targetId === 'shem-children') {
             collapseDescendants('ham-children');
             hideElement('ham-children');
@@ -1021,7 +1347,6 @@ function revealNext(targetId) {
             if (japhethNode) japhethNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Shem & Japheth if opening Ham's branch
         if (targetId === 'ham-children') {
             collapseDescendants('shem-children');
             hideElement('shem-children');
@@ -1036,7 +1361,6 @@ function revealNext(targetId) {
             if (japhethNode) japhethNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Shem & Ham if opening Japheth's branch
         if (targetId === 'japheth-children') {
             collapseDescendants('shem-children');
             hideElement('shem-children');
@@ -1051,7 +1375,6 @@ function revealNext(targetId) {
             if (hamNode) hamNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Mizraim & Canaan if opening Cush's branch
         if (targetId === 'cush-children') {
             collapseDescendants('mizraim-children');
             hideElement('mizraim-children');
@@ -1066,7 +1389,6 @@ function revealNext(targetId) {
             if (cNode) cNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Cush & Canaan if opening Mizraim's branch
         if (targetId === 'mizraim-children') {
             collapseDescendants('cush-children');
             hideElement('cush-children');
@@ -1081,7 +1403,6 @@ function revealNext(targetId) {
             if (cNode) cNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Cush & Mizraim if opening Canaan's branch
         if (targetId === 'canaan-children') {
             collapseDescendants('cush-children');
             hideElement('cush-children');
@@ -1096,7 +1417,6 @@ function revealNext(targetId) {
             if (mNode) mNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Javan if opening Gomer's branch
         if (targetId === 'gomer-children') {
             collapseDescendants('javan-children');
             hideElement('javan-children');
@@ -1105,7 +1425,6 @@ function revealNext(targetId) {
             if (jNode) jNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Gomer if opening Javan's branch
         if (targetId === 'javan-children') {
             collapseDescendants('gomer-children');
             hideElement('gomer-children');
@@ -1114,9 +1433,6 @@ function revealNext(targetId) {
             if (gNode) gNode.classList.remove('is-cracked');
         }
 
-        // --- SHEM'S LINEAGE MUTUAL SIBLING AUTO-COLLAPSE ---
-
-        // Auto-collapse Aram if opening Arphaxad/Shelah's branch
         if (targetId === 'shelah-node') {
             collapseDescendants('aram-children');
             hideElement('aram-children');
@@ -1125,7 +1441,6 @@ function revealNext(targetId) {
             if (aNode) aNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Arphaxad/Shelah & downstream if opening Aram's branch
         if (targetId === 'aram-children') {
             collapseDescendants('shelah-node');
             hideElement('shelah-node');
@@ -1134,7 +1449,6 @@ function revealNext(targetId) {
             if (sNode) sNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Peleg (reu-node) if opening Joktan's branch
         if (targetId === 'joktan-children') {
             collapseDescendants('reu-node');
             hideElement('reu-node');
@@ -1143,7 +1457,6 @@ function revealNext(targetId) {
             if (pNode) pNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Joktan's branch if opening Peleg's branch (reu-node)
         if (targetId === 'reu-node') {
             collapseDescendants('joktan-children');
             hideElement('joktan-children');
@@ -1152,7 +1465,6 @@ function revealNext(targetId) {
             if (jNode) jNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Nahor & Haran if opening Abraham's branch, and reset all sub-branches under Abraham
         if (targetId === 'abraham-children') {
             collapseDescendants('nahor-children');
             hideElement('nahor-children');
@@ -1167,7 +1479,6 @@ function revealNext(targetId) {
             if (hNode) hNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Abraham & Haran if opening Nahor's branch
         if (targetId === 'nahor-children') {
             collapseDescendants('abraham-children');
             hideElement('abraham-children');
@@ -1182,7 +1493,6 @@ function revealNext(targetId) {
             if (hNode) hNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Abraham & Nahor if opening Haran's branch
         if (targetId === 'haran-children') {
             collapseDescendants('abraham-children');
             hideElement('abraham-children');
@@ -1197,7 +1507,6 @@ function revealNext(targetId) {
             if (nNode) nNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Rebekah if opening Laban's branch
         if (targetId === 'laban-children') {
             collapseDescendants('rebekah-children');
             hideElement('rebekah-children');
@@ -1206,7 +1515,6 @@ function revealNext(targetId) {
             if (rebNode) rebNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Laban if opening Rebekah's branch
         if (targetId === 'rebekah-children') {
             collapseDescendants('laban-children');
             hideElement('laban-children');
@@ -1215,7 +1523,6 @@ function revealNext(targetId) {
             if (labNode) labNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Reuel if opening Eliphaz's branch
         if (targetId === 'eliphaz-children') {
             collapseDescendants('reuel-children');
             hideElement('reuel-children');
@@ -1224,7 +1531,6 @@ function revealNext(targetId) {
             if (rNode) rNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Eliphaz if opening Reuel's branch
         if (targetId === 'reuel-children') {
             collapseDescendants('eliphaz-children');
             hideElement('eliphaz-children');
@@ -1233,9 +1539,6 @@ function revealNext(targetId) {
             if (eNode) eNode.classList.remove('is-cracked');
         }
 
-        // --- ISAAC'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
-
-        // Auto-collapse Jacob if opening Esau's branch
         if (targetId === 'esau-children') {
             collapseDescendants('jacob-children');
             hideElement('jacob-children');
@@ -1244,7 +1547,6 @@ function revealNext(targetId) {
             if (jNode) jNode.classList.remove('is-cracked');
         }
 
-        // Auto-collapse Esau if opening Jacob's branch
         if (targetId === 'jacob-children') {
             collapseDescendants('esau-children');
             hideElement('esau-children');
@@ -1252,8 +1554,6 @@ function revealNext(targetId) {
             const eNode = document.getElementById('esau-node');
             if (eNode) eNode.classList.remove('is-cracked');
         }
-
-        // --- JACOB'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
 
         if (targetId === 'reuben-children') {
             collapseDescendants('joseph-children');
@@ -1335,8 +1635,6 @@ function revealNext(targetId) {
             if (levNode) levNode.classList.remove('is-cracked');
         }
 
-        // --- LEVI'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
-
         if (targetId === 'gershon-children') {
             collapseDescendants('kohath-children');
             hideElement('kohath-children');
@@ -1379,8 +1677,6 @@ function revealNext(targetId) {
             if (kohNode) kohNode.classList.remove('is-cracked');
         }
 
-        // --- KOHATH'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
-
         if (targetId === 'amram-children') {
             collapseDescendants('izhar-children');
             hideElement('izhar-children');
@@ -1396,8 +1692,6 @@ function revealNext(targetId) {
             const amrNode = document.getElementById('amram-node');
             if (amrNode) amrNode.classList.remove('is-cracked');
         }
-
-        // --- AMRAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
 
         if (targetId === 'aaron-children') {
             collapseDescendants('moses-children');
@@ -1415,8 +1709,6 @@ function revealNext(targetId) {
             if (aarNode) aarNode.classList.remove('is-cracked');
         }
 
-        // --- MOSES'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
-
         if (targetId === 'gershom-moses-children') {
             collapseDescendants('eliezer-children');
             hideElement('eliezer-children');
@@ -1432,8 +1724,6 @@ function revealNext(targetId) {
             const gerNode = document.getElementById('gershom-moses-node');
             if (gerNode) gerNode.classList.remove('is-cracked');
         }
-
-        // --- ABRAHAM'S SONS MUTUAL SIBLING AUTO-COLLAPSE ---
 
         if (targetId === 'isaac-children') {
             collapseDescendants('ishmael-children');
@@ -1515,46 +1805,34 @@ function revealNext(targetId) {
             if (jokNode) jokNode.classList.remove('is-cracked');
         }
 
-        // Show target element and its immediate connector
         targetElement.classList.remove('hidden');
         targetElement.classList.remove('collapsing');
         if (connectorMap[targetId]) {
             showElement(connectorMap[targetId]);
         }
 
-        // Un-hide the primary (first) node in each column inside this branch.
-        // collapseDescendants() explicitly adds 'hidden' to every node listed in
-        // the lineageMap — including nodes inside child branches. When the branch
-        // container is re-opened, those nodes must be individually un-hidden.
-        // Using :first-child ensures we only reveal each column's HEAD node, so
-        // linear chains (e.g. Seth→Enosh→Kenan) don't all cascade open at once.
         targetElement.querySelectorAll(':scope > .column > .node:first-child').forEach(function(n) {
             n.classList.remove('hidden');
             n.classList.remove('collapsing');
         });
 
-        // Mark the active parent node as cracked while its branch is open
         if (parentNode) {
             parentNode.classList.add('is-cracked');
         }
 
-        // Smooth center scroll to newly expanded node
         scrollToNode(targetId);
 
     } else {
-        // --- COLLAPSE BRANCH & ALL DESCENDANTS ---
         hideElement(targetId);
         if (connectorMap[targetId]) {
             hideElement(connectorMap[targetId]);
         }
         collapseDescendants(targetId);
 
-        // Mark the parent node as whole (un-cracked) since its branch is now closed
         if (parentNode) {
             parentNode.classList.remove('is-cracked');
         }
 
-        // Step-by-step reverse theme restoration when collapsing up the tree
         if (targetId === 'noah-children' || targetId === 'noah-node') {
             document.body.classList.remove('noah-theme');
             document.body.classList.add('methuselah-theme');
@@ -1581,7 +1859,6 @@ function revealNext(targetId) {
             if (treeContainer) treeContainer.classList.remove('cain-open');
         }
 
-        // Scroll back up to the parent node
         if (parentMap[targetId]) {
             scrollToNode(parentMap[targetId]);
         }
@@ -1598,8 +1875,6 @@ function showPanel(panelId, event) {
     closeAllPanels();
     const panel = document.getElementById(panelId);
     if (!panel) return;
-
-    // Ensure detail panel is attached to top-level body for fixed top-right screen display
     document.body.appendChild(panel);
     panel.classList.remove('hidden');
 }
@@ -1959,13 +2234,11 @@ function closeNoahInfo() {
     if (panel) panel.classList.add('hidden');
 }
 
-// Close panels when the user clicks anywhere outside them
 window.addEventListener('click', (event) => {
     if (event.target.closest('.info-badge') || event.target.closest('.detail-panel')) return;
     closeAllPanels();
 });
 
-// Smooth scroll centering helper for Viewport Auto-Pan
 function scrollToNode(nodeId) {
     let target = nodeId;
     if (typeof nodeId === 'string' && nodeId.endsWith('-children')) {
@@ -1989,14 +2262,10 @@ function scrollToNode(nodeId) {
         });
     };
 
-    // Immediate initial scroll pulse
     requestAnimationFrame(performScroll);
-
-    // Second scroll pulse after CSS branch collapse/expand animations finish (180ms)
     setTimeout(performScroll, 200);
 }
 
-// Helper with smooth 180ms fold-up animation for collapsing target branch
 function hideElement(id, immediate = false) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -2070,3 +2339,28 @@ function collapseDescendants(parentId) {
         });
     }
 }
+
+// ============================================================
+// PART 4 — BOOTSTRAP: fetch JSON & build tree
+// ============================================================
+
+(async function init() {
+    try {
+        const response = await fetch('genealogy.json');
+        const data = await response.json();
+
+        // Build node lookup map: id -> node object
+        const map = {};
+        data.forEach(node => { map[node.id] = node; });
+
+        // Build main interactive tree into .tree-container
+        buildTree(map, data);
+
+    } catch (err) {
+        console.error('Failed to load genealogy.json:', err);
+        const container = document.querySelector('.tree-container');
+        if (container) {
+            container.innerHTML += '<p style="color:red;padding:2rem">Error loading genealogy data. Make sure genealogy.json is accessible.</p>';
+        }
+    }
+})();
