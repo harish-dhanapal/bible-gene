@@ -1200,6 +1200,31 @@ function renderNode(personId, container, currentColumn = null) {
             children.forEach(child => {
                 renderNode(child.id, branchEl);
             });
+        } else if (person.highPriestlySuccession && person.highPriestlySuccession.length > 0) {
+            const itemsHtml = person.highPriestlySuccession.map(item => `
+                <div class="lineage-item ${item.highlight ? 'highlight-priest' : ''}">
+                    <span class="gen-badge ${item.highlight ? 'crown' : ''}">${item.gen}</span>
+                    <div class="item-info">
+                        <strong>${item.name}</strong>
+                        <small>${item.details}</small>
+                    </div>
+                </div>
+                <div class="lineage-item-connector"></div>
+            `).join('');
+
+            branchEl.innerHTML = `
+                <div class="column">
+                    <div class="lineage-card">
+                        <div class="lineage-card-header">
+                            <h3>👑 High Priestly Succession</h3>
+                            <p>1 Chronicles 6:3–15 &amp; Ezra 7:1–5 (${person.highPriestlySuccession.length} Generations)</p>
+                        </div>
+                        <div class="lineage-card-scroll">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
     } else {
@@ -1445,6 +1470,8 @@ function revealNext(targetId) {
             collapseDescendants('shelah-node');
             hideElement('shelah-node');
             hideElement('shelah-connector');
+            const arpNode = document.getElementById('arphaxad-node');
+            if (arpNode) arpNode.classList.remove('is-cracked');
             const sNode = document.getElementById('shelah-node');
             if (sNode) sNode.classList.remove('is-cracked');
         }

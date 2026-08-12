@@ -7,7 +7,7 @@
         "details":  [
 
                     ],
-        "emoji":  "ðŸƒ",
+        "emoji":  "🍃",
         "special":  false
     },
     {
@@ -21,7 +21,7 @@
                         "Killed Abel.",
                         "Exiled to Land of Nod."
                     ],
-        "emoji":  "ðŸŒ¾",
+        "emoji":  "🌾",
         "special":  false
     },
     {
@@ -133,7 +133,7 @@
                         "Shepherd.",
                         "Killed by Cain."
                     ],
-        "emoji":  "ðŸ•Šï¸",
+        "emoji":  "🕊️",
         "special":  false
     },
     {
@@ -145,7 +145,7 @@
                         "Main Patriarch Line",
                         "Lifespan: 912 years"
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -245,7 +245,7 @@
                         "Son of Noah",
                         "Ancestor of Semitic peoples."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -282,7 +282,7 @@
                         "Son of Shem.",
                         "Line leading to Abraham \u0026 Jesus."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -295,7 +295,7 @@
                         "Son of Arphaxad.",
                         "Messianic Lineage (Lifespan: 433 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -308,7 +308,7 @@
                         "Namesake root of the \"Hebrews\".",
                         "Great-grandson of Shem (Lifespan: 464 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -321,7 +321,7 @@
                         "Name means \"Division\" (Babel).",
                         "Messianic Lineage (Lifespan: 239 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -334,7 +334,7 @@
                         "Son of Peleg.",
                         "Friend/Companion (Lifespan: 239 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -347,7 +347,7 @@
                         "Great-grandfather of Abraham.",
                         "Son of Reu (Lifespan: 230 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -360,7 +360,7 @@
                         "Grandfather of Abraham.",
                         "Son of Serug (Lifespan: 148 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -373,12 +373,12 @@
                         "Led family from Ur to Haran.",
                         "Father of Abram, Nahor \u0026 Haran (205 yrs)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
         "id":  "abraham",
-        "name":  "Abram (Abraham) ðŸ‘‘",
+        "name":  "Abram (Abraham) 👑",
         "parentId":  "terah",
         "generation":  20,
         "details":  [
@@ -386,12 +386,12 @@
                         "Patriarch of the Covenant.",
                         "Father of 8 sons (Sarah, Hagar, Keturah)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
         "id":  "isaac",
-        "name":  "Isaac ðŸ‘‘",
+        "name":  "Isaac 👑",
         "parentId":  "abraham",
         "generation":  21,
         "details":  [
@@ -400,7 +400,7 @@
                         "Covenant Heir.",
                         "Father of Esau \u0026 Jacob."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -413,7 +413,7 @@
                         "Elder son of Isaac \u0026 Rebekah.",
                         "Father of 5 Edomite sons."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -598,7 +598,7 @@
     },
     {
         "id":  "jacob",
-        "name":  "Jacob (Israel) ðŸ‘‘",
+        "name":  "Jacob (Israel) 👑",
         "parentId":  "isaac",
         "generation":  22,
         "details":  [
@@ -607,7 +607,7 @@
                         "Renamed Israel.",
                         "Father of 12 Tribes \u0026 Dinah."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -874,7 +874,7 @@
     },
     {
         "id":  "levi",
-        "name":  "Levi ðŸ‘‘",
+        "name":  "Levi",
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
@@ -882,7 +882,6 @@
                         "Third son of Jacob.",
                         "Father of 3 Priestly Clans."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -995,7 +994,7 @@
     },
     {
         "id":  "kohath",
-        "name":  "Kohath ðŸ‘‘",
+        "name":  "Kohath",
         "parentId":  "levi",
         "generation":  24,
         "details":  [
@@ -1003,12 +1002,11 @@
                         "Second son of Levi.",
                         "Father of 4 Levitical Clans."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
         "id":  "amram",
-        "name":  "Amram ðŸ‘‘",
+        "name":  "Amram",
         "parentId":  "kohath",
         "generation":  25,
         "details":  [
@@ -1016,12 +1014,11 @@
                         "Married Jochebed.",
                         "Father of Aaron, Moses \u0026 Miriam."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
         "id":  "aaron",
-        "name":  "Aaron ðŸ‘‘",
+        "name":  "Aaron",
         "parentId":  "amram",
         "generation":  26,
         "details":  [
@@ -1029,7 +1026,6 @@
                         "First High Priest of Israel.",
                         "Father of High Priestly Line."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -1058,21 +1054,154 @@
     },
     {
         "id":  "eleazar",
-        "name":  "Eleazar ðŸ‘‘",
+        "name":  "Eleazar",
         "parentId":  "aaron",
         "generation":  27,
         "details":  [
                         "Ex 6:23 \u0026 Num 20:28",
                         "Third son of Aaron.",
                         "2nd High Priest of Israel.",
-                        "Click for High Priestly Succession (23 Gen)"
+                        "Click for High Priestly Succession (22 Gen)"
                     ],
-        "emoji":  "ðŸ‘‘",
-        "special":  false
+        "special":  false,
+        "highPriestlySuccession":  [
+                                       {
+                                           "gen":  "Gen 2",
+                                           "name":  "Phinehas 👑",
+                                           "details":  "1 Chr 6:4 \u0026 Num 25:11–13 — Covenant of Perpetual Priesthood",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 3",
+                                           "name":  "Abishua",
+                                           "details":  "1 Chr 6:4 \u0026 Ezra 7:5 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 4",
+                                           "name":  "Bukki",
+                                           "details":  "1 Chr 6:5 \u0026 Ezra 7:4 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 5",
+                                           "name":  "Uzzi",
+                                           "details":  "1 Chr 6:5 \u0026 Ezra 7:4 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 6",
+                                           "name":  "Zerahiah",
+                                           "details":  "1 Chr 6:6 \u0026 Ezra 7:4 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 7",
+                                           "name":  "Meraioth",
+                                           "details":  "1 Chr 6:6 \u0026 Ezra 7:3 — Ancestor of Ezra",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 8",
+                                           "name":  "Amariah",
+                                           "details":  "1 Chr 6:7 \u0026 Ezra 7:3 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 9",
+                                           "name":  "Ahitub",
+                                           "details":  "1 Chr 6:7 \u0026 Ezra 7:2 — Father of Zadok",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 10",
+                                           "name":  "Zadok 👑",
+                                           "details":  "1 Chr 6:8 \u0026 1 Ki 1:39 — High Priest under David \u0026 Solomon; anointed Solomon",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 11",
+                                           "name":  "Ahimaaz",
+                                           "details":  "1 Chr 6:9 \u0026 2 Sam 18:19 — Royal messenger \u0026 priest",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 12",
+                                           "name":  "Azariah (I) 👑",
+                                           "details":  "1 Chr 6:9 \u0026 1 Ki 4:2 — Priest in Solomon\u0027s Temple",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 13",
+                                           "name":  "Johanan",
+                                           "details":  "1 Chr 6:10 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 14",
+                                           "name":  "Azariah (II) 👑",
+                                           "details":  "1 Chr 6:10 — High Priest who served in Solomon\u0027s Temple",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 15",
+                                           "name":  "Amariah",
+                                           "details":  "1 Chr 6:11 \u0026 2 Chr 19:11 — Chief Priest under King Jehoshaphat",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 16",
+                                           "name":  "Ahitub",
+                                           "details":  "1 Chr 6:11 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 17",
+                                           "name":  "Zadok (II)",
+                                           "details":  "1 Chr 6:12 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 18",
+                                           "name":  "Shallum (Meshullam)",
+                                           "details":  "1 Chr 6:12 \u0026 1 Chr 9:11 — Ruler of the house of God",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 19",
+                                           "name":  "Hilkiah 👑",
+                                           "details":  "1 Chr 6:13 \u0026 2 Ki 22:8 — Found Book of the Law under King Josiah",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 20",
+                                           "name":  "Azariah (III)",
+                                           "details":  "1 Chr 6:13 \u0026 Ezra 7:1 — High Priest line",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 21",
+                                           "name":  "Seraiah 👑",
+                                           "details":  "1 Chr 6:14 \u0026 2 Ki 25:18 — Chief Priest at fall of Jerusalem",
+                                           "highlight":  true
+                                       },
+                                       {
+                                           "gen":  "Gen 22",
+                                           "name":  "Jehozadak (Jozadak)",
+                                           "details":  "1 Chr 6:14–15 — Carried captive into Babylonian exile",
+                                           "highlight":  false
+                                       },
+                                       {
+                                           "gen":  "Gen 23",
+                                           "name":  "Joshua (Jeshua) 👑",
+                                           "details":  "Ezra 3:2 \u0026 Hag 1:1 \u0026 Zech 3:1 — High Priest of 2nd Temple",
+                                           "highlight":  true
+                                       }
+                                   ]
     },
     {
         "id":  "ithamar",
-        "name":  "Ithamar ðŸ‘‘",
+        "name":  "Ithamar",
         "parentId":  "aaron",
         "generation":  27,
         "details":  [
@@ -1080,12 +1209,11 @@
                         "Fourth son of Aaron.",
                         "Priest \u0026 Tabernacle Overseer."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
         "id":  "moses",
-        "name":  "Moses ðŸ‘‘",
+        "name":  "Moses",
         "parentId":  "amram",
         "generation":  26,
         "details":  [
@@ -1094,7 +1222,6 @@
                         "Led Israel out of Egypt.",
                         "Married Zipporah."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -1147,7 +1274,7 @@
     },
     {
         "id":  "miriam",
-        "name":  "Miriam ðŸ‘‘",
+        "name":  "Miriam",
         "parentId":  "amram",
         "generation":  26,
         "details":  [
@@ -1155,7 +1282,6 @@
                         "Prophetess of Israel.",
                         "Sister of Aaron \u0026 Moses."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -1268,7 +1394,7 @@
     },
     {
         "id":  "judah",
-        "name":  "Judah ðŸ‘‘",
+        "name":  "Judah",
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
@@ -1276,7 +1402,6 @@
                         "Fourth son of Jacob.",
                         "Royal Messianic Tribe (King David \u0026 Jesus)."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -1353,7 +1478,7 @@
     },
     {
         "id":  "joseph",
-        "name":  "Joseph ðŸ‘‘",
+        "name":  "Joseph",
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
@@ -1362,7 +1487,6 @@
                         "Ruler of Egypt (Coat of many colors).",
                         "Father of Manasseh \u0026 Ephraim."
                     ],
-        "emoji":  "ðŸ‘‘",
         "special":  false
     },
     {
@@ -1423,7 +1547,7 @@
                         "Father of 12 Arabian princes.",
                         "Great desert nation."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -1592,7 +1716,7 @@
                         "Second son of Keturah.",
                         "Father of Sheba \u0026 Dedan."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -1617,7 +1741,7 @@
                         "Son of Jokshan.",
                         "Father of 3 tribes."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -1678,7 +1802,7 @@
                         "Founder of the Midianites.",
                         "Land of Jethro (Exodus 2)."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -1872,7 +1996,7 @@
                         "Father of Laban \u0026 Rebekah.",
                         "Messianic Lineage (Paddan-Aram)."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -1885,12 +2009,12 @@
                         "Aramean of Haran.",
                         "Father of Leah \u0026 Rachel."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
         "id":  "leah",
-        "name":  "Leah ðŸ‘‘",
+        "name":  "Leah 👑",
         "parentId":  "laban",
         "generation":  23,
         "details":  [
@@ -1899,12 +2023,12 @@
                         "Mother of 6 tribes (Judah, Levi, etc.).",
                         "Messianic Line ancestor."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
         "id":  "rachel",
-        "name":  "Rachel ðŸ‘‘",
+        "name":  "Rachel 👑",
         "parentId":  "laban",
         "generation":  23,
         "details":  [
@@ -1913,7 +2037,7 @@
                         "Mother of Joseph \u0026 Benjamin.",
                         "Matriarch of Israel."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -1926,7 +2050,7 @@
                         "Handmaid of Rachel.",
                         "Mother of Dan \u0026 Naphtali."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
@@ -1939,12 +2063,12 @@
                         "Handmaid of Leah.",
                         "Mother of Gad \u0026 Asher."
                     ],
-        "emoji":  "ðŸ“œ",
+        "emoji":  "📜",
         "special":  true
     },
     {
         "id":  "rebekah",
-        "name":  "Rebekah ðŸ‘‘",
+        "name":  "Rebekah 👑",
         "parentId":  "bethuel",
         "generation":  22,
         "details":  [
@@ -1953,7 +2077,7 @@
                         "Mother of Esau \u0026 Jacob.",
                         "Messianic Line Matriarch."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -2028,7 +2152,7 @@
                         "Ancestor of Moabites \u0026 Ammonites.",
                         "Line to Ruth, David \u0026 Jesus."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -2057,7 +2181,7 @@
     },
     {
         "id":  "moab",
-        "name":  "Moab ðŸ‘‘",
+        "name":  "Moab 👑",
         "parentId":  "lot",
         "generation":  22,
         "details":  [
@@ -2066,7 +2190,7 @@
                         "Father of the Moabites.",
                         "Line to Ruth, David \u0026 Jesus."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -2080,7 +2204,7 @@
                         "Father of the Ammonites.",
                         "Line of King Rehoboam."
                     ],
-        "emoji":  "âœ",
+        "emoji":  "✝",
         "special":  true
     },
     {
@@ -2242,7 +2366,7 @@
     },
     {
         "id":  "ophir",
-        "name":  "Ophir ðŸª™",
+        "name":  "Ophir 🪙",
         "parentId":  "joktan",
         "generation":  16,
         "details":  [
@@ -2449,7 +2573,7 @@
     },
     {
         "id":  "nimrod",
-        "name":  "Nimrod ðŸ‘‘",
+        "name":  "Nimrod 👑",
         "parentId":  "cush",
         "generation":  13,
         "details":  [
@@ -2527,7 +2651,7 @@
     },
     {
         "id":  "casluhim",
-        "name":  "Casluhim ðŸ›¡ï¸",
+        "name":  "Casluhim 🛡️",
         "parentId":  "mizraim",
         "generation":  13,
         "details":  [
