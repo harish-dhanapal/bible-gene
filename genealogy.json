@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "id":  "root",
         "name":  "Adam \u0026 Eve",
@@ -1302,9 +1302,46 @@
         "parentId":  "izhar",
         "generation":  26,
         "details":  [
-                        "Ex 6:21 \u0026 Num 16",
+                        "Ex 6:21, 6:24 \u0026 Num 16",
                         "Firstborn son of Izhar.",
-                        "Leader of Korah\u0027s rebellion."
+                        "Leader of Korah\u0027s rebellion.",
+                        "Father of Assir, Elkanah \u0026 Abiasaph."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "assir",
+        "name":  "Assir",
+        "parentId":  "korah",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:24 \u0026 1 Chr 6:22",
+                        "Firstborn son of Korah.",
+                        "Head of Korahite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elkanah",
+        "name":  "Elkanah",
+        "parentId":  "korah",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:24 \u0026 1 Chr 6:23",
+                        "Second son of Korah.",
+                        "Levite of Korahite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abiasaph",
+        "name":  "Abiasaph (Ebiasaph)",
+        "parentId":  "korah",
+        "generation":  27,
+        "details":  [
+                        "Ex 6:24 \u0026 1 Chr 6:23",
+                        "Third son of Korah.",
+                        "Levite of Korahite clan."
                     ],
         "special":  false
     },
@@ -1338,9 +1375,58 @@
         "parentId":  "kohath",
         "generation":  25,
         "details":  [
-                        "Ex 6:18 \u0026 Num 3:19",
+                        "Ex 6:18, Num 3:19 \u0026 1 Chr 23:19",
                         "Third son of Kohath.",
-                        "Clan of Hebronites."
+                        "Clan of Hebronites.",
+                        "Father of Jeriah, Amariah, Jahaziel \u0026 Jekameam."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jeriah",
+        "name":  "Jeriah",
+        "parentId":  "hebron",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:19 \u0026 1 Chr 24:23",
+                        "Firstborn son of Hebron.",
+                        "Chief of the Hebronites."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "amariah-hebron",
+        "name":  "Amariah",
+        "parentId":  "hebron",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:19 \u0026 1 Chr 24:23",
+                        "Second son of Hebron.",
+                        "Levite of Hebronite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jahaziel",
+        "name":  "Jahaziel",
+        "parentId":  "hebron",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:19 \u0026 1 Chr 24:23",
+                        "Third son of Hebron.",
+                        "Levite of Hebronite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jekameam",
+        "name":  "Jekameam",
+        "parentId":  "hebron",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:19 \u0026 1 Chr 24:23",
+                        "Fourth son of Hebron.",
+                        "Levite of Hebronite clan."
                     ],
         "special":  false
     },
@@ -1350,9 +1436,69 @@
         "parentId":  "kohath",
         "generation":  25,
         "details":  [
-                        "Ex 6:18â€“22",
+                        "Ex 6:18, 6:22 \u0026 1 Chr 23:20",
                         "Fourth son of Kohath.",
-                        "Father of Mishael, Elzaphan \u0026 Sithri."
+                        "Father of Mishael, Elzaphan, Sithri, Micah \u0026 Isshiah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mishael",
+        "name":  "Mishael",
+        "parentId":  "uzziel",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:22 \u0026 Lev 10:4",
+                        "Son of Uzziel (Ex 6:22).",
+                        "Cousin of Moses \u0026 Aaron; carried Nadab \u0026 Abihu."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elzaphan",
+        "name":  "Elzaphan (Elizaphan)",
+        "parentId":  "uzziel",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:22, Lev 10:4 \u0026 Num 3:30",
+                        "Son of Uzziel (Ex 6:22).",
+                        "Leader of the Kohathite clans."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sithri",
+        "name":  "Sithri",
+        "parentId":  "uzziel",
+        "generation":  26,
+        "details":  [
+                        "Ex 6:22",
+                        "Son of Uzziel (Ex 6:22).",
+                        "Levite of Uzzielite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "micah",
+        "name":  "Micah",
+        "parentId":  "uzziel",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:20 \u0026 1 Chr 24:24",
+                        "Firstborn son of Uzziel (1 Chr 23:20).",
+                        "Head of Micah\u0027s Levite branch."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "isshiah",
+        "name":  "Isshiah (Jesiah)",
+        "parentId":  "uzziel",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:20 \u0026 1 Chr 24:25",
+                        "Second son of Uzziel (1 Chr 23:20).",
+                        "Levite of Uzzielite clan."
                     ],
         "special":  false
     },
@@ -1374,9 +1520,34 @@
         "parentId":  "merari",
         "generation":  25,
         "details":  [
-                        "Ex 6:19 \u0026 Num 3:20",
+                        "Ex 6:19, Num 3:20 \u0026 1 Chr 23:21",
                         "Firstborn son of Merari.",
-                        "Clan of Mahlites."
+                        "Clan of Mahlites.",
+                        "Father of Eleazar \u0026 Kish."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eleazar-mahli",
+        "name":  "Eleazar",
+        "parentId":  "mahli",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:21–22 \u0026 1 Chr 24:28",
+                        "Firstborn son of Mahli.",
+                        "Died having no sons, only daughters."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "kish-mahli",
+        "name":  "Kish",
+        "parentId":  "mahli",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:21–22 \u0026 1 Chr 24:29",
+                        "Second son of Mahli.",
+                        "Sons married Eleazar's daughters."
                     ],
         "special":  false
     },
@@ -1386,9 +1557,46 @@
         "parentId":  "merari",
         "generation":  25,
         "details":  [
-                        "Ex 6:19 \u0026 Num 3:20",
+                        "Ex 6:19, Num 3:20 \u0026 1 Chr 23:23",
                         "Second son of Merari.",
-                        "Clan of Mushites."
+                        "Clan of Mushites.",
+                        "Father of Mahli, Eder \u0026 Jerimoth."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "mahli-mushi",
+        "name":  "Mahli",
+        "parentId":  "mushi",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:23 \u0026 1 Chr 24:30",
+                        "Firstborn son of Mushi.",
+                        "Levite of Mushite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eder-mushi",
+        "name":  "Eder",
+        "parentId":  "mushi",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:23 \u0026 1 Chr 24:30",
+                        "Second son of Mushi.",
+                        "Levite of Mushite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jerimoth-mushi",
+        "name":  "Jerimoth",
+        "parentId":  "mushi",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 23:23 \u0026 1 Chr 24:30",
+                        "Third son of Mushi.",
+                        "Levite of Mushite clan."
                     ],
         "special":  false
     },
@@ -1398,9 +1606,957 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 29:35 (Son of Leah)",
-                        "Fourth son of Jacob.",
-                        "Royal Messianic Tribe (King David \u0026 Jesus)."
+                        "Gen 29:35, Gen 38 \u0026 Gen 46:12",
+                        "Fourth son of Jacob (Son of Leah).",
+                        "Royal Messianic Tribe (King David \u0026 Jesus).",
+                        "Father of Er, Onan, Shelah, Perez \u0026 Zerah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "er",
+        "name":  "Er",
+        "parentId":  "judah",
+        "generation":  24,
+        "details":  [
+                        "Gen 38:3, Gen 46:12 \u0026 1 Chr 2:3",
+                        "Firstborn son of Judah \u0026 Shuah's daughter.",
+                        "Died in Canaan before entering Egypt."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "onan",
+        "name":  "Onan",
+        "parentId":  "judah",
+        "generation":  24,
+        "details":  [
+                        "Gen 38:4, Gen 46:12 \u0026 1 Chr 2:3",
+                        "Second son of Judah \u0026 Shuah's daughter.",
+                        "Died in Canaan before entering Egypt."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shelah-judah",
+        "name":  "Shelah",
+        "parentId":  "judah",
+        "generation":  24,
+        "details":  [
+                        "Gen 38:5, Num 26:20 \u0026 1 Chr 2:3",
+                        "Third son of Judah \u0026 Shuah's daughter.",
+                        "Head of the Shelanite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "perez",
+        "name":  "Perez (Pharez)",
+        "parentId":  "judah",
+        "generation":  24,
+        "details":  [
+                        "Gen 38:29, Ruth 4:18, 1 Chr 2:4 \u0026 Matt 1:3",
+                        "Twin son of Judah \u0026 Tamar.",
+                        "Head of the Perezite clan.",
+                        "Messianic Line ancestor.",
+                        "Father of Hezron \u0026 Hamul."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "hezron-perez",
+        "name":  "Hezron",
+        "parentId":  "perez",
+        "generation":  25,
+        "details":  [
+                        "Gen 46:12, Ruth 4:18 \u0026 Matt 1:3",
+                        "Firstborn son of Perez.",
+                        "Head of the Hezronite clan.",
+                        "Messianic Line ancestor.",
+                        "Father of Jerahmeel, Ram \u0026 Caleb."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "jerahmeel",
+        "name":  "Jerahmeel",
+        "parentId":  "hezron-perez",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 2:9 \u0026 1 Chr 2:25",
+                        "Firstborn son of Hezron.",
+                        "Head of the Jerahmeelite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ram",
+        "name":  "Ram (Aram)",
+        "parentId":  "hezron-perez",
+        "generation":  26,
+        "details":  [
+                        "Ruth 4:19, 1 Chr 2:9–10 \u0026 Matt 1:3–4",
+                        "Second son of Hezron.",
+                        "Messianic Line ancestor.",
+                        "Father of Amminadab."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "amminadab",
+        "name":  "Amminadab",
+        "parentId":  "ram",
+        "generation":  27,
+        "details":  [
+                        "Ruth 4:19–20, 1 Chr 2:10 \u0026 Matt 1:4",
+                        "Son of Ram.",
+                        "Father of Nahshon \u0026 Elisheba.",
+                        "Direct ancestor of King David \u0026 Jesus."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "nahshon",
+        "name":  "Nahshon",
+        "parentId":  "amminadab",
+        "generation":  28,
+        "details":  [
+                        "Ex 6:23, Num 1:7, Ruth 4:20 \u0026 Matt 1:4",
+                        "Prince / Leader of the tribe of Judah (Exodus).",
+                        "Messianic Line ancestor.",
+                        "Father of Salmon."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "salmon",
+        "name":  "Salmon (Salma)",
+        "parentId":  "nahshon",
+        "generation":  29,
+        "details":  [
+                        "Ruth 4:20–21, 1 Chr 2:11 \u0026 Matt 1:4–5",
+                        "Son of Nahshon (Husband of Rahab).",
+                        "Messianic Line ancestor.",
+                        "Father of Boaz."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "boaz",
+        "name":  "Boaz",
+        "parentId":  "salmon",
+        "generation":  30,
+        "details":  [
+                        "Ruth 2–4, 1 Chr 2:11–12 \u0026 Matt 1:5",
+                        "Son of Salmon \u0026 Rahab (Husband of Ruth).",
+                        "Kinsman-Redeemer in Bethlehem.",
+                        "Messianic Line ancestor.",
+                        "Father of Obed."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "obed",
+        "name":  "Obed",
+        "parentId":  "boaz",
+        "generation":  31,
+        "details":  [
+                        "Ruth 4:17, 1 Chr 2:12 \u0026 Matt 1:5",
+                        "Son of Boaz \u0026 Ruth.",
+                        "Messianic Line ancestor.",
+                        "Father of Jesse."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "jesse",
+        "name":  "Jesse",
+        "parentId":  "obed",
+        "generation":  32,
+        "details":  [
+                        "Ruth 4:17, 1 Sam 16:1–13, Isa 11:1 \u0026 Matt 1:5–6",
+                        "Son of Obed (Bethlehemite).",
+                        "Messianic Line ancestor (\"Root of Jesse\").",
+                        "Father of Eliab, Abinadab, Shammah, Nethanel, Raddai, Ozem \u0026 David."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "eliab-jesse",
+        "name":  "Eliab",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Sam 16:6, 1 Sam 17:13, 17:28 \u0026 1 Chr 2:13",
+                        "Firstborn son of Jesse.",
+                        "Warrior in King Saul's army."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "abinadab",
+        "name":  "Abinadab",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Sam 16:8, 1 Sam 17:13 \u0026 1 Chr 2:13",
+                        "Second son of Jesse.",
+                        "Warrior in King Saul's army."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shammah-jesse",
+        "name":  "Shammah (Shimea)",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Sam 16:9, 1 Sam 17:13 \u0026 1 Chr 2:13",
+                        "Third son of Jesse.",
+                        "Warrior in King Saul's army."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nethanel",
+        "name":  "Nethanel",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Chr 2:14",
+                        "Fourth son of Jesse."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "raddai",
+        "name":  "Raddai",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Chr 2:14",
+                        "Fifth son of Jesse."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ozem",
+        "name":  "Ozem",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Chr 2:15",
+                        "Sixth son of Jesse."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "david",
+        "name":  "David (King of Israel)",
+        "parentId":  "jesse",
+        "generation":  33,
+        "details":  [
+                        "1 Sam 16:11–13, 2 Sam 5:1–5, 1 Chr 3:1–9 \u0026 Matt 1:6",
+                        "Youngest son of Jesse; Anointed King of all Israel (c. 1010–970 BC).",
+                        "Man after God's own heart; recipient of the Davidic Covenant.",
+                        "Direct royal Messianic ancestor (Father of Solomon \u0026 Nathan)."
+                    ],
+        "emoji":  "⭐",
+        "special":  true
+    },
+    {
+        "id":  "amnon",
+        "name":  "Amnon",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:2 \u0026 1 Chr 3:1",
+                        "Firstborn son of David (by Ahinoam of Jezreel).",
+                        "Born in Hebron."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "daniel-david",
+        "name":  "Daniel (Chileab)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:3 \u0026 1 Chr 3:1",
+                        "Second son of David (by Abigail of Carmel).",
+                        "Born in Hebron."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "absalom",
+        "name":  "Absalom",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:3, 2 Sam 13–18 \u0026 1 Chr 3:2",
+                        "Third son of David (by Maacah daughter of Talmai, king of Geshur).",
+                        "Born in Hebron; led rebellion against David."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "adonijah",
+        "name":  "Adonijah",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:4, 1 Ki 1 \u0026 1 Chr 3:2",
+                        "Fourth son of David (by Haggith).",
+                        "Born in Hebron; attempted to claim the throne."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shephatiah",
+        "name":  "Shephatiah",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:4 \u0026 1 Chr 3:3",
+                        "Fifth son of David (by Abital).",
+                        "Born in Hebron."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ithream",
+        "name":  "Ithream",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 3:5 \u0026 1 Chr 3:3",
+                        "Sixth son of David (by Eglah).",
+                        "Born in Hebron."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shammua",
+        "name":  "Shammua (Shimea)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:14 \u0026 1 Chr 3:5",
+                        "Son of David (by Bathsheba / Bath-shua).",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shobab",
+        "name":  "Shobab",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:14 \u0026 1 Chr 3:5",
+                        "Son of David (by Bathsheba / Bath-shua).",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nathan",
+        "name":  "Nathan",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:14, 1 Chr 3:5, Zech 12:12 \u0026 Luke 3:31",
+                        "Son of David (by Bathsheba / Bath-shua).",
+                        "Born in Jerusalem.",
+                        "Click for Messianic Lineage via Mary (41 Gen to Jesus)"
+                    ],
+        "emoji":  "⭐",
+        "special":  true,
+        "maternalMessianicLine":  [
+                                     {
+                                         "gen":  "Gen 35",
+                                         "name":  "Mattatha",
+                                         "details":  "Luke 3:31 — Son of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 36",
+                                         "name":  "Menna",
+                                         "details":  "Luke 3:31 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 37",
+                                         "name":  "Melea",
+                                         "details":  "Luke 3:31 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 38",
+                                         "name":  "Eliakim",
+                                         "details":  "Luke 3:30 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 39",
+                                         "name":  "Jonam",
+                                         "details":  "Luke 3:30 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 40",
+                                         "name":  "Joseph",
+                                         "details":  "Luke 3:30 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 41",
+                                         "name":  "Judah",
+                                         "details":  "Luke 3:30 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 42",
+                                         "name":  "Simeon",
+                                         "details":  "Luke 3:30 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 43",
+                                         "name":  "Levi",
+                                         "details":  "Luke 3:29 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 44",
+                                         "name":  "Matthat",
+                                         "details":  "Luke 3:29 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 45",
+                                         "name":  "Jorim",
+                                         "details":  "Luke 3:29 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 46",
+                                         "name":  "Eliezer",
+                                         "details":  "Luke 3:29 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 47",
+                                         "name":  "Joshua (Jose)",
+                                         "details":  "Luke 3:29 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 48",
+                                         "name":  "Er",
+                                         "details":  "Luke 3:28 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 49",
+                                         "name":  "Elmadam",
+                                         "details":  "Luke 3:28 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 50",
+                                         "name":  "Cosam",
+                                         "details":  "Luke 3:28 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 51",
+                                         "name":  "Addi",
+                                         "details":  "Luke 3:28 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 52",
+                                         "name":  "Melchi",
+                                         "details":  "Luke 3:28 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 53",
+                                         "name":  "Neri",
+                                         "details":  "Luke 3:27 — Line of Nathan",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 54",
+                                         "name":  "Shealtiel (Salathiel)",
+                                         "details":  "Luke 3:27 — Prince in Exile",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 55",
+                                         "name":  "Zerubbabel 👑",
+                                         "details":  "Luke 3:27 — Leader of Return",
+                                         "highlight":  true
+                                     },
+                                     {
+                                         "gen":  "Gen 56",
+                                         "name":  "Rhesa",
+                                         "details":  "Luke 3:27 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 57",
+                                         "name":  "Joanan (Johanan)",
+                                         "details":  "Luke 3:27 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 58",
+                                         "name":  "Joda (Juda)",
+                                         "details":  "Luke 3:26 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 59",
+                                         "name":  "Josech (Joseph)",
+                                         "details":  "Luke 3:26 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 60",
+                                         "name":  "Semein (Semei)",
+                                         "details":  "Luke 3:26 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 61",
+                                         "name":  "Mattathias",
+                                         "details":  "Luke 3:26 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 62",
+                                         "name":  "Maath",
+                                         "details":  "Luke 3:26 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 63",
+                                         "name":  "Naggai",
+                                         "details":  "Luke 3:25 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 64",
+                                         "name":  "Esli (Hesli)",
+                                         "details":  "Luke 3:25 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 65",
+                                         "name":  "Nahum",
+                                         "details":  "Luke 3:25 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 66",
+                                         "name":  "Amos",
+                                         "details":  "Luke 3:25 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 67",
+                                         "name":  "Mattathias",
+                                         "details":  "Luke 3:25 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 68",
+                                         "name":  "Joseph",
+                                         "details":  "Luke 3:24 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 69",
+                                         "name":  "Jannai (Janna)",
+                                         "details":  "Luke 3:24 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 70",
+                                         "name":  "Melchi",
+                                         "details":  "Luke 3:24 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 71",
+                                         "name":  "Levi",
+                                         "details":  "Luke 3:24 — Post-Exilic line",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 72",
+                                         "name":  "Matthat",
+                                         "details":  "Luke 3:24 — Grandfather of Mary",
+                                         "highlight":  false
+                                     },
+                                     {
+                                         "gen":  "Gen 73",
+                                         "name":  "Heli (Eli) 👑",
+                                         "details":  "Luke 3:23 — Father of Mary",
+                                         "highlight":  true
+                                     },
+                                     {
+                                         "gen":  "Gen 74",
+                                         "name":  "Mary (Mother of Jesus) / Joseph 👑",
+                                         "details":  "Luke 3:23 \u0026 Luke 1:27 — Mary daughter of Heli; Joseph legal husband",
+                                         "highlight":  true
+                                     },
+                                     {
+                                         "gen":  "Gen 75",
+                                         "name":  "⭐ JESUS CHRIST ⭐",
+                                         "details":  "Luke 3:23, Luke 1:31–33 \u0026 Luke 2:11 — The Savior, Son of the Highest",
+                                         "highlight":  true
+                                     }
+                                 ]
+    },
+    {
+        "id":  "solomon",
+        "name":  "Solomon (Jedidiah)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 12:24–25, 1 Ki 1–11, 1 Chr 3:5 \u0026 Matt 1:6",
+                        "Son of David (by Bathsheba); King of Israel.",
+                        "Builder of the First Temple in Jerusalem.",
+                        "Click for Royal Messianic Lineage (26 Gen to Jesus)"
+                    ],
+        "emoji":  "⭐",
+        "special":  true,
+        "royalMessianicLine":  [
+                                   {
+                                       "gen":  "Gen 35",
+                                       "name":  "Rehoboam 👑",
+                                       "details":  "1 Ki 11:43 \u0026 Matt 1:7 — 1st King of Judah",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 36",
+                                       "name":  "Abijah (Abijam)",
+                                       "details":  "1 Ki 15:1 \u0026 Matt 1:7 — King of Judah",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 37",
+                                       "name":  "Asa 👑",
+                                       "details":  "1 Ki 15:8 \u0026 Matt 1:7 — Righteous King of Judah",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 38",
+                                       "name":  "Jehoshaphat 👑",
+                                       "details":  "1 Ki 22:41 \u0026 Matt 1:8 — Righteous King of Judah",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 39",
+                                       "name":  "Joram (Jehoram)",
+                                       "details":  "2 Ki 8:16 \u0026 Matt 1:8 — King of Judah",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 40",
+                                       "name":  "Uzziah (Azariah) 👑",
+                                       "details":  "2 Ki 15:1 \u0026 Matt 1:8–9 — King of Judah",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 41",
+                                       "name":  "Jotham",
+                                       "details":  "2 Ki 15:32 \u0026 Matt 1:9 — King of Judah",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 42",
+                                       "name":  "Ahaz",
+                                       "details":  "2 Ki 16:1 \u0026 Matt 1:9 — Prophecy of Immanuel (Isa 7:14)",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 43",
+                                       "name":  "Hezekiah 👑",
+                                       "details":  "2 Ki 18:1 \u0026 Matt 1:9–10 — Righteous Reformer King of Judah",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 44",
+                                       "name":  "Manasseh",
+                                       "details":  "2 Ki 21:1 \u0026 Matt 1:10 — King of Judah",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 45",
+                                       "name":  "Amon",
+                                       "details":  "2 Ki 21:19 \u0026 Matt 1:10 — King of Judah",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 46",
+                                       "name":  "Josiah 👑",
+                                       "details":  "2 Ki 22:1 \u0026 Matt 1:10–11 — Great Covenant Reformer King",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 47",
+                                       "name":  "Jeconiah (Jehoiachin)",
+                                       "details":  "2 Ki 24:6, 1 Chr 3:16 \u0026 Matt 1:11–12 — Babylonian Exile",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 48",
+                                       "name":  "Shealtiel (Salathiel)",
+                                       "details":  "1 Chr 3:17, Ezra 3:2 \u0026 Matt 1:12 — Prince in Exile",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 49",
+                                       "name":  "Zerubbabel 👑",
+                                       "details":  "Ezra 3:2, Hag 2:23 \u0026 Matt 1:12–13 — Rebuilt 2nd Temple",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 50",
+                                       "name":  "Abiud",
+                                       "details":  "Matt 1:13 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 51",
+                                       "name":  "Eliakim",
+                                       "details":  "Matt 1:13 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 52",
+                                       "name":  "Azor",
+                                       "details":  "Matt 1:13–14 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 53",
+                                       "name":  "Zadok",
+                                       "details":  "Matt 1:14 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 54",
+                                       "name":  "Achim",
+                                       "details":  "Matt 1:14 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 55",
+                                       "name":  "Eliud",
+                                       "details":  "Matt 1:14–15 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 56",
+                                       "name":  "Eleazar",
+                                       "details":  "Matt 1:15 — Post-Exilic Messianic line",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 57",
+                                       "name":  "Matthan",
+                                       "details":  "Matt 1:15 — Grandfather of Joseph",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 58",
+                                       "name":  "Jacob",
+                                       "details":  "Matt 1:16 — Father of Joseph",
+                                       "highlight":  false
+                                   },
+                                   {
+                                       "gen":  "Gen 59",
+                                       "name":  "Joseph 👑",
+                                       "details":  "Matt 1:16 \u0026 Luke 1:27 — Husband of Mary",
+                                       "highlight":  true
+                                   },
+                                   {
+                                       "gen":  "Gen 60",
+                                       "name":  "⭐ JESUS CHRIST ⭐",
+                                       "details":  "Matt 1:16–17, 1:21–23 \u0026 Luke 2:11 — The Messiah, Savior of the World",
+                                       "highlight":  true
+                                   }
+                               ]
+    },
+    {
+        "id":  "ibhar",
+        "name":  "Ibhar",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:15 \u0026 1 Chr 3:6",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elishua",
+        "name":  "Elishua (Elishama)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:15 \u0026 1 Chr 3:6",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elpelet",
+        "name":  "Elpelet (Eliphelet I)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "1 Chr 3:6 \u0026 1 Chr 14:5",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nogah",
+        "name":  "Nogah",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "1 Chr 3:7 \u0026 1 Chr 14:6",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "nepheg-david",
+        "name":  "Nepheg",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:15 \u0026 1 Chr 3:7",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "japhia",
+        "name":  "Japhia",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:15 \u0026 1 Chr 3:7",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elishama-david",
+        "name":  "Elishama",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:16 \u0026 1 Chr 3:8",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eliada",
+        "name":  "Eliada (Beeliada)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:16 \u0026 1 Chr 3:8",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eliphelet-david",
+        "name":  "Eliphelet (Eliphalat)",
+        "parentId":  "david",
+        "generation":  34,
+        "details":  [
+                        "2 Sam 5:16 \u0026 1 Chr 3:8",
+                        "Son of David.",
+                        "Born in Jerusalem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elisheba",
+        "name":  "Elisheba",
+        "parentId":  "amminadab",
+        "generation":  28,
+        "details":  [
+                        "Exodus 6:23",
+                        "Daughter of Amminadab (Sister of Nahshon).",
+                        "Wife of Aaron the High Priest.",
+                        "Mother of Nadab, Abihu, Eleazar \u0026 Ithamar."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "caleb-hezron",
+        "name":  "Caleb (Chelubai)",
+        "parentId":  "hezron-perez",
+        "generation":  26,
+        "details":  [
+                        "1 Chr 2:9, 1 Chr 2:18 \u0026 1 Chr 2:42",
+                        "Third son of Hezron.",
+                        "Prominent leader in Judah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hamul",
+        "name":  "Hamul",
+        "parentId":  "perez",
+        "generation":  25,
+        "details":  [
+                        "Gen 46:12, Num 26:21 \u0026 1 Chr 2:5",
+                        "Second son of Perez.",
+                        "Head of the Hamulite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "zerah-judah",
+        "name":  "Zerah",
+        "parentId":  "judah",
+        "generation":  24,
+        "details":  [
+                        "Gen 38:30, Num 26:20 \u0026 1 Chr 2:4",
+                        "Twin son of Judah \u0026 Tamar.",
+                        "Head of the Zerahite clan."
                     ],
         "special":  false
     },
@@ -1410,9 +2566,22 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:6 (Son of Bilhah)",
-                        "Fifth son of Jacob.",
-                        "Tribe of Dan (Samson)."
+                        "Gen 30:6 \u0026 Gen 46:23",
+                        "Fifth son of Jacob (Son of Bilhah).",
+                        "Tribe of Dan (Samson).",
+                        "Father of Hushim (Shuham)."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "hushim",
+        "name":  "Hushim (Shuham)",
+        "parentId":  "dan",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:23 \u0026 Num 26:42",
+                        "Son of Dan.",
+                        "Ancestor of the Shuhamites / Danite clan."
                     ],
         "special":  false
     },
@@ -1422,9 +2591,58 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:8 (Son of Bilhah)",
-                        "Sixth son of Jacob.",
-                        "Tribe of Naphtali."
+                        "Gen 30:8 \u0026 Gen 46:24",
+                        "Sixth son of Jacob (Son of Bilhah).",
+                        "Tribe of Naphtali.",
+                        "Father of Jahzeel, Guni, Jezer \u0026 Shillem."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jahzeel",
+        "name":  "Jahzeel",
+        "parentId":  "naphtali",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:24, Num 26:48 \u0026 1 Chr 7:13",
+                        "Firstborn son of Naphtali.",
+                        "Head of the Jahzeelite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "guni",
+        "name":  "Guni",
+        "parentId":  "naphtali",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:24, Num 26:48 \u0026 1 Chr 7:13",
+                        "Second son of Naphtali.",
+                        "Head of the Gunite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jezer",
+        "name":  "Jezer",
+        "parentId":  "naphtali",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:24, Num 26:49 \u0026 1 Chr 7:13",
+                        "Third son of Naphtali.",
+                        "Head of the Jezerite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shillem",
+        "name":  "Shillem (Shallum)",
+        "parentId":  "naphtali",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:24, Num 26:49 \u0026 1 Chr 7:13",
+                        "Fourth son of Naphtali.",
+                        "Head of the Shillemite clan."
                     ],
         "special":  false
     },
@@ -1434,9 +2652,94 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:11 (Son of Zilpah)",
-                        "Seventh son of Jacob.",
-                        "Tribe of Gad."
+                        "Gen 30:11 \u0026 Gen 46:16",
+                        "Seventh son of Jacob (Son of Zilpah).",
+                        "Tribe of Gad.",
+                        "Father of Ziphion, Haggi, Shuni, Ezbon, Eri, Arodi \u0026 Areli."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ziphion",
+        "name":  "Ziphion (Zephon)",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:15",
+                        "Firstborn son of Gad.",
+                        "Head of the Zephonite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "haggi",
+        "name":  "Haggi",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:15",
+                        "Second son of Gad.",
+                        "Head of the Haggite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shuni",
+        "name":  "Shuni",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:15",
+                        "Third son of Gad.",
+                        "Head of the Shunite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ezbon",
+        "name":  "Ezbon (Ozni)",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:16",
+                        "Fourth son of Gad.",
+                        "Head of the Oznite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "eri",
+        "name":  "Eri",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:16",
+                        "Fifth son of Gad.",
+                        "Head of the Erite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "arodi",
+        "name":  "Arodi (Arod)",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:17",
+                        "Sixth son of Gad.",
+                        "Head of the Arodite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "areli",
+        "name":  "Areli",
+        "parentId":  "gad",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:16 \u0026 Num 26:17",
+                        "Seventh son of Gad.",
+                        "Head of the Arelite clan."
                     ],
         "special":  false
     },
@@ -1446,9 +2749,94 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:13 (Son of Zilpah)",
-                        "Eighth son of Jacob.",
-                        "Tribe of Asher."
+                        "Gen 30:13 \u0026 Gen 46:17",
+                        "Eighth son of Jacob (Son of Zilpah).",
+                        "Tribe of Asher.",
+                        "Father of Imnah, Ishvah, Ishvi, Beriah \u0026 Serah."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "imnah",
+        "name":  "Imnah",
+        "parentId":  "asher",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:17, Num 26:44 \u0026 1 Chr 7:30",
+                        "Firstborn son of Asher.",
+                        "Head of the Imnite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ishvah",
+        "name":  "Ishvah (Isvah)",
+        "parentId":  "asher",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:17 \u0026 1 Chr 7:30",
+                        "Second son of Asher."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ishvi",
+        "name":  "Ishvi (Ishwai)",
+        "parentId":  "asher",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:17, Num 26:44 \u0026 1 Chr 7:30",
+                        "Third son of Asher.",
+                        "Head of the Ishvite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "beriah",
+        "name":  "Beriah",
+        "parentId":  "asher",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:17, Num 26:44 \u0026 1 Chr 7:30–31",
+                        "Fourth son of Asher.",
+                        "Head of the Beriite clan.",
+                        "Father of Heber \u0026 Malchiel."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "heber-beriah",
+        "name":  "Heber",
+        "parentId":  "beriah",
+        "generation":  25,
+        "details":  [
+                        "Gen 46:17, Num 26:45 \u0026 1 Chr 7:31",
+                        "Firstborn son of Beriah.",
+                        "Head of the Heberite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "malchiel",
+        "name":  "Malchiel",
+        "parentId":  "beriah",
+        "generation":  25,
+        "details":  [
+                        "Gen 46:17, Num 26:45 \u0026 1 Chr 7:31",
+                        "Second son of Beriah.",
+                        "Head of the Malchielite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "serah-asher",
+        "name":  "Serah",
+        "parentId":  "asher",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:17, Num 26:46 \u0026 1 Chr 7:30",
+                        "Daughter of Asher (Sister of Beriah).",
+                        "Prominent matriarch in Israel."
                     ],
         "special":  false
     },
@@ -1458,9 +2846,58 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:18 (Son of Leah)",
-                        "Ninth son of Jacob.",
-                        "Tribe of Issachar."
+                        "Gen 30:18 \u0026 Gen 46:13",
+                        "Ninth son of Jacob (Son of Leah).",
+                        "Tribe of Issachar.",
+                        "Father of Tola, Puvah, Job \u0026 Shimron."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "tola",
+        "name":  "Tola",
+        "parentId":  "issachar",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:13, Num 26:23 \u0026 1 Chr 7:1",
+                        "Firstborn son of Issachar.",
+                        "Head of the Tolaite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "puvah",
+        "name":  "Puvah (Puah)",
+        "parentId":  "issachar",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:13, Num 26:23 \u0026 1 Chr 7:1",
+                        "Second son of Issachar.",
+                        "Head of the Punite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "job-issachar",
+        "name":  "Job (Jashub)",
+        "parentId":  "issachar",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:13, Num 26:24 \u0026 1 Chr 7:1",
+                        "Third son of Issachar.",
+                        "Head of the Jashubite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "shimron",
+        "name":  "Shimron",
+        "parentId":  "issachar",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:13, Num 26:24 \u0026 1 Chr 7:1",
+                        "Fourth son of Issachar.",
+                        "Head of the Shimronite clan."
                     ],
         "special":  false
     },
@@ -1470,9 +2907,46 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 30:20 (Son of Leah)",
-                        "Tenth son of Jacob.",
-                        "Tribe of Zebulun."
+                        "Gen 30:20 \u0026 Gen 46:14",
+                        "Tenth son of Jacob (Son of Leah).",
+                        "Tribe of Zebulun.",
+                        "Father of Sered, Elon \u0026 Jahleel."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "sered",
+        "name":  "Sered",
+        "parentId":  "zebulun",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:14 \u0026 Num 26:26",
+                        "Firstborn son of Zebulun.",
+                        "Head of the Seredite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "elon",
+        "name":  "Elon",
+        "parentId":  "zebulun",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:14 \u0026 Num 26:26",
+                        "Second son of Zebulun.",
+                        "Head of the Elonite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "jahleel",
+        "name":  "Jahleel",
+        "parentId":  "zebulun",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:14 \u0026 Num 26:26",
+                        "Third son of Zebulun.",
+                        "Head of the Jahleelite clan."
                     ],
         "special":  false
     },
@@ -1519,9 +2993,128 @@
         "parentId":  "jacob",
         "generation":  23,
         "details":  [
-                        "Gen 35:18 (Son of Rachel)",
-                        "Twelfth son of Jacob.",
-                        "Tribe of Benjamin (King Saul, Paul)."
+                        "Gen 35:18 \u0026 Gen 46:21",
+                        "Twelfth son of Jacob (Son of Rachel).",
+                        "Tribe of Benjamin (King Saul, Paul).",
+                        "Father of Bela, Becher, Ashbel, Gera, Naaman, Ehi, Rosh, Muppim, Huppim \u0026 Ard."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "bela",
+        "name":  "Bela",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21, Num 26:38 \u0026 1 Chr 7:6",
+                        "Firstborn son of Benjamin.",
+                        "Head of the Belait clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "becher",
+        "name":  "Becher",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 1 Chr 7:6",
+                        "Second son of Benjamin.",
+                        "Head of the Becherite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ashbel",
+        "name":  "Ashbel",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21, Num 26:38 \u0026 1 Chr 7:6",
+                        "Third son of Benjamin.",
+                        "Head of the Ashbelite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "gera",
+        "name":  "Gera",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 1 Chr 8:3",
+                        "Fourth son of Benjamin."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "naaman-benjamin",
+        "name":  "Naaman",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 Num 26:40",
+                        "Fifth son of Benjamin.",
+                        "Head of the Naamite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ehi",
+        "name":  "Ehi (Ahiram)",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 Num 26:38",
+                        "Sixth son of Benjamin.",
+                        "Head of the Ahiramite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "rosh",
+        "name":  "Rosh",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21",
+                        "Seventh son of Benjamin."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "muppim",
+        "name":  "Muppim (Shupham)",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 Num 26:39",
+                        "Eighth son of Benjamin.",
+                        "Head of the Shuphamite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "huppim",
+        "name":  "Huppim (Hupham)",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21, Num 26:39 \u0026 1 Chr 7:12",
+                        "Ninth son of Benjamin.",
+                        "Head of the Huphamite clan."
+                    ],
+        "special":  false
+    },
+    {
+        "id":  "ard",
+        "name":  "Ard",
+        "parentId":  "benjamin",
+        "generation":  24,
+        "details":  [
+                        "Gen 46:21 \u0026 Num 26:40",
+                        "Tenth son of Benjamin.",
+                        "Head of the Ardite clan."
                     ],
         "special":  false
     },

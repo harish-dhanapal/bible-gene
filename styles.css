@@ -831,6 +831,29 @@ body.noah-theme {
     background-size: cover;
 }
 
+/* Custom background theme for Abraham (Jesus) */
+body.abraham-theme {
+    background: url('images/jesus.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.abraham-theme .tree-container {
+    padding-left: 40px;
+    transition: padding-left 0.4s ease;
+}
+
+@media (max-width: 1200px) {
+    body.abraham-theme .tree-container {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.abraham-theme .tree-container {
+        padding-left: 10px;
+    }
+}
+
 /* ==========================================
    SCROLLABLE LINEAGE CARD SYSTEM (e.g. High Priestly Succession)
    ========================================== */
@@ -966,4 +989,90 @@ body.noah-theme {
     height: 10px;
     background: linear-gradient(to bottom, rgba(212, 175, 55, 0.5), rgba(212, 175, 55, 0.2));
     margin-left: 28px;
+}
+
+/* Royal Messianic Card Styles */
+.lineage-card.royal-card {
+    border-color: rgba(234, 179, 8, 0.6);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(234, 179, 8, 0.25);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 27, 75, 0.94));
+}
+
+.lineage-card.royal-card:hover {
+    border-color: rgba(250, 204, 21, 0.85);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 36px rgba(250, 204, 21, 0.35);
+}
+
+.lineage-card-header.royal-header {
+    background: linear-gradient(90deg, rgba(234, 179, 8, 0.28), rgba(126, 34, 206, 0.2));
+    border-bottom: 1px solid rgba(234, 179, 8, 0.4);
+}
+
+.lineage-card-header.royal-header h3 {
+    color: #fef08a;
+    text-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+}
+
+.lineage-item.highlight-royal {
+    background: linear-gradient(90deg, rgba(234, 179, 8, 0.22), rgba(147, 51, 234, 0.12));
+    border: 1px solid rgba(234, 179, 8, 0.55);
+    box-shadow: 0 2px 10px rgba(234, 179, 8, 0.15);
+}
+
+.lineage-item.highlight-royal strong {
+    color: #fef08a;
+}
+
+.gen-badge.royal-star {
+    background: linear-gradient(135deg, #eab308, #ca8a04);
+    color: #020617;
+    font-weight: 800;
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.4);
+}
+
+.lineage-item-connector.royal-connector {
+    background: linear-gradient(to bottom, rgba(234, 179, 8, 0.6), rgba(234, 179, 8, 0.2));
+}
+
+/* Maternal Messianic Card Styles (Gospel of Luke) */
+.lineage-card.maternal-card {
+    border-color: rgba(244, 63, 94, 0.55);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(244, 63, 94, 0.22);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(67, 10, 36, 0.94));
+}
+
+.lineage-card.maternal-card:hover {
+    border-color: rgba(251, 113, 133, 0.85);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 36px rgba(251, 113, 133, 0.35);
+}
+
+.lineage-card-header.maternal-header {
+    background: linear-gradient(90deg, rgba(244, 63, 94, 0.28), rgba(168, 85, 247, 0.2));
+    border-bottom: 1px solid rgba(244, 63, 94, 0.4);
+}
+
+.lineage-card-header.maternal-header h3 {
+    color: #ffe4e6;
+    text-shadow: 0 0 12px rgba(251, 113, 133, 0.5);
+}
+
+.lineage-item.highlight-maternal {
+    background: linear-gradient(90deg, rgba(244, 63, 94, 0.22), rgba(168, 85, 247, 0.12));
+    border: 1px solid rgba(244, 63, 94, 0.55);
+    box-shadow: 0 2px 10px rgba(244, 63, 94, 0.15);
+}
+
+.lineage-item.highlight-maternal strong {
+    color: #ffe4e6;
+}
+
+.gen-badge.maternal-star {
+    background: linear-gradient(135deg, #f43f5e, #be123c);
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 0 8px rgba(244, 63, 94, 0.4);
+}
+
+.lineage-item-connector.maternal-connector {
+    background: linear-gradient(to bottom, rgba(244, 63, 94, 0.6), rgba(244, 63, 94, 0.2));
 }

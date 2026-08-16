@@ -16,7 +16,7 @@ const SPECIAL_BEHAVIORS = {
 };
 
 // Nodes that have an empty branch container in legacy HTML/JS structure despite having 0 children in JSON
-const EMPTY_BRANCH_NODES = new Set(['eleazar', 'rehabiah']);
+const EMPTY_BRANCH_NODES = new Set(['eleazar', 'rehabiah', 'solomon', 'nathan']);
 
 // Mapping of parent nodes to their entire list of downstream child IDs & connectors
 const lineageMap = {
@@ -289,34 +289,190 @@ const lineageMap = {
         'esau-connector', 'esau-children', 'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
     ],
     'jacob-node': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children', 'dan-connector', 'dan-children', 'naphtali-connector', 'naphtali-children', 'gad-connector', 'gad-children', 'asher-connector', 'asher-children', 'beriah-connector', 'beriah-children', 'issachar-connector', 'issachar-children', 'zebulun-connector', 'zebulun-children', 'benjamin-connector', 'benjamin-children', 'judah-connector', 'judah-children', 'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
     ],
     'jacob-children': [
-        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+        'jacob-connector', 'jacob-children', 'joseph-connector', 'joseph-children', 'reuben-connector', 'reuben-children', 'simeon-connector', 'simeon-children', 'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children', 'dan-connector', 'dan-children', 'naphtali-connector', 'naphtali-children', 'gad-connector', 'gad-children', 'asher-connector', 'asher-children', 'beriah-connector', 'beriah-children', 'issachar-connector', 'issachar-children', 'zebulun-connector', 'zebulun-children', 'benjamin-connector', 'benjamin-children', 'judah-connector', 'judah-children', 'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'dan-node': [
+        'dan-connector', 'dan-children'
+    ],
+    'dan-children': [
+        'dan-connector', 'dan-children'
+    ],
+    'naphtali-node': [
+        'naphtali-connector', 'naphtali-children'
+    ],
+    'naphtali-children': [
+        'naphtali-connector', 'naphtali-children'
+    ],
+    'gad-node': [
+        'gad-connector', 'gad-children'
+    ],
+    'gad-children': [
+        'gad-connector', 'gad-children'
+    ],
+    'asher-node': [
+        'asher-connector', 'asher-children', 'beriah-connector', 'beriah-children'
+    ],
+    'asher-children': [
+        'asher-connector', 'asher-children', 'beriah-connector', 'beriah-children'
+    ],
+    'beriah-node': [
+        'beriah-connector', 'beriah-children'
+    ],
+    'beriah-children': [
+        'beriah-connector', 'beriah-children'
+    ],
+    'issachar-node': [
+        'issachar-connector', 'issachar-children'
+    ],
+    'issachar-children': [
+        'issachar-connector', 'issachar-children'
+    ],
+    'zebulun-node': [
+        'zebulun-connector', 'zebulun-children'
+    ],
+    'zebulun-children': [
+        'zebulun-connector', 'zebulun-children'
+    ],
+    'benjamin-node': [
+        'benjamin-connector', 'benjamin-children'
+    ],
+    'benjamin-children': [
+        'benjamin-connector', 'benjamin-children'
+    ],
+    'judah-node': [
+        'judah-connector', 'judah-children', 'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'judah-children': [
+        'judah-connector', 'judah-children', 'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'perez-node': [
+        'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'perez-children': [
+        'perez-connector', 'perez-children', 'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'hezron-perez-node': [
+        'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'hezron-perez-children': [
+        'hezron-perez-connector', 'hezron-perez-children', 'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'ram-node': [
+        'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'ram-children': [
+        'ram-connector', 'ram-children', 'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'amminadab-node': [
+        'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'amminadab-children': [
+        'amminadab-connector', 'amminadab-children', 'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'nahshon-node': [
+        'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'nahshon-children': [
+        'nahshon-connector', 'nahshon-children', 'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'salmon-node': [
+        'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'salmon-children': [
+        'salmon-connector', 'salmon-children', 'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'boaz-node': [
+        'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'boaz-children': [
+        'boaz-connector', 'boaz-children', 'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'obed-node': [
+        'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'obed-children': [
+        'obed-connector', 'obed-children', 'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'jesse-node': [
+        'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'jesse-children': [
+        'jesse-connector', 'jesse-children', 'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'david-node': [
+        'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'david-children': [
+        'david-connector', 'david-children', 'solomon-connector', 'solomon-children', 'nathan-connector', 'nathan-children'
+    ],
+    'solomon-node': [
+        'solomon-connector', 'solomon-children'
+    ],
+    'solomon-children': [
+        'solomon-connector', 'solomon-children'
+    ],
+    'nathan-node': [
+        'nathan-connector', 'nathan-children'
+    ],
+    'nathan-children': [
+        'nathan-connector', 'nathan-children'
     ],
     'levi-node': [
-        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children', 'mahli-connector', 'mahli-children', 'mushi-connector', 'mushi-children'
     ],
     'levi-children': [
-        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children'
+        'levi-connector', 'levi-children', 'gershon-connector', 'gershon-children', 'kohath-connector', 'kohath-children', 'merari-connector', 'merari-children', 'mahli-connector', 'mahli-children', 'mushi-connector', 'mushi-children'
     ],
     'merari-node': [
-        'merari-connector', 'merari-children'
+        'merari-connector', 'merari-children', 'mahli-connector', 'mahli-children', 'mushi-connector', 'mushi-children'
     ],
     'merari-children': [
-        'merari-connector', 'merari-children'
+        'merari-connector', 'merari-children', 'mahli-connector', 'mahli-children', 'mushi-connector', 'mushi-children'
+    ],
+    'mahli-node': [
+        'mahli-connector', 'mahli-children'
+    ],
+    'mahli-children': [
+        'mahli-connector', 'mahli-children'
+    ],
+    'mushi-node': [
+        'mushi-connector', 'mushi-children'
+    ],
+    'mushi-children': [
+        'mushi-connector', 'mushi-children'
     ],
     'kohath-node': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children', 'korah-connector', 'korah-children', 'hebron-connector', 'hebron-children', 'uzziel-connector', 'uzziel-children'
     ],
     'kohath-children': [
-        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children'
+        'kohath-connector', 'kohath-children', 'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children', 'izhar-connector', 'izhar-children', 'korah-connector', 'korah-children', 'hebron-connector', 'hebron-children', 'uzziel-connector', 'uzziel-children'
     ],
     'izhar-node': [
-        'izhar-connector', 'izhar-children'
+        'izhar-connector', 'izhar-children', 'korah-connector', 'korah-children'
     ],
     'izhar-children': [
-        'izhar-connector', 'izhar-children'
+        'izhar-connector', 'izhar-children', 'korah-connector', 'korah-children'
+    ],
+    'korah-node': [
+        'korah-connector', 'korah-children'
+    ],
+    'korah-children': [
+        'korah-connector', 'korah-children'
+    ],
+    'hebron-node': [
+        'hebron-connector', 'hebron-children'
+    ],
+    'hebron-children': [
+        'hebron-connector', 'hebron-children'
+    ],
+    'uzziel-node': [
+        'uzziel-connector', 'uzziel-children'
+    ],
+    'uzziel-children': [
+        'uzziel-connector', 'uzziel-children'
     ],
     'amram-node': [
         'amram-connector', 'amram-children', 'aaron-connector', 'aaron-children', 'eleazar-connector', 'eleazar-children', 'moses-connector', 'moses-children', 'gershom-moses-connector', 'gershom-moses-children', 'eliezer-connector', 'eliezer-children', 'rehabiah-connector', 'rehabiah-children'
@@ -667,6 +823,48 @@ const connectorMap = {
     'simeon-children': 'simeon-connector',
     'levi-node': 'levi-connector',
     'levi-children': 'levi-connector',
+    'dan-node': 'dan-connector',
+    'dan-children': 'dan-connector',
+    'naphtali-node': 'naphtali-connector',
+    'naphtali-children': 'naphtali-connector',
+    'gad-node': 'gad-connector',
+    'gad-children': 'gad-connector',
+    'asher-node': 'asher-connector',
+    'asher-children': 'asher-connector',
+    'beriah-node': 'beriah-connector',
+    'beriah-children': 'beriah-connector',
+    'issachar-node': 'issachar-connector',
+    'issachar-children': 'issachar-connector',
+    'zebulun-node': 'zebulun-connector',
+    'zebulun-children': 'zebulun-connector',
+    'benjamin-node': 'benjamin-connector',
+    'benjamin-children': 'benjamin-connector',
+    'judah-node': 'judah-connector',
+    'judah-children': 'judah-connector',
+    'perez-node': 'perez-connector',
+    'perez-children': 'perez-connector',
+    'hezron-perez-node': 'hezron-perez-connector',
+    'hezron-perez-children': 'hezron-perez-connector',
+    'ram-node': 'ram-connector',
+    'ram-children': 'ram-connector',
+    'amminadab-node': 'amminadab-connector',
+    'amminadab-children': 'amminadab-connector',
+    'nahshon-node': 'nahshon-connector',
+    'nahshon-children': 'nahshon-connector',
+    'salmon-node': 'salmon-connector',
+    'salmon-children': 'salmon-connector',
+    'boaz-node': 'boaz-connector',
+    'boaz-children': 'boaz-connector',
+    'obed-node': 'obed-connector',
+    'obed-children': 'obed-connector',
+    'jesse-node': 'jesse-connector',
+    'jesse-children': 'jesse-connector',
+    'david-node': 'david-connector',
+    'david-children': 'david-connector',
+    'solomon-node': 'solomon-connector',
+    'solomon-children': 'solomon-connector',
+    'nathan-node': 'nathan-connector',
+    'nathan-children': 'nathan-connector',
     'gershon-node': 'gershon-connector',
     'gershon-children': 'gershon-connector',
     'libni-node': 'libni-connector',
@@ -683,10 +881,20 @@ const connectorMap = {
     'zerah-levite-children': 'zerah-levite-connector',
     'merari-node': 'merari-connector',
     'merari-children': 'merari-connector',
+    'mahli-node': 'mahli-connector',
+    'mahli-children': 'mahli-connector',
+    'mushi-node': 'mushi-connector',
+    'mushi-children': 'mushi-connector',
     'kohath-node': 'kohath-connector',
     'kohath-children': 'kohath-connector',
     'izhar-node': 'izhar-connector',
     'izhar-children': 'izhar-connector',
+    'korah-node': 'korah-connector',
+    'korah-children': 'korah-connector',
+    'hebron-node': 'hebron-connector',
+    'hebron-children': 'hebron-connector',
+    'uzziel-node': 'uzziel-connector',
+    'uzziel-children': 'uzziel-connector',
     'amram-node': 'amram-connector',
     'amram-children': 'amram-connector',
     'moses-node': 'moses-connector',
@@ -813,6 +1021,114 @@ const parentMap = {
     'simeon-children': 'simeon-node',
     'levi-node': 'jacob-children',
     'levi-children': 'levi-node',
+    'dan-node': 'jacob-children',
+    'dan-children': 'dan-node',
+    'hushim-node': 'dan-children',
+    'naphtali-node': 'jacob-children',
+    'naphtali-children': 'naphtali-node',
+    'jahzeel-node': 'naphtali-children',
+    'guni-node': 'naphtali-children',
+    'jezer-node': 'naphtali-children',
+    'shillem-node': 'naphtali-children',
+    'gad-node': 'jacob-children',
+    'gad-children': 'gad-node',
+    'ziphion-node': 'gad-children',
+    'haggi-node': 'gad-children',
+    'shuni-node': 'gad-children',
+    'ezbon-node': 'gad-children',
+    'eri-node': 'gad-children',
+    'arodi-node': 'gad-children',
+    'areli-node': 'gad-children',
+    'asher-node': 'jacob-children',
+    'asher-children': 'asher-node',
+    'imnah-node': 'asher-children',
+    'ishvah-node': 'asher-children',
+    'ishvi-node': 'asher-children',
+    'beriah-node': 'asher-children',
+    'beriah-children': 'beriah-node',
+    'heber-beriah-node': 'beriah-children',
+    'malchiel-node': 'beriah-children',
+    'serah-asher-node': 'asher-children',
+    'issachar-node': 'jacob-children',
+    'issachar-children': 'issachar-node',
+    'tola-node': 'issachar-children',
+    'puvah-node': 'issachar-children',
+    'job-issachar-node': 'issachar-children',
+    'shimron-node': 'issachar-children',
+    'zebulun-node': 'jacob-children',
+    'zebulun-children': 'zebulun-node',
+    'sered-node': 'zebulun-children',
+    'elon-node': 'zebulun-children',
+    'jahleel-node': 'zebulun-children',
+    'benjamin-node': 'jacob-children',
+    'benjamin-children': 'benjamin-node',
+    'bela-node': 'benjamin-children',
+    'becher-node': 'benjamin-children',
+    'ashbel-node': 'benjamin-children',
+    'gera-node': 'benjamin-children',
+    'naaman-benjamin-node': 'benjamin-children',
+    'ehi-node': 'benjamin-children',
+    'rosh-node': 'benjamin-children',
+    'muppim-node': 'benjamin-children',
+    'huppim-node': 'benjamin-children',
+    'ard-node': 'benjamin-children',
+    'judah-node': 'jacob-children',
+    'judah-children': 'judah-node',
+    'er-node': 'judah-children',
+    'onan-node': 'judah-children',
+    'shelah-judah-node': 'judah-children',
+    'perez-node': 'judah-children',
+    'perez-children': 'perez-node',
+    'hezron-perez-node': 'perez-children',
+    'hezron-perez-children': 'hezron-perez-node',
+    'jerahmeel-node': 'hezron-perez-children',
+    'ram-node': 'hezron-perez-children',
+    'ram-children': 'ram-node',
+    'amminadab-node': 'ram-children',
+    'amminadab-children': 'amminadab-node',
+    'nahshon-node': 'amminadab-children',
+    'nahshon-children': 'nahshon-node',
+    'salmon-node': 'nahshon-children',
+    'salmon-children': 'salmon-node',
+    'boaz-node': 'salmon-children',
+    'boaz-children': 'boaz-node',
+    'obed-node': 'boaz-children',
+    'obed-children': 'obed-node',
+    'jesse-node': 'obed-children',
+    'jesse-children': 'jesse-node',
+    'eliab-jesse-node': 'jesse-children',
+    'abinadab-node': 'jesse-children',
+    'shammah-jesse-node': 'jesse-children',
+    'nethanel-node': 'jesse-children',
+    'raddai-node': 'jesse-children',
+    'ozem-node': 'jesse-children',
+    'david-node': 'jesse-children',
+    'david-children': 'david-node',
+    'amnon-node': 'david-children',
+    'daniel-david-node': 'david-children',
+    'absalom-node': 'david-children',
+    'adonijah-node': 'david-children',
+    'shephatiah-node': 'david-children',
+    'ithream-node': 'david-children',
+    'shammua-node': 'david-children',
+    'shobab-node': 'david-children',
+    'nathan-node': 'david-children',
+    'nathan-children': 'nathan-node',
+    'solomon-node': 'david-children',
+    'solomon-children': 'solomon-node',
+    'ibhar-node': 'david-children',
+    'elishua-node': 'david-children',
+    'elpelet-node': 'david-children',
+    'nogah-node': 'david-children',
+    'nepheg-david-node': 'david-children',
+    'japhia-node': 'david-children',
+    'elishama-david-node': 'david-children',
+    'eliada-node': 'david-children',
+    'eliphelet-david-node': 'david-children',
+    'elisheba-node': 'amminadab-children',
+    'caleb-hezron-node': 'hezron-perez-children',
+    'hamul-node': 'perez-children',
+    'zerah-judah-node': 'judah-children',
     'gershon-node': 'levi-children',
     'gershon-children': 'gershon-node',
     'libni-node': 'gershon-children',
@@ -829,13 +1145,39 @@ const parentMap = {
     'zerah-levite-children': 'zerah-levite-node',
     'merari-node': 'levi-children',
     'merari-children': 'merari-node',
+    'mahli-node': 'merari-children',
+    'mahli-children': 'mahli-node',
+    'eleazar-mahli-node': 'mahli-children',
+    'kish-mahli-node': 'mahli-children',
+    'mushi-node': 'merari-children',
+    'mushi-children': 'mushi-node',
+    'mahli-mushi-node': 'mushi-children',
+    'eder-mushi-node': 'mushi-children',
+    'jerimoth-mushi-node': 'mushi-children',
     'kohath-node': 'levi-children',
     'kohath-children': 'kohath-node',
     'izhar-node': 'kohath-children',
     'izhar-children': 'izhar-node',
     'korah-node': 'izhar-children',
+    'korah-children': 'korah-node',
+    'assir-node': 'korah-children',
+    'elkanah-node': 'korah-children',
+    'abiasaph-node': 'korah-children',
     'nepheg-node': 'izhar-children',
     'zichri-node': 'izhar-children',
+    'hebron-node': 'kohath-children',
+    'hebron-children': 'hebron-node',
+    'jeriah-node': 'hebron-children',
+    'amariah-hebron-node': 'hebron-children',
+    'jahaziel-node': 'hebron-children',
+    'jekameam-node': 'hebron-children',
+    'uzziel-node': 'kohath-children',
+    'uzziel-children': 'uzziel-node',
+    'mishael-node': 'uzziel-children',
+    'elzaphan-node': 'uzziel-children',
+    'sithri-node': 'uzziel-children',
+    'micah-node': 'uzziel-children',
+    'isshiah-node': 'uzziel-children',
     'amram-node': 'kohath-children',
     'amram-children': 'amram-node',
     'moses-node': 'amram-children',
@@ -867,6 +1209,8 @@ const parentMap = {
     'eliab-children': 'eliab-node',
     'joseph-node': 'jacob-children',
     'joseph-children': 'joseph-node',
+    'manasseh-node': 'joseph-children',
+    'ephraim-node': 'joseph-children',
     'esau-node': 'isaac-children',
     'esau-children': 'esau-node',
     'eliphaz-node': 'esau-children',
@@ -1031,7 +1375,26 @@ const TITLE_WRAP_IDS = new Set([
     'mishma','hammuel','joseph','ishmael','jokshan','dedan',
     'midian','nahor','haran','lot','bethuel','laban','rebekah',
     'leah','rachel','bilhah','zilpah','moab','ben-ammi',
-    'ham','cush','raamah','mizraim','canaan','japheth','gomer','javan'
+    'ham','cush','raamah','mizraim','canaan','japheth','gomer','javan',
+    'korah','assir','elkanah','abiasaph',
+    'hebron','jeriah','amariah-hebron','jahaziel','jekameam',
+    'uzziel','mishael','elzaphan','sithri','micah','isshiah',
+    'mahli','mushi','eleazar-mahli','kish-mahli','mahli-mushi','eder-mushi','jerimoth-mushi',
+    'dan','hushim',
+    'naphtali','jahzeel','guni','jezer','shillem',
+    'gad','ziphion','haggi','shuni','ezbon','eri','arodi','areli',
+    'asher','imnah','ishvah','ishvi','beriah','heber-beriah','malchiel','serah-asher',
+    'issachar','tola','puvah','job-issachar','shimron',
+    'zebulun','sered','elon','jahleel',
+    'manasseh','ephraim',
+    'benjamin','bela','becher','ashbel','gera','naaman-benjamin','ehi','rosh','muppim','huppim','ard',
+    'judah','er','onan','shelah-judah','perez','zerah-judah',
+    'hezron-perez','hamul',
+    'jerahmeel','ram','caleb-hezron',
+    'amminadab','nahshon','elisheba',
+    'salmon','boaz','obed','jesse',
+    'eliab-jesse','abinadab','shammah-jesse','nethanel','raddai','ozem','david',
+    'amnon','daniel-david','absalom','adonijah','shephatiah','ithream','shammua','shobab','nathan','solomon','ibhar','elishua','elpelet','nogah','nepheg-david','japhia','elishama-david','eliada','eliphelet-david'
 ]);
 
 // Build content of a node element
@@ -1225,6 +1588,56 @@ function renderNode(personId, container, currentColumn = null) {
                     </div>
                 </div>
             `;
+        } else if (person.royalMessianicLine && person.royalMessianicLine.length > 0) {
+            const itemsHtml = person.royalMessianicLine.map(item => `
+                <div class="lineage-item ${item.highlight ? 'highlight-royal' : ''}">
+                    <span class="gen-badge ${item.highlight ? 'royal-star' : ''}">${item.gen}</span>
+                    <div class="item-info">
+                        <strong>${item.name}</strong>
+                        <small>${item.details}</small>
+                    </div>
+                </div>
+                <div class="lineage-item-connector royal-connector"></div>
+            `).join('');
+
+            branchEl.innerHTML = `
+                <div class="column">
+                    <div class="lineage-card royal-card">
+                        <div class="lineage-card-header royal-header">
+                            <h3>⭐ Royal Messianic Lineage</h3>
+                            <p>Matthew 1:6–16 (Solomon to Jesus Christ • ${person.royalMessianicLine.length} Generations)</p>
+                        </div>
+                        <div class="lineage-card-scroll">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else if (person.maternalMessianicLine && person.maternalMessianicLine.length > 0) {
+            const itemsHtml = person.maternalMessianicLine.map(item => `
+                <div class="lineage-item ${item.highlight ? 'highlight-maternal' : ''}">
+                    <span class="gen-badge ${item.highlight ? 'maternal-star' : ''}">${item.gen}</span>
+                    <div class="item-info">
+                        <strong>${item.name}</strong>
+                        <small>${item.details}</small>
+                    </div>
+                </div>
+                <div class="lineage-item-connector maternal-connector"></div>
+            `).join('');
+
+            branchEl.innerHTML = `
+                <div class="column">
+                    <div class="lineage-card maternal-card">
+                        <div class="lineage-card-header maternal-header">
+                            <h3>⭐ Messianic Lineage (Gospel of Luke)</h3>
+                            <p>Luke 3:23–31 (Nathan to Jesus Christ • ${person.maternalMessianicLine.length} Generations)</p>
+                        </div>
+                        <div class="lineage-card-scroll">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
     } else {
@@ -1286,7 +1699,7 @@ function toggleAbelTheme() {
         const sethNode = document.querySelector('.node.seth');
         if (sethNode) sethNode.classList.remove('is-cracked');
     }
-    document.body.classList.remove('cain-theme', 'seth-theme', 'enoch-theme', 'noah-theme', 'methuselah-theme');
+    document.body.classList.remove('cain-theme', 'seth-theme', 'enoch-theme', 'noah-theme', 'methuselah-theme', 'abraham-theme');
     document.body.classList.toggle('abel-theme');
 }
 
@@ -1303,7 +1716,7 @@ function revealNext(targetId) {
 
     if (isHidden) {
         if (targetId === 'gen2-children') {
-            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme');
+            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme', 'abraham-theme');
             const abelNode = document.getElementById('abel-node');
             if (abelNode) abelNode.classList.remove('is-cracked');
         }
@@ -1493,6 +1906,9 @@ function revealNext(targetId) {
         }
 
         if (targetId === 'abraham-children') {
+            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme');
+            document.body.classList.add('abraham-theme');
+
             collapseDescendants('nahor-children');
             hideElement('nahor-children');
             hideElement('nahor-connector');
@@ -1507,6 +1923,7 @@ function revealNext(targetId) {
         }
 
         if (targetId === 'nahor-children') {
+            document.body.classList.remove('abraham-theme');
             collapseDescendants('abraham-children');
             hideElement('abraham-children');
             hideElement('abraham-connector');
@@ -1521,6 +1938,7 @@ function revealNext(targetId) {
         }
 
         if (targetId === 'haran-children') {
+            document.body.classList.remove('abraham-theme');
             collapseDescendants('abraham-children');
             hideElement('abraham-children');
             hideElement('abraham-connector');
@@ -1600,6 +2018,12 @@ function revealNext(targetId) {
             hideElement('levi-connector');
             const levNode = document.getElementById('levi-node');
             if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'simeon-children') {
@@ -1620,6 +2044,12 @@ function revealNext(targetId) {
             hideElement('levi-connector');
             const levNode = document.getElementById('levi-node');
             if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'levi-children') {
@@ -1640,6 +2070,12 @@ function revealNext(targetId) {
             hideElement('joseph-connector');
             const josNode = document.getElementById('joseph-node');
             if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'joseph-children') {
@@ -1660,6 +2096,430 @@ function revealNext(targetId) {
             hideElement('levi-connector');
             const levNode = document.getElementById('levi-node');
             if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'dan-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'naphtali-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'gad-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('asher-children');
+            hideElement('asher-children');
+            hideElement('asher-connector');
+            const ashNode = document.getElementById('asher-node');
+            if (ashNode) ashNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'asher-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+
+            collapseDescendants('issachar-children');
+            hideElement('issachar-children');
+            hideElement('issachar-connector');
+            const issNode = document.getElementById('issachar-node');
+            if (issNode) issNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'issachar-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+
+            collapseDescendants('asher-children');
+            hideElement('asher-children');
+            hideElement('asher-connector');
+            const ashNode = document.getElementById('asher-node');
+            if (ashNode) ashNode.classList.remove('is-cracked');
+
+            collapseDescendants('zebulun-children');
+            hideElement('zebulun-children');
+            hideElement('zebulun-connector');
+            const zebNode = document.getElementById('zebulun-node');
+            if (zebNode) zebNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'zebulun-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+
+            collapseDescendants('asher-children');
+            hideElement('asher-children');
+            hideElement('asher-connector');
+            const ashNode = document.getElementById('asher-node');
+            if (ashNode) ashNode.classList.remove('is-cracked');
+
+            collapseDescendants('issachar-children');
+            hideElement('issachar-children');
+            hideElement('issachar-connector');
+            const issNode = document.getElementById('issachar-node');
+            if (issNode) issNode.classList.remove('is-cracked');
+
+            collapseDescendants('benjamin-children');
+            hideElement('benjamin-children');
+            hideElement('benjamin-connector');
+            const benNode = document.getElementById('benjamin-node');
+            if (benNode) benNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'benjamin-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+
+            collapseDescendants('asher-children');
+            hideElement('asher-children');
+            hideElement('asher-connector');
+            const ashNode = document.getElementById('asher-node');
+            if (ashNode) ashNode.classList.remove('is-cracked');
+
+            collapseDescendants('issachar-children');
+            hideElement('issachar-children');
+            hideElement('issachar-connector');
+            const issNode = document.getElementById('issachar-node');
+            if (issNode) issNode.classList.remove('is-cracked');
+
+            collapseDescendants('zebulun-children');
+            hideElement('zebulun-children');
+            hideElement('zebulun-connector');
+            const zebNode = document.getElementById('zebulun-node');
+            if (zebNode) zebNode.classList.remove('is-cracked');
+
+            collapseDescendants('judah-children');
+            hideElement('judah-children');
+            hideElement('judah-connector');
+            const judNode = document.getElementById('judah-node');
+            if (judNode) judNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'judah-children') {
+            collapseDescendants('reuben-children');
+            hideElement('reuben-children');
+            hideElement('reuben-connector');
+            const reuNode = document.getElementById('reuben-node');
+            if (reuNode) reuNode.classList.remove('is-cracked');
+
+            collapseDescendants('simeon-children');
+            hideElement('simeon-children');
+            hideElement('simeon-connector');
+            const simNode = document.getElementById('simeon-node');
+            if (simNode) simNode.classList.remove('is-cracked');
+
+            collapseDescendants('levi-children');
+            hideElement('levi-children');
+            hideElement('levi-connector');
+            const levNode = document.getElementById('levi-node');
+            if (levNode) levNode.classList.remove('is-cracked');
+
+            collapseDescendants('joseph-children');
+            hideElement('joseph-children');
+            hideElement('joseph-connector');
+            const josNode = document.getElementById('joseph-node');
+            if (josNode) josNode.classList.remove('is-cracked');
+
+            collapseDescendants('dan-children');
+            hideElement('dan-children');
+            hideElement('dan-connector');
+            const danNode = document.getElementById('dan-node');
+            if (danNode) danNode.classList.remove('is-cracked');
+
+            collapseDescendants('naphtali-children');
+            hideElement('naphtali-children');
+            hideElement('naphtali-connector');
+            const napNode = document.getElementById('naphtali-node');
+            if (napNode) napNode.classList.remove('is-cracked');
+
+            collapseDescendants('gad-children');
+            hideElement('gad-children');
+            hideElement('gad-connector');
+            const gadNode = document.getElementById('gad-node');
+            if (gadNode) gadNode.classList.remove('is-cracked');
+
+            collapseDescendants('asher-children');
+            hideElement('asher-children');
+            hideElement('asher-connector');
+            const ashNode = document.getElementById('asher-node');
+            if (ashNode) ashNode.classList.remove('is-cracked');
+
+            collapseDescendants('issachar-children');
+            hideElement('issachar-children');
+            hideElement('issachar-connector');
+            const issNode = document.getElementById('issachar-node');
+            if (issNode) issNode.classList.remove('is-cracked');
+
+            collapseDescendants('zebulun-children');
+            hideElement('zebulun-children');
+            hideElement('zebulun-connector');
+            const zebNode = document.getElementById('zebulun-node');
+            if (zebNode) zebNode.classList.remove('is-cracked');
+
+            collapseDescendants('benjamin-children');
+            hideElement('benjamin-children');
+            hideElement('benjamin-connector');
+            const benNode = document.getElementById('benjamin-node');
+            if (benNode) benNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'gershon-children') {
@@ -1704,12 +2564,40 @@ function revealNext(targetId) {
             if (kohNode) kohNode.classList.remove('is-cracked');
         }
 
+        if (targetId === 'mahli-children') {
+            collapseDescendants('mushi-children');
+            hideElement('mushi-children');
+            hideElement('mushi-connector');
+            const musNode = document.getElementById('mushi-node');
+            if (musNode) musNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'mushi-children') {
+            collapseDescendants('mahli-children');
+            hideElement('mahli-children');
+            hideElement('mahli-connector');
+            const mahNode = document.getElementById('mahli-node');
+            if (mahNode) mahNode.classList.remove('is-cracked');
+        }
+
         if (targetId === 'amram-children') {
             collapseDescendants('izhar-children');
             hideElement('izhar-children');
             hideElement('izhar-connector');
             const izhNode = document.getElementById('izhar-node');
             if (izhNode) izhNode.classList.remove('is-cracked');
+
+            collapseDescendants('hebron-children');
+            hideElement('hebron-children');
+            hideElement('hebron-connector');
+            const hebNode = document.getElementById('hebron-node');
+            if (hebNode) hebNode.classList.remove('is-cracked');
+
+            collapseDescendants('uzziel-children');
+            hideElement('uzziel-children');
+            hideElement('uzziel-connector');
+            const uzzNode = document.getElementById('uzziel-node');
+            if (uzzNode) uzzNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'izhar-children') {
@@ -1718,6 +2606,58 @@ function revealNext(targetId) {
             hideElement('amram-connector');
             const amrNode = document.getElementById('amram-node');
             if (amrNode) amrNode.classList.remove('is-cracked');
+
+            collapseDescendants('hebron-children');
+            hideElement('hebron-children');
+            hideElement('hebron-connector');
+            const hebNode = document.getElementById('hebron-node');
+            if (hebNode) hebNode.classList.remove('is-cracked');
+
+            collapseDescendants('uzziel-children');
+            hideElement('uzziel-children');
+            hideElement('uzziel-connector');
+            const uzzNode = document.getElementById('uzziel-node');
+            if (uzzNode) uzzNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'hebron-children') {
+            collapseDescendants('amram-children');
+            hideElement('amram-children');
+            hideElement('amram-connector');
+            const amrNode = document.getElementById('amram-node');
+            if (amrNode) amrNode.classList.remove('is-cracked');
+
+            collapseDescendants('izhar-children');
+            hideElement('izhar-children');
+            hideElement('izhar-connector');
+            const izhNode = document.getElementById('izhar-node');
+            if (izhNode) izhNode.classList.remove('is-cracked');
+
+            collapseDescendants('uzziel-children');
+            hideElement('uzziel-children');
+            hideElement('uzziel-connector');
+            const uzzNode = document.getElementById('uzziel-node');
+            if (uzzNode) uzzNode.classList.remove('is-cracked');
+        }
+
+        if (targetId === 'uzziel-children') {
+            collapseDescendants('amram-children');
+            hideElement('amram-children');
+            hideElement('amram-connector');
+            const amrNode = document.getElementById('amram-node');
+            if (amrNode) amrNode.classList.remove('is-cracked');
+
+            collapseDescendants('izhar-children');
+            hideElement('izhar-children');
+            hideElement('izhar-connector');
+            const izhNode = document.getElementById('izhar-node');
+            if (izhNode) izhNode.classList.remove('is-cracked');
+
+            collapseDescendants('hebron-children');
+            hideElement('hebron-children');
+            hideElement('hebron-connector');
+            const hebNode = document.getElementById('hebron-node');
+            if (hebNode) hebNode.classList.remove('is-cracked');
         }
 
         if (targetId === 'aaron-children') {
@@ -1860,16 +2800,20 @@ function revealNext(targetId) {
             parentNode.classList.remove('is-cracked');
         }
 
+        if (targetId === 'abraham-children' || targetId === 'abraham-node') {
+            document.body.classList.remove('abraham-theme');
+            document.body.classList.add('noah-theme');
+        }
         if (targetId === 'noah-children' || targetId === 'noah-node') {
-            document.body.classList.remove('noah-theme');
+            document.body.classList.remove('noah-theme', 'abraham-theme');
             document.body.classList.add('methuselah-theme');
         }
         if (targetId === 'seth-lamech-node') {
-            document.body.classList.remove('methuselah-theme', 'noah-theme');
+            document.body.classList.remove('methuselah-theme', 'noah-theme', 'abraham-theme');
             document.body.classList.add('enoch-theme');
         }
         if (targetId === 'methuselah-node' || targetId === 'seth-enoch-node' || targetId === 'jared-node' || targetId === 'mahalalel-node' || targetId === 'kenan-node') {
-            document.body.classList.remove('enoch-theme', 'methuselah-theme', 'noah-theme');
+            document.body.classList.remove('enoch-theme', 'methuselah-theme', 'noah-theme', 'abraham-theme');
             document.body.classList.add('seth-theme');
         }
         if (targetId === 'cain-enoch-node' || targetId === 'lamech-children') {
@@ -1878,10 +2822,10 @@ function revealNext(targetId) {
             if (treeContainer) treeContainer.classList.remove('cain-open');
         }
         if (targetId === 'enosh-node') {
-            document.body.classList.remove('seth-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme');
+            document.body.classList.remove('seth-theme', 'enoch-theme', 'methuselah-theme', 'noah-theme', 'abraham-theme');
         }
         if (targetId === 'gen2-children') {
-            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'noah-theme', 'methuselah-theme');
+            document.body.classList.remove('cain-theme', 'seth-theme', 'abel-theme', 'enoch-theme', 'noah-theme', 'methuselah-theme', 'abraham-theme');
             const treeContainer = document.querySelector('.tree-container');
             if (treeContainer) treeContainer.classList.remove('cain-open');
         }
